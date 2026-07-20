@@ -1,0 +1,25 @@
+{
+    "headline": "Live API Test (Channels)",
+    "extension": "{ico:msx-white:event} {now:date:D, M d, yyyy}{tb}{ico:msx-white:access-time} {now:time:hh:mm}",
+    "menu": [{
+            "label": "List",
+            "data": "http://msx.benzac.de/services/live.php?type=list"
+        }, {
+            "label": "Grid",
+            "data": "http://msx.benzac.de/services/live.php?type=grid"
+        }, {
+            "label": "Compact",
+            "data": "http://msx.benzac.de/services/live.php?type=compact"
+        }, {
+            "label": "Overview",
+            "data": "http://msx.benzac.de/services/live.php?type=overview"
+        }, {
+            "label": "Preview",
+            "data": "http://msx.benzac.de/services/live.php?type=preview"
+        }, {
+            "type": "separator"
+        }, {
+            "label": "TV Guide",
+            "data": "user:http://msx.benzac.de/services/guide.php"
+        }]
+}

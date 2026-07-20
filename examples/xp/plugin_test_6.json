@@ -1,0 +1,13 @@
+{
+    "headline": "Background Plugin Test",
+    "pages": [{
+            "items": [{
+                    "layout": "0,0,12,6",
+                    "color": "msx-glass",
+                    "title": "Load Test",
+                    "image": "http://msx.benzac.de/info/xp/img/background_plugin.png",
+                    "imageFiller": "width",
+                    "action": "menu:http://msx.benzac.de/info/xp/data/plugin_test_6_menu.json"
+                }]
+        }]
+}

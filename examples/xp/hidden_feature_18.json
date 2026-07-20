@@ -1,0 +1,73 @@
+{
+    "type": "pages",
+    "headline": "Keep Ratio Keyword",
+    "options": {
+        "items": [{
+                "type": "control",
+                "layout": "0,0,8,1",
+                "label": "Enable Immersive Mode",
+                "action": "[cleanup|settings:immersive_mode:1]"
+            }, {
+                "type": "control",
+                "layout": "0,1,8,1",
+                "label": "Disable Immersive Mode",
+                "action": "[cleanup|settings:immersive_mode:0]"
+            }, {
+                "type": "space",
+                "layout": "0,5,8,1",
+                "text": [
+                    "{ico:msx-blue:info} Please note that the immersive mode is (usually) only available on mobile and desktop devices.",
+                    " If your device supports the immersive mode, you will find an entry in the settings where you can also enable/disable it."
+                ]
+            }]
+    },
+    "template": {
+        "type": "default",
+        "titleFooter": "{col:msx-white}default",
+        "imageLabel": "default",
+        "area": "0,4,12,2",
+        "layout": "0,0,2,2",
+        "color": "msx-glass",
+        "imageFiller": "cover",
+        "alignment": "center",
+        "selection": {
+            "important": true,
+            "background": "{context:background}"
+        },
+        "properties": {
+            "image:action": "slider:stop",
+            "image:trigger": "slider:sync"
+        }
+    },
+    "items": [{
+            "image": "http://msx.benzac.de/media/thumbs/square1.jpg",
+            "background": "http://msx.benzac.de/media/square1.jpg",
+            "action": "image:http://msx.benzac.de/media/square1.jpg"
+        }, {
+            "titleFooter": "{col:msx-white}msx-keep-ratio",
+            "imageLabel": "msx-keep-ratio",
+            "image": "http://msx.benzac.de/media/thumbs/square1.jpg",
+            "background": "http://msx.benzac.de/media/square1.jpg#msx-keep-ratio",
+            "action": "image:http://msx.benzac.de/media/square1.jpg"
+        }, {
+            "image": "http://msx.benzac.de/media/thumbs/square2.jpg",
+            "background": "http://msx.benzac.de/media/square2.jpg",
+            "action": "image:http://msx.benzac.de/media/square2.jpg"
+        }, {
+            "titleFooter": "{col:msx-white}msx-keep-ratio",
+            "imageLabel": "msx-keep-ratio",
+            "image": "http://msx.benzac.de/media/thumbs/square2.jpg",
+            "background": "http://msx.benzac.de/media/square2.jpg#msx-keep-ratio",
+            "action": "image:http://msx.benzac.de/media/square2.jpg"
+        }, {
+            "image": "http://msx.benzac.de/media/thumbs/square3.jpg",
+            "background": "http://msx.benzac.de/media/square3.jpg",
+            "action": "image:http://msx.benzac.de/media/square3.jpg"
+        }, {
+            "titleFooter": "{col:msx-white}msx-keep-ratio",
+            "imageLabel": "msx-keep-ratio",
+            "image": "http://msx.benzac.de/media/thumbs/square3.jpg",
+            "background": "http://msx.benzac.de/media/square3.jpg#msx-keep-ratio",
+            "action": "image:http://msx.benzac.de/media/square3.jpg"
+        }]
+}

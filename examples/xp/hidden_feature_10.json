@@ -1,0 +1,36 @@
+{
+    "type": "pages",
+    "headline": "Page Action",    
+    "underlay": {
+        "action": "logger:debug:Content is visible."
+    },
+    "overlay": {
+        "action": "logger:debug:Content is active."
+    },
+    "pages": [{
+            "action": "info:Page 1 is active.",
+            "items": [{
+                    "layout": "0,0,12,6",
+                    "color": "msx-glass",
+                    "headline": "Page 1"
+                }
+            ]
+        }, {
+            "action": "info:Page 2 is active.",
+            "items": [{
+                    "layout": "0,0,12,6",
+                    "color": "msx-glass",
+                    "headline": "Page 2"
+                }
+            ]
+        }, {
+            "action": "info:Page 3 is active.",
+            "items": [{
+                    "layout": "0,0,12,6",
+                    "color": "msx-glass",
+                    "headline": "Page 3"
+                }
+            ]
+        }
+    ]
+}

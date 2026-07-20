@@ -1,0 +1,64 @@
+{
+    "type": "list",
+    "transparent": true,
+    "flag": "next_video",
+    "ready": {
+        "action": "[trigger:stop:close:next_video|trigger:complete:player:goto:random]"
+    },
+    "underlay": {
+        "items": [{
+                "type": "space",
+                "layout": "0,0,12,6",
+                "offset": "-0.75,-1,1.5,1.67",
+                "color": "transparent",
+                "imageOverlay": 1,
+                "round": false
+            }, {
+                "type": "space",
+                "layout": "0,3,12,3",
+                "offset": "-0.75,-0.2,1.5,0.86",
+                "color": "rgba(26,26,26,0.8)",
+                "round": false
+            }]
+    },
+    "overlay": {
+        "items": [{
+                "type": "space",
+                "layout": "0,3,12,1",
+                "alignment": "center",
+                "headline": "",
+                "live": {
+                    "type": "playback",
+                    "source": "current",
+                    "headline": "{col:msx-white-soft}Select next video or wait for random selection in {txt:msx-white:countdown:position}..."                   
+                }
+            }]
+    },
+    "template": {
+        "enumerate": false,
+        "type": "separate",
+        "layout": "0,0,3,3",
+        "area": "0,0,12,3",
+        "offset": "0,3.5,0,0",
+        "imageFiller": "cover",
+        "color": "msx-glass",
+        "alignment": "center"
+    },
+    "items": [{
+            "title": "Video 1",
+            "image": "https://msx.benzac.de/media/thumbs/video1.jpg",
+            "action": "player:goto:index:0"
+        }, {
+            "title": "Video 2",
+            "image": "https://msx.benzac.de/media/thumbs/video2.jpg",
+            "action": "player:goto:index:1"
+        }, {
+            "title": "Video 3",
+            "image": "https://msx.benzac.de/media/thumbs/video4.jpg",
+            "action": "player:goto:index:2"
+        }, {
+            "title": "Video 4",
+            "image": "https://msx.benzac.de/media/thumbs/video5.jpg",
+            "action": "player:goto:index:3"
+        }]
+}

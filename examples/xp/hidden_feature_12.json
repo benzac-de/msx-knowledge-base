@@ -1,0 +1,115 @@
+{
+    "compress": true,
+    "type": "list",
+    "headline": "Compression Test",
+    "template": {
+        "type": "control",
+        "layout": "0,0,16,1",
+        "icon": "adb"
+    },
+    "header": {
+        "compress": false,
+        "offset": "0,0,0,0.666",
+        "items": [{
+                "type": "control",
+                "layout": "0,0,16,1",
+                "offset": "0,0,0,0.333",
+                "icon": "adb",
+                "label": "Header"
+            }]
+    },
+    "footer": {
+        "offset": "0,0.333,0,0",
+        "items": [{
+                "compress": false,
+                "type": "space",
+                "layout": "0,0,16,1",
+                "headline": "Footer"
+            }, {
+                "compress": false,
+                "badge": "Uncompressed",
+                "type": "button",
+                "layout": "0,1,4,4",
+                "offset": "0,-0.333,0,0",
+                "icon": "msx-green:check-circle",
+                "label": "Success",
+                "action": "success:This is a success message."
+            }, {
+                "compress": false,
+                "badge": "Uncompressed",
+                "type": "button",
+                "layout": "4,1,4,4",
+                "offset": "0,-0.333,0,0",
+                "icon": "msx-blue:info",
+                "label": "Info",
+                "action": "info:This is an info message."
+            }, {
+                "compress": false,
+                "badge": "Uncompressed",
+                "type": "button",
+                "layout": "8,1,4,4",
+                "offset": "0,-0.333,0,0",
+                "icon": "msx-yellow:warning",
+                "label": "Warning",
+                "action": "warn:This is a warning message."
+            }, {
+                "compress": false,
+                "badge": "Uncompressed",
+                "type": "button",
+                "layout": "12,1,4,4",
+                "offset": "0,-0.333,0,0",
+                "icon": "msx-red:error",
+                "label": "Error",
+                "action": "error:This is an error message."
+            }, {
+                "compress": true,
+                "badge": "Compressed",
+                "type": "button",
+                "layout": "0,5,3,3",
+                "icon": "msx-green:check-circle",
+                "label": "Success",
+                "action": "success:This is a success message."
+            }, {
+                "compress": true,
+                "badge": "Compressed",
+                "type": "button",
+                "layout": "3,5,3,3",
+                "icon": "msx-blue:info",
+                "label": "Info",
+                "action": "info:This is an info message."
+            }, {
+                "compress": true,
+                "badge": "Compressed",
+                "type": "button",
+                "layout": "6,5,3,3",
+                "icon": "msx-yellow:warning",
+                "label": "Warning",
+                "action": "warn:This is a warning message."
+            }, {
+                "compress": true,
+                "badge": "Compressed",
+                "type": "button",
+                "layout": "9,5,3,3",
+                "icon": "msx-red:error",
+                "label": "Error",
+                "action": "error:This is an error message."
+            }]
+    },    
+    "items": [{
+            "label": "Item 1"
+        }, {
+            "label": "Item 2"
+        }, {
+            "label": "Item 3"
+        }, {
+            "label": "Item 4"
+        }, {
+            "label": "Item 5"
+        }, {
+            "label": "Item 6"
+        }, {
+            "label": "Item 7"
+        }, {
+            "label": "Item 8"
+        }]
+}

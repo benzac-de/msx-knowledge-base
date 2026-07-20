@@ -1,0 +1,31 @@
+{
+    "type": "pages",
+    "headline": "Messages",
+    "pages": [{  
+            "items": [{
+                    "type": "button",                                
+                    "layout": "0,0,3,3",                  
+                    "icon": "msx-green:check-circle",
+                    "label": "Success",
+                    "action": "success:This is a success message."
+                }, {
+                    "type": "button",                                
+                    "layout": "3,0,3,3",                  
+                    "icon": "msx-blue:info",
+                    "label": "Info",
+                    "action": "info:This is an info message."
+                }, {
+                    "type": "button",                                
+                    "layout": "6,0,3,3",                   
+                    "icon": "msx-yellow:warning",
+                    "label": "Warning",
+                    "action": "warn:This is a warning message."
+                }, {
+                    "type": "button",                                
+                    "layout": "9,0,3,3",                  
+                    "icon": "msx-red:error",
+                    "label": "Error",
+                    "action": "error:This is an error message."
+                }]
+        }]
+}

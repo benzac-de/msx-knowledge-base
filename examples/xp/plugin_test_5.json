@@ -1,0 +1,52 @@
+{
+    "type": "pages",
+    "headline": "Panorama Plugin Test",
+    "template": {
+        "type": "default",
+        "layout": "0,0,6,2",
+        "color": "msx-glass",
+        "group": "{ico:vrpano}",
+        "imageFiller": "height-center",
+        "properties": {
+            "control:load": "silent",
+            "control:type": "extended",
+            "control:dim": false,
+            "label:extension": "{ico:vrpano}",
+            "button:content:action": "settings:slideshow_interval",
+            "button:content:icon": "settings",
+            "button:speed:enable": true,
+            "info:text": "Please use the {ico:msx-white:settings} {txt:msx-white:Slideshow Interval} settings to set the base speed (it is applied when the panorama changes).{br} Please use the {ico:msx-white:slow-motion-video} {txt:msx-white:Playback Speed} panel for runtime adjustments (it is reset when the panorama changes)."
+        }
+    },
+    "items": [{
+            "titleFooter": "{col:msx-white}Panorama 1",
+            "playerLabel": "Panorama 1",
+            "image": "http://msx.benzac.de/media/thumbs/pano1.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/panorama.html?url=http://msx.benzac.de/media/pano1.jpg&duration=slideshow"
+        }, {
+            "titleFooter": "{col:msx-white}Panorama 2",
+            "playerLabel": "Panorama 2",
+            "image": "http://msx.benzac.de/media/thumbs/pano2.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/panorama.html?url=http://msx.benzac.de/media/pano2.jpg&duration=slideshow"
+        }, {
+            "titleFooter": "{col:msx-white}Panorama 3",
+            "playerLabel": "Panorama 3",
+            "image": "http://msx.benzac.de/media/thumbs/pano3.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/panorama.html?url=http://msx.benzac.de/media/pano3.jpg&duration=slideshow"
+        }, {
+            "titleFooter": "{col:msx-white}Panorama 4",
+            "playerLabel": "Panorama 4",
+            "image": "http://msx.benzac.de/media/thumbs/pano4.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/panorama.html?url=http://msx.benzac.de/media/pano4.jpg&duration=slideshow"
+        }, {
+            "titleFooter": "{col:msx-white}Panorama 5",
+            "playerLabel": "Panorama 5",
+            "image": "http://msx.benzac.de/media/thumbs/pano5.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/panorama.html?url=http://msx.benzac.de/media/pano5.jpg&duration=slideshow"
+        }, {
+            "titleFooter": "{col:msx-white}Panorama 6",
+            "playerLabel": "Panorama 6",
+            "image": "http://msx.benzac.de/media/thumbs/pano6.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/panorama.html?url=http://msx.benzac.de/media/pano6.jpg&duration=slideshow"
+        }]
+}

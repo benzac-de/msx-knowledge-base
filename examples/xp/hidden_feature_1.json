@@ -1,0 +1,7 @@
+{
+    "action": "info:Start action executed.",
+    "headline": "My Menu",
+    "menu": [{
+            "label": "My Menu Item"
+        }]
+}

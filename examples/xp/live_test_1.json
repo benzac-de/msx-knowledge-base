@@ -1,0 +1,62 @@
+{
+    "type": "pages",
+    "headline": "Live API Test (Lifetime)",
+    "template": {
+        "type": "button",
+        "layout": "0,0,6,3",
+        "headline": "State: Init",
+        "text": "...",
+        "progress": -1,
+        "action": "live",
+        "live": {
+            "type": "lifetime",
+            "duration": 60000,
+            "delay": 10000,
+            "coming": {
+                "headline": "State: Coming",
+                "execute": {
+                    "action": "info:Content is coming."
+                }
+            },
+            "running": {
+                "headline": "State: Running",
+                "execute": {
+                    "action": "info:Content is running."
+                }
+            },
+            "over": {
+                "headline": "State: Over",
+                "execute": {
+                    "action": "info:Content is over."
+                }
+            },
+            "text": [
+                "Creation: {creation:date:yyyy-mm-dd} {creation:time:hh:mm:ss}{br}",
+                "From: {from:date:yyyy-mm-dd} {from:time:hh:mm:ss}{br}",
+                "To: {to:date:yyyy-mm-dd} {to:time:hh:mm:ss}{br}",
+                "Now:  {now:date:yyyy-mm-dd} {now:time:hh:mm:ss}{br}",
+                "Duration: {duration:time:mm:ss}{br}",
+                "Progress: {progress:time:mm:ss} ({progress:percentage}){br}",
+                "Countdown: {countdown:time:mm:ss} ({countdown:percentage}){br}",
+                "Overflow: {overflow:time:mm:ss}{br}"
+            ]
+        }
+    },
+    "items": [{
+            "tag": "1"
+        }, {
+            "tag": "2"
+        }, {
+            "tag": "3"
+        }, {
+            "tag": "4"
+        }, {
+            "tag": "5"
+        }, {
+            "tag": "6"
+        }, {
+            "tag": "7"
+        }, {
+            "tag": "8"
+        }]
+}

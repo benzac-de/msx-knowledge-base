@@ -1,0 +1,55 @@
+{
+    "headline": "Atmospheric Backgrounds",
+    "transparent": 2,
+    "template": {
+        "layout": "0,0,4,3",
+        "type": "default",
+        "imageHeight": 2,
+        "imageFiller": "cover",
+        "wrapperColor": "msx-black",
+        "properties": {
+            "control:type": "extended",
+            "control:reuse": "restart",
+            "control:transparent": "{context:controlTransparent}",
+            "control:dim": false,
+            "label:duration": "{VALUE} {ico:repeat}"
+        }
+    },
+    "items": [{
+            "image": "http://msx.benzac.de/media/thumbs/atmos1.jpg",
+            "titleFooter": "{col:msx-white}Atmospheric Background 1",
+            "action": "video:auto:plugin:http://msx.benzac.de/plugins/background.html?url=http://msx.benzac.de/media/atmos1.mp4",
+            "playerLabel": "Atmospheric Background 1",
+            "controlTransparent": "true"
+        }, {
+            "image": "http://msx.benzac.de/media/thumbs/atmos2.jpg",
+            "titleFooter": "{col:msx-white}Atmospheric Background 2",
+            "action": "video:auto:plugin:http://msx.benzac.de/plugins/background.html?url=http://msx.benzac.de/media/atmos2.mp4",
+            "playerLabel": "Atmospheric Background 2",
+            "controlTransparent": "true"
+        }, {
+            "image": "http://msx.benzac.de/media/thumbs/atmos3.jpg",
+            "titleFooter": "{col:msx-white}Atmospheric Background 3",
+            "action": "video:auto:plugin:http://msx.benzac.de/plugins/background.html?url=http://msx.benzac.de/media/atmos3.mp4",
+            "playerLabel": "Atmospheric Background 3",
+            "controlTransparent": "false"
+        }, {
+            "image": "http://msx.benzac.de/media/thumbs/atmos4.jpg",
+            "titleFooter": "{col:msx-white}Atmospheric Background 4",
+            "action": "video:auto:plugin:http://msx.benzac.de/plugins/background.html?url=http://msx.benzac.de/media/atmos4.mp4",
+            "playerLabel": "Atmospheric Background 4",
+            "controlTransparent": "true"
+        }, {
+            "image": "http://msx.benzac.de/media/thumbs/atmos5.jpg",
+            "titleFooter": "{col:msx-white}Atmospheric Background 5",
+            "action": "video:auto:plugin:http://msx.benzac.de/plugins/background.html?url=http://msx.benzac.de/media/atmos5.mp4",
+            "playerLabel": "Atmospheric Background 5",
+            "controlTransparent": "false"
+        }, {
+            "image": "http://msx.benzac.de/media/thumbs/atmos6.jpg",
+            "titleFooter": "{col:msx-white}Atmospheric Background 6",
+            "action": "video:auto:plugin:http://msx.benzac.de/plugins/background.html?url=http://msx.benzac.de/media/atmos6.mp4",
+            "playerLabel": "Atmospheric Background 6",
+            "controlTransparent": "true"
+        }]
+}

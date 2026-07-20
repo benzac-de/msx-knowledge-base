@@ -1,0 +1,106 @@
+{
+    "type": "list",
+    "headline": "Resolve Action",
+    "template": {       
+        "type": "separate",
+        "layout": "0,0,2,4",
+        "color": "msx-glass"
+    },
+    "items": [{
+            "badge": "Service",
+            "icon": "msx-white-soft:movie",
+            "title": "Video 1",
+            "titleFooter": "Standard",
+            "playerLabel": "Video 1",
+            "action": "video:resolve:http://msx.benzac.de/services/resolve.php?type=video&platform={PLATFORM}&player={PLAYER}"
+        }, {
+            "badge": "Service",
+            "icon": "msx-white-soft:movie",
+            "title": "Video 2 ",
+            "titleFooter": "Plugin",
+            "playerLabel": "Video 2",
+            "action": "video:resolve:http://msx.benzac.de/services/resolve.php?type=plugin:video&platform={PLATFORM}&player={PLAYER}"
+        }, {
+            "badge": "Service",
+            "icon": "msx-white-soft:movie",
+            "title": "Video 3",
+            "titleFooter": "Unsupported",
+            "playerLabel": "Video 3",
+            "action": "video:resolve:http://msx.benzac.de/services/resolve.php?type=unsupported"
+        }, {
+            "badge": "Service",
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "resolve:http://msx.benzac.de/services/resolve.php?type=image",
+            "title": "Audio 1",
+            "titleFooter": "Standard",
+            "playerLabel": "Audio 1",
+            "action": "audio:resolve:http://msx.benzac.de/services/resolve.php?type=audio&platform={PLATFORM}&player={PLAYER}"
+        }, {
+            "badge": "Service",
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "resolve:http://msx.benzac.de/services/resolve.php?type=image",
+            "title": "Audio 2",
+            "titleFooter": "Plugin",
+            "playerLabel": "Audio 2",
+            "action": "audio:resolve:http://msx.benzac.de/services/resolve.php?type=plugin:audio&platform={PLATFORM}&player={PLAYER}"
+        }, {
+            "badge": "Service",
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "resolve:http://msx.benzac.de/services/resolve.php?type=unsupported",
+            "title": "Audio 3",
+            "titleFooter": "Unsupported",
+            "playerLabel": "Audio 3",
+            "action": "audio:resolve:http://msx.benzac.de/services/resolve.php?type=unsupported"
+        }, {
+            "badge": "Interaction",
+            "icon": "msx-white-soft:movie",
+            "title": "Video 4",
+            "titleFooter": "Standard",
+            "playerLabel": "Video 4",
+            "action": "video:resolve:request:interaction:video@http://msx.benzac.de/interaction/resolve.html"
+        }, {
+            "badge": "Interaction",
+            "icon": "msx-white-soft:movie",
+            "title": "Video 5",
+            "titleFooter": "Plugin",
+            "playerLabel": "Video 5",
+            "action": "video:resolve:request:interaction:plugin:video@http://msx.benzac.de/interaction/resolve.html"
+        }, {
+            "badge": "Interaction",
+            "icon": "msx-white-soft:movie",
+            "title": "Video 6",
+            "titleFooter": "Unsupported",
+            "playerLabel": "Video 6",
+            "action": "video:resolve:request:interaction:unsupported@http://msx.benzac.de/interaction/resolve.html"
+        }, {
+            "badge": "Interaction",
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "resolve:request:interaction:image@http://msx.benzac.de/interaction/resolve.html",
+            "title": "Audio 4",
+            "titleFooter": "Standard",
+            "playerLabel": "Audio 4",
+            "action": "audio:resolve:request:interaction:audio@http://msx.benzac.de/interaction/resolve.html"
+        }, {
+            "badge": "Interaction",
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "resolve:request:interaction:image@http://msx.benzac.de/interaction/resolve.html",
+            "title": "Audio 5",
+            "titleFooter": "Plugin",
+            "playerLabel": "Audio 5",
+            "action": "audio:resolve:request:interaction:plugin:audio@http://msx.benzac.de/interaction/resolve.html"
+        }, {
+            "badge": "Interaction",
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "resolve:request:interaction:unsupported@http://msx.benzac.de/interaction/resolve.html",
+            "title": "Audio 6",
+            "titleFooter": "Unsupported",
+            "playerLabel": "Audio 6",
+            "action": "audio:resolve:request:interaction:unsupported@http://msx.benzac.de/interaction/resolve.html"
+        }]
+}

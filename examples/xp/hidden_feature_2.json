@@ -1,0 +1,10 @@
+{
+    "headline": "My Menu",
+    "menu": [{
+            "label": "My Menu Item"
+        }, {
+            "type": "separator"
+        }, {
+            "type": "settings"
+        }]
+}

@@ -1,0 +1,202 @@
+{
+    "type": "pages",
+    "headline": "Image Height",
+    "pages": [{         
+            "items": [
+                {
+                    "type": "button",
+                    "layout": "0,0,2,1",                    
+                    "label": "1"
+                }, {
+                    "type": "button",
+                    "layout": "0,1,2,1",                    
+                    "label": "2"
+                }, {
+                    "type": "button",
+                    "layout": "0,2,2,1",                    
+                    "label": "3"
+                }, {
+                    "type": "button",
+                    "layout": "0,3,2,1",                    
+                    "label": "4"
+                }, {
+                    "type": "button",
+                    "layout": "0,4,2,1",                    
+                    "label": "5"
+                }, {
+                    "type": "button",
+                    "layout": "0,5,2,1",                    
+                    "label": "6"
+                }, {
+                    "type": "default",
+                    "layout": "2,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:0}",                   
+                    "imageHeight": 0,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:1}",
+                    "imageHeight": 1,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "6,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:2}",
+                    "imageHeight": 2,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:3}",
+                    "imageHeight": 3,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "10,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:4}",
+                    "imageHeight": 4,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]        
+        }, {         
+            "items": [
+                {
+                    "type": "button",
+                    "layout": "0,0,2,1",                    
+                    "label": "1"
+                }, {
+                    "type": "button",
+                    "layout": "0,1,2,1",                    
+                    "label": "2"
+                }, {
+                    "type": "button",
+                    "layout": "0,2,2,1",                    
+                    "label": "3"
+                }, {
+                    "type": "button",
+                    "layout": "0,3,2,1",                    
+                    "label": "4"
+                }, {
+                    "type": "button",
+                    "layout": "0,4,2,1",                    
+                    "label": "5"
+                }, {
+                    "type": "button",
+                    "layout": "0,5,2,1",                    
+                    "label": "6"
+                }, {
+                    "type": "default",
+                    "layout": "2,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:5}",
+                    "imageHeight": 5,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:6}",
+                    "imageHeight": 6,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "6,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:7}",   
+                    "titleFooter": "Image height is ignored, because it is greater than the item height.",
+                    "imageHeight": 7,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:8}",
+                    "titleFooter": "Image height is ignored, because it is greater than the item height.",
+                    "imageHeight": 8,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "10,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:9}",
+                    "titleFooter": "Image height is ignored, because it is greater than the item height.",
+                    "imageHeight": 9,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]        
+        }, {         
+            "items": [
+                {
+                    "type": "button",
+                    "layout": "0,0,2,1",                    
+                    "label": "1"
+                }, {
+                    "type": "button",
+                    "layout": "0,1,2,1",                    
+                    "label": "2"
+                }, {
+                    "type": "button",
+                    "layout": "0,2,2,1",                    
+                    "label": "3"
+                }, {
+                    "type": "button",
+                    "layout": "0,3,2,1",                    
+                    "label": "4"
+                }, {
+                    "type": "button",
+                    "layout": "0,4,2,1",                    
+                    "label": "5"
+                }, {
+                    "type": "button",
+                    "layout": "0,5,2,1",                    
+                    "label": "6"
+                }, {
+                    "type": "default",
+                    "layout": "2,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:0.83}",
+                    "titleFooter": "Image height is aligned with the edge of item 1.",
+                    "imageHeight": 0.83,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:1.83}",
+                    "titleFooter": "Image height is aligned with the edge of item 2.",
+                    "imageHeight": 1.83,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "6,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:2.83}",
+                    "titleFooter": "Image height is aligned with the edge of item 3.",
+                    "imageHeight": 2.83,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:3.83}",
+                    "titleFooter": "Image height is aligned with the edge of item 4.",
+                    "imageHeight": 3.83,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "10,0,2,6",                    
+                    "titleHeader": "{txt:msx-white:4.83}",
+                    "titleFooter": "Image height is aligned with the edge of item 5.",
+                    "imageHeight": 4.83,
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]        
+        }]
+}

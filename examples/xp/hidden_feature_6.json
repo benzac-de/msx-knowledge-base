@@ -1,0 +1,59 @@
+{
+    "type": "pages",
+    "headline": "Number Inline Expressions",
+    "template": {
+        "type": "separate",
+        "layout": "0,0,2,3",
+        "icon": "msx-white-soft:info",
+        "color": "msx-glass"
+    },
+    "items": [{
+            "title": "Specific Date/Time",
+            "action": "info:{num:1548335764000:date:DD, MM d, yyyy}, {num:1548335764000:time:h:mm/ampm}"
+        }, {
+            "title": "Current Date/Time",
+            "action": "info:{num:now:date:DD, MM d, yyyy}, {num:now:time:h:mm/ampm}"
+        }, {
+            "title": "Colored Date/Time",
+            "action": "info:{txt:msx-blue:num:1548335764000:date:DD, MM d, yyyy}, {txt:msx-blue:num:1548335764000:time:h:mm/ampm}"
+        }, {
+            "title": "Duration Time",
+            "action": "info:{num:5640000:duration:time:hh:mm:ss}"
+        }, {
+            "title": "Duration Text",
+            "action": "info:{num:5640000:duration:text:dhms}"
+        }, {
+            "title": "Colored Duration",
+            "action": "info:{txt:msx-blue:num:5640000:duration:text:dhms}"
+        }, {
+            "badge": "Formatter",
+            "title": "Specific Date/Time",
+            "titleFooter": "0.1.160+",
+            "action": "info:{num:1548335764000:formatter:day_full}"
+        }, {
+            "badge": "Formatter",
+            "title": "Current Date/Time",
+            "titleFooter": "0.1.160+",
+            "action": "info:{num:now:formatter:day_full}"
+        }, {
+            "badge": "Formatter",
+            "title": "Colored Date/Time",
+            "titleFooter": "0.1.160+",
+            "action": "info:{txt:msx-blue:num:1548335764000:formatter:day_full}"
+        }, {
+            "badge": "Format",
+            "title": "Default Number",
+            "titleFooter": "0.1.160+",
+            "action": "info:{num:12345.12345:format}"
+        }, {
+            "badge": "Format",
+            "title": "Rounded Number",
+            "titleFooter": "0.1.160+",
+            "action": "info:{num:12345.12345:format:0}"
+        }, {
+            "badge": "Format",
+            "title": "Colored Number",
+            "titleFooter": "0.1.160+",
+            "action": "info:{txt:msx-blue:num:12345.12345:format: ,24}"
+        }]
+}

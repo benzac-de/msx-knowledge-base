@@ -1,0 +1,126 @@
+{
+    "type": "list",
+    "headline": "Extended Properties Test",
+    "template": {
+        "type": "separate",
+        "layout": "0,0,2,4",
+        "icon": "msx-white-soft:movie",
+        "color": "msx-glass"
+    },
+    "items": [{
+            "title": "Video 1",
+            "playerLabel": "Video 1",
+            "action": "video:http://msx.benzac.de/media/video1.mp4",
+            "properties": {
+                "button:content:icon": "info",
+                "button:content:action": "info:Live info executed.",
+                "label:duration": "Live",
+                "label:extension": "{ico:msx-red:live-tv}",
+                "progress:color": "msx-red",
+                "progress:type": "reverse:time:[H:]M:ss"
+            }
+        }, {
+            "title": "Video 2",
+            "playerLabel": "Video 2",
+            "action": "video:http://msx.benzac.de/media/video2.mp4",
+            "properties": {
+                "button:content:icon": "info",
+                "button:content:action": "info:Ad info executed.",
+                "button:forward:enable": "false",
+                "button:rewind:enable": "false",
+                "button:restart:enable": "false",
+                "button:speed:enable": "false",
+                "label:extension": "{txt:msx-yellow:Ad}",
+                "progress:color": "msx-yellow",
+                "progress:type": "text:s",
+                "progress:marker:enable": "false"
+            }
+        }, {
+            "title": "Video 3",
+            "playerLabel": "Video 3",
+            "action": "video:http://msx.benzac.de/media/video4.mp4",
+            "properties": {
+                "button:content:icon": "info",
+                "button:content:action": "info:Video info executed.",
+                "label:extension": "{ico:msx-blue:local-play}",
+                "progress:color": "msx-blue",
+                "progress:type": "percentage",
+                "trigger:midpoint": "info:Midpoint of video reached.",
+                "trigger:third_quartile": "dialog:none"
+            }
+        }, {
+            "badge": "Extended",
+            "title": "Video 4",
+            "titleFooter": "0.1.130+",
+            "playerLabel": "Video 4",
+            "action": "video:http://msx.benzac.de/media/video5.mp4",
+            "properties": {
+                "button:content:icon": "info",
+                "button:content:action": "info:Video info executed.",  
+                "button:rewind:icon": "thumb-down",
+                "button:rewind:action": "info:Thumb down executed.",  
+                "button:forward:icon": "thumb-up",
+                "button:forward:action": "info:Thumb up executed.",  
+                "button:restart:display": "false",
+                "button:speed:display": "false",      
+                "label:extension": "{ico:msx-white:ondemand-video} Extended",
+                "progress:type": "time:[H:]M:ss",
+                "control:type": "extended",
+                "info:image": "http://msx.benzac.de/img/icon.png",
+                "info:text": "Placeholder for additional video information."
+            }
+        }, {
+            "badge": "Extended",
+            "title": "Video 5",
+            "titleFooter": "0.1.130+",
+            "playerLabel": "Video 5",
+            "action": "video:http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "button:content:icon": "info",
+                "button:content:action": "panel:request:interaction:program@http://msx.benzac.de/interaction/live.html",  
+                "button:restart:display": "false",  
+                "button:rewind:display": "false",               
+                "button:play_pause:display": "false",
+                "button:forward:display": "false",
+                "button:speed:display": "false",                  
+                "label:extension": "{ico:msx-white:access-time} {now:time:hh:mm:ss}",
+                "label:position": "...",
+                "label:duration": "...",               
+                "control:type": "extended",
+                "trigger:load": "interaction:load:http://msx.benzac.de/interaction/live.html",   
+                "trigger:complete": "player:auto:restart",
+                "info:text": "This video is controlled by an interaction plugin to simulate a live stream.",
+                "live:channel": "0",
+                "live:program": "-1"
+            }
+        }, {
+            "badge": "Extended",
+            "title": "Video 6",
+            "titleFooter": "0.1.140+",
+            "playerLabel": "Video 6",
+            "action": "video:http://msx.benzac.de/media/video6.mp4",
+            "properties": {
+                "control:type": "extended",
+                "control:action": "[player:show:execute|player:pause]",
+                "trigger:foreground": "player:auto:play",
+                "button:play_pause:icon": "default",
+                "button:play_pause:action": "[player:play_pause|player:hide_play]",
+                "info:text": "This video shows a quick play/pause function.{br}{ico:msx-white:play-arrow} If you press {txt:msx-white:OK} while the video is in foreground, it is paused.{br}{ico:msx-white:play-arrow} If you return to foreground, it is resumed.{br}"                
+            }
+        }, {
+            "badge": "Extended",
+            "title": "Video 7",
+            "titleFooter": "0.1.146+",
+            "playerLabel": "Video 7",
+            "action": "video:http://msx.benzac.de/media/video7.mp4",
+            "properties": {
+                "control:type": "extended",
+                "info:image": "http://msx.benzac.de/media/thumbs/video7.jpg",
+                "info:size": "large",
+                "info:overlay": "full",              
+                "info:text": "This video shows a next video selection when the video is ending (i.e. the video is playing and 10 seconds or less are remaining).",
+                "trigger:ending": "content:http://msx.benzac.de/info/xp/data/next_video_test.json",
+                "trigger:complete": "[]" 
+            }
+        }]
+}

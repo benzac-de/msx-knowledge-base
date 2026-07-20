@@ -1,0 +1,20 @@
+{
+    "headline": "Actions",   
+    "menu": [{
+            "label": "Videos",
+            "data": "http://msx.benzac.de/info/data/guide/videos.json"
+        }, {
+            "label": "Audios",
+            "data": "http://msx.benzac.de/info/data/guide/audios.json"
+        }, {
+            "label": "Images",
+            "data": "http://msx.benzac.de/info/data/guide/images.json"
+        }, {
+            "label": "Links",
+            "data": "http://msx.benzac.de/info/data/guide/links.json"
+        }, {
+            "label": "Mixed",
+            "data": "http://msx.benzac.de/info/data/guide/mixed.json"
+        }
+    ]
+}

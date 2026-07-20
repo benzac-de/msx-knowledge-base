@@ -1,0 +1,141 @@
+{
+    "type": "list",
+    "headline": "Tabs",
+    "preload": "next",
+    "flag": "tabs",
+    "header": {
+        "offset": "0,0,0,0.25",
+        "items": [{
+                "type": "space",
+                "round": false,
+                "layout": "0,0,12,3",
+                "offset": "-1.25,-1,2,1",
+                "color": "msx-glass",
+                "image": "https://picsum.photos/seed/msx_665e1e1c_bg/1992/552",
+                "imageFiller": "cover",
+                "imageOverlay": 4
+            }, {
+                "type": "space",
+                "round": false,
+                "layout": "0,1,12,1",
+                "offset": "-1.25,1,2,0",
+                "color": "msx-black-soft"
+            }, {
+                "type": "default",
+                "layout": "0,2,3,1",
+                "focus": true,
+                "color": "msx-white-soft",
+                "label": "{col:msx-black}First Section",
+                "action": "replace:content:tabs:http://msx.benzac.de/info/xp/data/hidden_feature_15_section1.json"
+            }, {
+                "type": "default",
+                "layout": "3,2,3,1",
+                "color": "transparent",
+                "label": "Second Section",
+                "action": "replace:content:tabs:http://msx.benzac.de/info/xp/data/hidden_feature_15_section2.json"
+            }, {
+                "type": "default",
+                "layout": "6,2,3,1",
+                "color": "transparent",
+                "label": "Third Section",
+                "action": "replace:content:tabs:http://msx.benzac.de/info/xp/data/hidden_feature_15_section3.json"
+            }, {
+                "type": "default",
+                "layout": "9,2,3,1",
+                "color": "transparent",
+                "label": "Fourth Section",
+                "action": "replace:content:tabs:http://msx.benzac.de/info/xp/data/hidden_feature_15_section4.json"
+            }]
+    },
+    "template": {
+        "type": "default",
+        "layout": "0,0,3,2",
+        "color": "msx-glass",
+        "imageFiller": "cover"
+    },
+    "items": [{
+            "titleHeader": "{col:msx-white}First Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item0/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item0/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}First Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Second Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item1/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item1/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Second Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Third Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item2/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item2/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Third Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Fourth Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item3/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item3/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Fourth Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Fifth Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item4/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item4/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Fifth Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Sixth Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item5/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item5/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Sixth Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Seventh Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item6/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item6/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Seventh Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Eighth Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item7/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item7/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Eighth Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Ninth Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item8/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item8/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Ninth Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Tenth Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item9/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item9/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Tenth Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Eleventh Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item10/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item10/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Eleventh Item"
+            }
+        }, {
+            "titleHeader": "{col:msx-white}Twelfth Item",
+            "image": "https://picsum.photos/seed/msx_903ff95d_item11/408/264",
+            "action": "image:https://picsum.photos/seed/msx_903ff95d_item11/1920/1080",
+            "properties": {
+                "image:extension": "| {col:msx-white}Twelfth Item"
+            }
+        }]
+}

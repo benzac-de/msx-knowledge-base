@@ -1,0 +1,62 @@
+{
+    "type": "list",
+    "headline": "Video Plugin Test",
+    "template": {
+        "type": "separate",
+        "layout": "0,0,2,4",
+        "icon": "msx-white-soft:extension",
+        "color": "msx-glass"
+    },
+    "items": [{           
+            "title": "Template",
+            "playerLabel": "Template",
+            "action": "video:plugin:http://msx.benzac.de/plugins/template.html"
+        }, {
+            "badge": "{txt:msx-white:Html5}",
+            "badgeColor": "#000000",
+            "title": "Example Video",
+            "action": "video:plugin:http://msx.benzac.de/plugins/html5.html?url=http://msx.benzac.de/media/video3.mp4"
+        }, {
+            "badge": "{txt:msx-white:YouTube}",
+            "badgeColor": "#ff0000",
+            "title": "Example Video",
+            "playerLabel": "YouTube - Example Video",
+            "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=PRy2CFVlPOA"
+        }, {
+            "badge": "{txt:msx-white:Vimeo}",
+            "badgeColor": "#1ab7ea",
+            "title": "Example Video",
+            "playerLabel": "Vimeo - Example Video",
+            "action": "video:plugin:http://msx.benzac.de/plugins/vimeo.html?id=54802209"
+        }, {
+            "badge": "{txt:msx-white:Dailymotion}",
+            "badgeColor": "#00aaff",
+            "title": "Example Video",
+            "playerLabel": "Dailymotion - Example Video",
+            "action": "video:plugin:http://msx.benzac.de/plugins/dailymotion.html?id=xz14c1"
+        }, {
+            "badge": "{txt:msx-white:Twitch}",
+            "badgeColor": "#643fa6",
+            "title": "Example Video",
+            "playerLabel": "Twitch - Example Video",
+            "action": "video:plugin:http://msx.benzac.de/plugins/twitch.html?id=499763039"
+        }, {
+            "badge": "{txt:msx-white:Facebook}",
+            "badgeColor": "#4767aa",
+            "title": "Example Video",
+            "playerLabel": "Facebook - Example Video",
+            "action": "video:plugin:http://msx.benzac.de/plugins/facebook.html?id=10152454700553553"
+        }, {
+            "badge": "{txt:msx-white:Wistia}",
+            "badgeColor": "#5aaff2",
+            "title": "Example Video",
+            "playerLabel": "Wistia - Example Video",
+            "action": "video:plugin:http://msx.benzac.de/plugins/wistia.html?id=ve7pzy0d3y"
+        }, {
+            "badge": "{txt:msx-white:SoundCloud}",
+            "badgeColor": "#ff5500",
+            "title": "Example Track",
+            "playerLabel": "SoundCloud - Example Track",
+            "action": "video:plugin:http://msx.benzac.de/plugins/soundcloud.html?id=143041228"
+        }]
+}

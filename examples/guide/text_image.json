@@ -1,0 +1,270 @@
+{
+    "type": "pages",
+    "headline": "Text & Image",
+    "pages": [{
+            "headline": "Different Combinations",
+            "items": [{
+                    "type": "default",
+                    "layout": "0,0,4,3",                     
+                    "headline": "Headline",
+                    "text": "Text",                    
+                    "icon": "msx-white-soft:apps",   
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                  
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,4,3",                    
+                    "headline": "Headline",
+                    "text": "Text",                            
+                    "icon": "msx-white-soft:apps",   
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover",
+                    "imageHeight": 1.25
+                }, {
+                    "type": "separate",
+                    "layout": "8,0,4,3",                                   
+                    "headline": "Headline",
+                    "text": "Text",                     
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                  
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "teaser",
+                    "layout": "0,3,4,3",                   
+                    "headline": "Headline",
+                    "text": "Text",                      
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "default",
+                    "layout": "4,3,4,3",
+                    "headline": "Headline",
+                    "text": "Text",                    
+                    "icon": "msx-white-soft:apps",  
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover",
+                    "imageWidth": 2
+                }, {
+                    "type": "button",
+                    "layout": "8,3,4,3",
+                    "headline": "Headline",
+                    "text": "Text",                   
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                  
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }
+            ]
+        }, {
+            "headline": "Colored Content With Background",
+            "background": "http://msx.benzac.de/img/test.jpg",
+            "items": [{
+                    "type": "default",
+                    "layout": "0,0,4,3",                     
+                    "headline": "Headline",
+                    "text": "Text",                    
+                    "icon": "msx-white-soft:apps",   
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "color": "msx-red"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,4,3",                    
+                    "headline": "Headline",
+                    "text": "Text",                           
+                    "icon": "msx-white-soft:apps",   
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",   
+                    "imageHeight": 1.25,
+                    "color": "msx-green"
+                }, {
+                    "type": "separate",
+                    "layout": "8,0,4,3",   
+                    "headline": "Headline",
+                    "text": "Text",                   
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "color": "msx-yellow"
+                }, {
+                    "type": "teaser",
+                    "layout": "0,3,4,3",                
+                    "headline": "Headline",
+                    "text": "Text",                       
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                    
+                    "color": "msx-blue"
+                }, {
+                    "type": "default",
+                    "layout": "4,3,4,3",
+                    "headline": "Headline",
+                    "text": "Text",                  
+                    "icon": "msx-white-soft:apps",  
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer", 
+                    "imageWidth": 2,
+                    "color": "msx-gray"
+                }, {
+                    "type": "button",
+                    "layout": "8,3,4,3",
+                    "headline": "Headline",
+                    "text": "Text",                   
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer"                   
+                }
+            ]
+        }, {
+            "headline": "Colored Content With Images",          
+            "items": [{
+                    "type": "default",
+                    "layout": "0,0,4,3",                     
+                    "headline": "Headline",
+                    "text": "Text",                   
+                    "icon": "msx-white-soft:apps",   
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "color": "msx-red",               
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,4,3",                    
+                    "headline": "Headline",
+                    "text": "Text",                         
+                    "icon": "msx-white-soft:apps",   
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "color": "msx-green",                 
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover",
+                    "imageHeight": 1.5
+                }, {
+                    "type": "separate",
+                    "layout": "8,0,4,3",               
+                    "headline": "Headline",
+                    "text": "Text",                    
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "color": "msx-yellow",                  
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "teaser",                  
+                    "layout": "0,3,4,3",  
+                    "headline": "Headline",
+                    "text": "Text",                        
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                   
+                    "color": "msx-blue",                   
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "default",
+                    "layout": "4,3,4,3",
+                    "headline": "Headline",
+                    "text": "Text",                    
+                    "icon": "msx-white-soft:apps",  
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                    
+                    "color": "msx-gray",                   
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover",
+                    "imageWidth": 2
+                }, {
+                    "type": "button",
+                    "layout": "8,3,4,3",
+                    "headline": "Headline",
+                    "text": "Text",                    
+                    "icon": "msx-white-soft:apps",
+                    "titleHeader": "Title Header",
+                    "title": "Title",
+                    "titleFooter": "Title Footer",                                  
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }
+            ]
+        }, {
+            "headline": "Overlayed Content",
+            "items": [{
+                    "type": "space",
+                    "layout": "0,0,12,6",
+                    "headline": "Space Headline"          
+                }, {
+                    "type": "space",
+                    "offset": "0,-0.5,0,0.5",
+                    "layout": "0,1,12,5",                   
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover",
+                    "titleFooter": "Space Image"      
+                }, {
+                    "type": "default",
+                    "offset": "-0.5,0,0,0",
+                    "layout": "2,1,3,2",   
+                    "icon": "msx-white-soft:apps",                   
+                    "titleFooter": "Title Footer"          
+                }, {
+                    "type": "default",
+                    "offset": "-0.5,0,0,0",
+                    "layout": "5,1,3,2",   
+                    "icon": "msx-white-soft:apps",                   
+                    "titleFooter": "Title Footer"          
+                }, {
+                    "type": "default",
+                    "offset": "-0.5,0,0,0",
+                    "layout": "8,1,3,2",                   
+                    "icon": "msx-white-soft:apps",                   
+                    "titleFooter": "Title Footer"                 
+                }, {
+                    "type": "default",
+                    "offset": "-0.5,0,0,0",
+                    "layout": "2,3,3,2",                   
+                    "icon": "msx-white-soft:apps",                   
+                    "titleFooter": "Title Footer"                   
+                }, {
+                    "type": "default",
+                    "offset": "-0.5,0,0,0",
+                    "layout": "5,3,3,2",                   
+                    "icon": "msx-white-soft:apps",                   
+                    "titleFooter": "Title Footer"                   
+                }, {
+                    "type": "default",
+                    "offset": "-0.5,0,0,0",
+                    "layout": "8,3,3,2",                   
+                    "icon": "msx-white-soft:apps",   
+                    "titleFooter": "Title Footer"          
+                }]
+        }]
+}

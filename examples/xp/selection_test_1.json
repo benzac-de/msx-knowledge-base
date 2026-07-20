@@ -1,0 +1,87 @@
+{
+    "type": "pages",
+    "headline": "Selection Test",
+    "overlay": {
+        "items": [{
+                "id": "info",
+                "type": "space",
+                "layout": "0,4,12,2",
+                "text": ""
+            }
+        ]
+    },
+    "template": {
+        "type": "separate",
+        "layout": "0,0,2,4",
+        "icon": "msx-white-soft:adb",
+        "color": "msx-glass"
+    },
+    "items": [{
+            "badge": "{col:msx-white}important",
+            "badgeColor": "msx-red",
+            "title": "Item 1",
+            "action": "info:Item 1 executed.",
+            "selection": {
+                "important": true,
+                "background": "http://msx.benzac.de/img/bg1.jpg",
+                "action": "update:content:overlay:info",
+                "data": {
+                    "text": "{ico:msx-blue:info} Item 1 selected."
+                }
+            }
+        }, {
+            "badge": "{col:msx-white}important",
+            "badgeColor": "msx-red",
+            "title": "Item 2",
+            "action": "info:Item 2 executed.",
+            "selection": {
+                "important": true,
+                "background": "http://msx.benzac.de/img/bg2.jpg",
+                "action": "update:content:overlay:info",
+                "data": {
+                    "text": "{ico:msx-blue:info} Item 2 selected."
+                }
+            }
+        }, {
+            "badge": "{col:msx-white}important",
+            "badgeColor": "msx-red",
+            "title": "Item 3",
+            "action": "info:Item 3 executed.",
+            "selection": {
+                "important": true,
+                "background": "http://msx.benzac.de/img/bg3.jpg",
+                "action": "update:content:overlay:info",
+                "data": {
+                    "text": "{ico:msx-blue:info} Item 3 selected."
+                }
+            }
+        }, {
+            "title": "Item 4",
+            "action": "info:Item 4 executed.",
+            "selection": {
+                "action": "update:content:overlay:info",
+                "data": {
+                    "text": "{ico:msx-blue:info} Item 4 selected."
+                }
+            }
+        }, {
+            "title": "Item 5",
+            "action": "info:Item 5 executed.",
+            "selection": {
+                "action": "update:content:overlay:info",
+                "data": {
+                    "text": "{ico:msx-blue:info} Item 5 selected."
+                }
+            }
+        }, {
+            "title": "Item 6",
+            "action": "info:Item 6 executed.",
+            "selection": {
+                "action": "update:content:overlay:info",
+                "data": {
+                    "text": "{ico:msx-blue:info} Item 6 selected."
+                }
+            }
+        }
+    ]
+}

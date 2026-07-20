@@ -1,0 +1,16 @@
+{
+    "headline": "Paging Examples",
+    "menu": [{
+            "label": "Paging Example 1",
+            "extensionLabel": "Limit: 20",
+            "data": "request:interaction:http://msx.benzac.de/services/paging.php?offset={OFFSET}&limit={LIMIT}|20@http://msx.benzac.de/interaction/paging.html"
+        }, {
+            "label": "Paging Example 2",
+            "extensionLabel": "Limit: 30",
+            "data": "request:interaction:http://msx.benzac.de/services/paging.php?offset={OFFSET}&limit={LIMIT}|30@http://msx.benzac.de/interaction/paging.html"
+        }, {
+            "label": "Paging Example 3",
+            "extensionLabel": "Limit: 40",
+            "data": "request:interaction:http://msx.benzac.de/services/paging.php?offset={OFFSET}&limit={LIMIT}|40@http://msx.benzac.de/interaction/paging.html"
+        }]
+}

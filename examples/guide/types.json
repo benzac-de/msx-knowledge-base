@@ -1,0 +1,64 @@
+{
+    "type": "pages",
+    "headline": "Types",
+    "pages": [{    
+            "items": [{
+                    "type": "teaser",
+                    "layout": "0,0,4,6",                   
+                    "badge": "Badge",                  
+                    "tag": "Tag",
+                    "tagColor": "msx-red",
+                    "titleHeader": "Teaser Header",
+                    "title": "Teaser",
+                    "titleFooter": "Teaser Footer",                 
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "height-left"
+                }, {
+                    "type": "button",
+                    "layout": "10,0,2,2",
+                    "label": "Button",                   
+                    "icon": "apps",
+                    "iconSize": "small"
+                }, {
+                    "type": "default",
+                    "layout": "4,3,4,2",
+                    "titleFooter": "Default Footer",
+                    "title": "Default",                   
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "width-center"                            
+                }, {
+                    "type": "default",
+                    "layout": "8,3,4,3",
+                    "titleFooter": "Default Footer",
+                    "title": "Default",                 
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "width-center",
+                    "imageHeight": 1.83
+                }, {
+                    "type": "default",
+                    "layout": "4,5,4,1",
+                    "titleFooter": "Default Footer",
+                    "title": "Default",                  
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "width-center",
+                    "imageWidth": 1.83
+                }, {
+                    "type": "space",                  
+                    "layout": "8,2,4,1", 
+                    "title": "Space",
+                    "titleFooter": "Space Footer"                  
+                }, {
+                    "type": "default",                 
+                    "layout": "8,0,2,2",             
+                    "headline": "Headline",
+                    "text": "Text Text Text Text Text Text Text Text."                                  
+                }, {
+                    "type": "separate",
+                    "layout": "4,0,4,3",
+                    "titleFooter": "Separate Footer",
+                    "titleHeader": "Separate Header",                    
+                    "image": "http://msx.benzac.de/img/test.jpg",                 
+                    "imageFiller": "width-center"
+                }]
+        }]
+}

@@ -1,0 +1,203 @@
+{
+    "type": "pages",
+    "headline": "Image Filler",    
+    "pages": [{
+            "items": [{
+                    "type": "default",
+                    "layout": "0,0,12,6",
+                    "color": "msx-black",
+                    "titleFooter": "default",
+                    "imageFiller": "default",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]
+        }, {
+            "items": [
+                {
+                    "type": "default",
+                    "layout": "0,0,4,2",
+                    "color": "msx-black",
+                    "titleFooter": "width-top",
+                    "imageFiller": "width-top",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,4,2",       
+                    "color": "msx-black",
+                    "titleFooter": "width-center",
+                    "imageFiller": "width-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,0,4,2",   
+                    "color": "msx-black",
+                    "titleFooter": "width-bottom",
+                    "imageFiller": "width-bottom",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "0,2,4,4",                                     
+                    "color": "msx-black",
+                    "titleFooter": "height-left",
+                    "imageFiller": "height-left",
+                    "image": "http://msx.benzac.de/img/test.jpg"                  
+                }, {
+                    "type": "default",
+                    "layout": "4,2,4,4",   
+                    "color": "msx-black",
+                    "titleFooter": "height-center",
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,2,4,4",    
+                    "color": "msx-black",
+                    "titleFooter": "height-right",
+                    "imageFiller": "height-right",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]
+        }, {
+            "items": [
+                {
+                    "type": "default",
+                    "layout": "0,0,4,2",
+                    "color": "msx-black",
+                    "titleFooter": "height-left",
+                    "imageFiller": "height-left",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,4,2",   
+                    "color": "msx-black",
+                    "titleFooter": "height-center",
+                    "imageFiller": "height-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,0,4,2",     
+                    "color": "msx-black",              
+                    "titleFooter": "height-right",
+                    "imageFiller": "height-right",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "0,2,4,4", 
+                    "color": "msx-black",
+                    "titleFooter": "width-top",
+                    "imageFiller": "width-top",
+                    "image": "http://msx.benzac.de/img/test.jpg"                  
+                }, {
+                    "type": "default",
+                    "layout": "4,2,4,4", 
+                    "color": "msx-black",
+                    "titleFooter": "width-center",
+                    "imageFiller": "width-center",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,2,4,4",    
+                    "color": "msx-black",
+                    "titleFooter": "width-bottom",
+                    "imageFiller": "width-bottom",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]
+        }, {
+            "items": [
+                {
+                    "type": "default",
+                    "layout": "0,0,4,2",
+                    "color": "msx-black",
+                    "titleFooter": "fit",
+                    "imageFiller": "fit",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,4,2",    
+                    "color": "msx-black",
+                    "titleFooter": "cover",
+                    "imageFiller": "cover",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,0,4,2",   
+                    "color": "msx-black",
+                    "titleFooter": "smart",
+                    "imageFiller": "smart",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "0,2,4,4",    
+                    "color": "msx-black",
+                    "titleFooter": "fit",
+                    "imageFiller": "fit",
+                    "image": "http://msx.benzac.de/img/test.jpg"                  
+                }, {
+                    "type": "default",
+                    "layout": "4,2,4,4",   
+                    "color": "msx-black",
+                    "titleFooter": "cover",
+                    "imageFiller": "cover",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,2,4,4",  
+                    "color": "msx-black",
+                    "titleFooter": "smart",
+                    "imageFiller": "smart",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]
+        }, {
+            "items": [
+                {
+                    "type": "default",
+                    "layout": "0,0,4,2",
+                    "color": "msx-black",
+                    "titleFooter": "height (width: 1)",
+                    "imageFiller": "height",
+                    "imageWidth": 1,
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "4,0,4,2",    
+                    "color": "msx-black",
+                    "titleFooter": "height{br}(width: 2)",
+                    "imageFiller": "height",
+                    "imageWidth": 2,
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,0,4,2",          
+                    "color": "msx-black",
+                    "titleFooter": "default",
+                    "imageFiller": "default",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "0,2,4,4",        
+                    "color": "msx-black",
+                    "titleFooter": "width (height: 1)",
+                    "imageFiller": "width",
+                    "imageHeight": 1,
+                    "image": "http://msx.benzac.de/img/test.jpg"                  
+                }, {
+                    "type": "default",
+                    "layout": "4,2,4,4",    
+                    "color": "msx-black",
+                    "titleFooter": "width (height: 2)",
+                    "imageFiller": "width",
+                    "imageHeight": 2,
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }, {
+                    "type": "default",
+                    "layout": "8,2,4,4",   
+                    "color": "msx-black",
+                    "titleFooter": "default",
+                    "imageFiller": "default",
+                    "image": "http://msx.benzac.de/img/test.jpg"
+                }
+            ]
+        }]
+}

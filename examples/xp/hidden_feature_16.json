@@ -1,0 +1,33 @@
+{
+    "type": "pages",
+    "headline": "Image Options",
+    "template": {
+        "type": "default",
+        "layout": "0,0,3,2",
+        "color": "msx-glass",
+        "imageFiller": "cover",
+        "action": "image:context",
+        "properties": {
+            "image:options": true,
+            "image:icon": "slider:options",
+            "image:action": "slider:execute:slider:options:execute"
+        }
+    },
+    "items": [{
+            "titleFooter": "Image 1",
+            "image": "http://msx.benzac.de/img/bg1.jpg",
+            "imageLabel": "Image 1"
+        }, {
+            "titleFooter": "Image 2",
+            "image": "http://msx.benzac.de/img/bg2.jpg",
+            "imageLabel": "Image 2"
+        }, {
+            "titleFooter": "Image 3",
+            "image": "http://msx.benzac.de/img/bg3.jpg",
+            "imageLabel": "Image 3"
+        }, {
+            "titleFooter": "Image 4",
+            "image": "http://msx.benzac.de/img/test.jpg",
+            "imageLabel": "Image 4"
+        }]
+}

@@ -1,0 +1,416 @@
+{
+    "type": "list",
+    "headline": "IMA Plugin Test",
+    "note": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/tags",
+    "compress": true,
+    "template": {
+        "type": "control",
+        "layout": "0,0,16,1",
+        "icon": "movie"
+    },
+    "items": [{
+            "label": "Single Inline Linear",
+            "playerLabel": "Single Inline Linear",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/single_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ct=linear",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "Single Skippable Inline",
+            "playerLabel": "Single Skippable Inline",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/single_preroll_skippable",
+                "ima:param:sz": "640x480",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "Single Redirect Linear",
+            "playerLabel": "Single Redirect Linear",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/single_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ct=redirectlinear",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "Single Redirect Error",
+            "playerLabel": "Single Redirect Error",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/single_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ct=redirecterror",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "Single Redirect Broken (Fallback)",
+            "playerLabel": "Single Redirect Broken (Fallback)",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/single_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ct=redirecterror",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",
+                "ima:param:nofb": "1",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "Single VPAID 2.0 Linear",
+            "playerLabel": "Single VPAID 2.0 Linear",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/single_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ct=linearvpaid2js",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "Single VPAID 2.0 Non-Linear",
+            "playerLabel": "Single VPAID 2.0 Non-Linear",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/single_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ct=nonlinearvpaid2js",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "Single Non-linear Inline",
+            "playerLabel": "Single Non-linear Inline",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/nonlinear_ad_samples",
+                "ima:param:sz": "480x70",
+                "ima:param:cust_params": "sample_ct=nonlinear",
+                "ima:param:ciu_szs": "300x250,728x90",
+                "ima:param:gdfp_req": "1",
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP Session Ad Rule Pre-roll",
+            "playerLabel": "VMAP Session Ad Rule Pre-roll",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sar=a0f2",
+                "ima:param:ciu_szs": "300x250",
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP Pre-roll",
+            "playerLabel": "VMAP Pre-roll",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=preonly",
+                "ima:param:ciu_szs": "300x250",               
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP Pre-roll + Bumper",
+            "playerLabel": "VMAP Pre-roll + Bumper",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=preonlybumper",
+                "ima:param:ciu_szs": "300x250",               
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP Post-roll",
+            "playerLabel": "VMAP Post-roll",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=postonly",
+                "ima:param:ciu_szs": "300x250",               
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP Post-roll + Bumper",
+            "playerLabel": "VMAP Post-roll + Bumper",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=postonlybumper",
+                "ima:param:ciu_szs": "300x250",               
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",               
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP Pre-, Mid-, and Post-rolls, Single Ads",
+            "playerLabel": "VMAP Pre-, Mid-, and Post-rolls, Single Ads",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=premidpost",
+                "ima:param:ciu_szs": "300x250",               
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",           
+                "ima:param:cmsid": "496",
+                "ima:param:vid": "short_onecue",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP - Pre-roll Single Ad, Mid-roll Standard Pod with 3 ads, Post-roll Single Ad",
+            "playerLabel": "VMAP - Pre-roll Single Ad, Mid-roll Standard Pod with 3 ads, Post-roll Single Ad",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=premidpostpod",
+                "ima:param:ciu_szs": "300x250",               
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",           
+                "ima:param:cmsid": "496",
+                "ima:param:vid": "short_onecue",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP - Pre-roll Single Ad, Mid-roll Optimized Pod with 3 Ads, Post-roll Single Ad",
+            "playerLabel": "VMAP - Pre-roll Single Ad, Mid-roll Optimized Pod with 3 Ads, Post-roll Single Ad",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=premidpostoptimizedpod",
+                "ima:param:ciu_szs": "300x250",
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",           
+                "ima:param:cmsid": "496",
+                "ima:param:vid": "short_onecue",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP - Pre-roll Single Ad, Mid-roll Standard Pod with 3 Ads, Post-roll Single Ad (bumpers around all ad breaks)",
+            "playerLabel": "VMAP - Pre-roll Single Ad, Mid-roll Standard Pod with 3 Ads, Post-roll Single Ad (bumpers around all ad breaks)",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=premidpostpodbumper",
+                "ima:param:ciu_szs": "300x250",
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",           
+                "ima:param:cmsid": "496",
+                "ima:param:vid": "short_onecue",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP - Pre-roll Single Ad, Mid-roll Optimized Pod with 3 Ads, Post-roll Single Ad (bumpers around all ad breaks)",
+            "playerLabel": "VMAP - Pre-roll Single Ad, Mid-roll Optimized Pod with 3 Ads, Post-roll Single Ad (bumpers around all ad breaks)",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=premidpostoptimizedpodbumper",
+                "ima:param:ciu_szs": "300x250",
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",           
+                "ima:param:cmsid": "496",
+                "ima:param:vid": "short_onecue",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "VMAP - Pre-roll Single Ad, Mid-roll Standard Pods with 5 Ads Every 10 Seconds, Post-roll Single Ad",
+            "playerLabel": "VMAP - Pre-roll Single Ad, Mid-roll Standard Pods with 5 Ads Every 10 Seconds, Post-roll Single Ad",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/vmap_ad_samples",
+                "ima:param:sz": "640x480",
+                "ima:param:cust_params": "sample_ar=premidpostlongpod",
+                "ima:param:ciu_szs": "300x250",
+                "ima:param:gdfp_req": "1",
+                "ima:param:ad_rule": "1",
+                "ima:param:output": "vmap",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",           
+                "ima:param:cmsid": "496",
+                "ima:param:vid": "short_onecue",
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "SIMID Survey Pre-roll",
+            "playerLabel": "SIMID Survey Pre-roll",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/simid",
+                "ima:param:description_url": "https://developers.google.com/interactive-media-ads",
+                "ima:param:sz": "640x480",             
+                "ima:param:gdfp_req": "1",           
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",              
+                "ima:param:correlator": ""
+            }
+        }, {
+            "label": "OM SDK Sample Pre-roll",
+            "playerLabel": "OM SDK Sample Pre-roll",
+            "action": "video:plugin:http://msx.benzac.de/plugins/ima.html?url=http://msx.benzac.de/media/video3.mp4",
+            "properties": {
+                "control:type": "extended",
+                "ima:url": "https://pubads.g.doubleclick.net/gampad/ads",
+                "ima:param:iu": "/21775744923/external/omid_ad_samples",
+                "ima:param:description_url": "http://test_site.com/homepage",
+                "ima:param:sz": "640x480",
+                "ima:param:gdfp_req": "1",           
+                "ima:param:output": "vast",
+                "ima:param:unviewed_position_start": "1",
+                "ima:param:env": "vp",
+                "ima:param:impl": "s",
+                "ima:param:vpmute": "0",
+                "ima:param:vpa": "0",
+                "ima:param:vad_forma": "linear",
+                "ima:param:url": "http://test_site.com",
+                "ima:param:vpos": "preroll",             
+                "ima:param:correlator": ""
+            }
+        }]
+}

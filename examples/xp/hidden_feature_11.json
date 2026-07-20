@@ -1,0 +1,24 @@
+{
+    "headline": "Dictionary Inline Expressions",
+    "dictionary": "http://msx.benzac.de/dic/test.json",
+    "pages": [{
+            "items": [{
+                    "layout": "0,0,12,6",
+                    "color": "msx-glass",
+                    "text": [
+                        "Test Entry: '{dic:test}'.{br}",
+                        "Test Entry: '{dic:test|Not Found}'.{br}",
+                        "Missing Entry: '{dic:missing}'.{br}",
+                        "Missing Entry: '{dic:missing|Not Found}'.{br}",
+                        "Colored Test Entry: '{txt:msx-blue:dic:test}'.{br}",
+                        "Colored Test Entry: '{txt:msx-blue:dic:test|Not Found}'.{br}",
+                        "Colored Missing Entry: '{txt:msx-blue:dic:missing}'.{br}",
+                        "Colored Missing Entry: '{txt:msx-blue:dic:missing|Not Found}'.{br}",
+                        "Complex Test Entry: '{col:msx-white}{dix:test}{ico:msx-red:error} {txt:msx-red:Not Found}{dix}{col}'.{br}",
+                        "Complex Missing Entry: '{col:msx-white}{dix:missing}{ico:msx-red:error} {txt:msx-red:Not Found}{dix}{col}'.{br}",
+                        "Insertion Test Entry: '{col:msx-white}{dix:insertion|Insertion 1|Insertion 2|Insertion 3}Missing entry with 3 insertions: {#1}, {#2}, and {#3}.{dix}{col}'.{br}",
+                        "Insertion Missing Entry: '{col:msx-white}{dix:missing|Insertion 1|Insertion 2|Insertion 3}Missing entry with 3 insertions: {#1}, {#2}, and {#3}.{dix}{col}'.{br}"
+                    ]
+                }]
+        }]
+}

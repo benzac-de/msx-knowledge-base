@@ -1,0 +1,4 @@
+{
+    "reference": "request:interaction:http://msx.benzac.de/info/data/mrss/example.xml|||http://msx.benzac.de/plugins/ad.html?url={URL}&type={TYPE}&guid={GUID}@http://msx.benzac.de/interaction/mrss.html",
+    "pages": []
+}

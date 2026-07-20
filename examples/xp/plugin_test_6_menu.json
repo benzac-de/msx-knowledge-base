@@ -1,0 +1,32 @@
+{
+    "headline": "Background Plugin Test",
+    "style": "overlay",
+    "transparent": 2,
+    "ready": {
+        "action": "execute:service:video:data:http://msx.benzac.de/services/background.php",
+        "data": {
+            "url": "http://msx.benzac.de/media/atmos1.mp4",
+            "label": "Atmospheric Background 1",
+            "transparent": true
+        }
+    },
+    "menu": [{
+            "label": "Menu Item 1",
+            "data": "http://msx.benzac.de/info/xp/data/plugin_test_6_content.json"
+        }, {
+            "label": "Menu Item 2",
+            "data": "http://msx.benzac.de/info/xp/data/plugin_test_6_content.json"
+        }, {
+            "label": "Menu Item 3",
+            "data": "http://msx.benzac.de/info/xp/data/plugin_test_6_content.json"
+        }, {
+            "label": "Menu Item 4",
+            "data": "http://msx.benzac.de/info/xp/data/plugin_test_6_content.json"
+        }, {
+            "label": "Menu Item 5",
+            "data": "http://msx.benzac.de/info/xp/data/plugin_test_6_content.json"
+        }, {
+            "label": "Menu Item 6",
+            "data": "http://msx.benzac.de/info/xp/data/plugin_test_6_content.json"
+        }]
+}

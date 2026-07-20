@@ -1,0 +1,69 @@
+{
+    "type": "pages",
+    "headline": "Icon Sizes",
+    "pages": [{
+            "items": [{
+                    "type": "button",
+                    "layout": "0,0,3,3",
+                    "badge": "small",  
+                    "label": "Label",
+                    "icon": "msx-white-soft:apps",
+                    "iconSize": "small"
+                }, {
+                    "type": "button",
+                    "layout": "3,0,3,3",
+                    "badge": "medium",  
+                    "label": "Label",
+                    "icon": "msx-white-soft:apps",
+                    "iconSize": "medium"
+                }, {
+                    "type": "button",
+                    "layout": "6,0,3,3",
+                    "badge": "large",    
+                    "label": "Label",
+                    "icon": "msx-white-soft:apps",
+                    "iconSize": "large"
+                }, {
+                    "type": "button",
+                    "layout": "9,0,3,3",
+                    "badge": "extra-large",       
+                    "label": "Label",
+                    "icon": "msx-white-soft:apps",
+                    "iconSize": "extra-large"
+                }, {
+                    "type": "button",
+                    "layout": "0,3,3,3",
+                    "badge": "small",       
+                    "label": "Label",
+                    "iconSize": "small",
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "button",
+                    "layout": "3,3,3,3",
+                    "badge": "medium",    
+                    "label": "Label",
+                    "iconSize": "medium",
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "button",
+                    "layout": "6,3,3,3",
+                    "badge": "large",     
+                    "label": "Label",
+                    "iconSize": "large",
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }, {
+                    "type": "button",
+                    "layout": "9,3,3,3",
+                    "badge": "extra-large",   
+                    "label": "Label",
+                    "iconSize": "extra-large",
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover"
+                }
+            ]
+        }
+    ]
+}

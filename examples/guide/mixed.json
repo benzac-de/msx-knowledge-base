@@ -1,0 +1,201 @@
+{
+    "type": "pages",
+    "headline": "Mixed",
+    "pages": [{    
+            "items": [{
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "0,0,2,4",
+                    "icon": "msx-white-soft:movie",
+                    "color": "msx-glass",
+                    "title": "Video 1",
+                    "playerLabel": "Video 1",
+                    "action": "video:http://msx.benzac.de/media/video1.mp4"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "2,0,2,4",
+                    "icon": "msx-white-soft:movie",
+                    "color": "msx-glass",
+                    "title": "Video 2",
+                    "playerLabel": "Video 2",
+                    "action": "video:http://msx.benzac.de/media/video2.mp4"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "4,0,2,4",
+                    "icon": "msx-white-soft:movie",
+                    "color": "msx-glass",
+                    "title": "Video 3",
+                    "playerLabel": "Video 3",
+                    "action": "video:http://msx.benzac.de/media/video3.mp4"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "6,0,2,3",
+                    "icon": "msx-white-soft:music-note",
+                    "color": "msx-glass",
+                    "background": "http://msx.benzac.de/img/bg1.jpg",
+                    "title": "Audio 1",
+                    "playerLabel": "Audio 1",
+                    "action": "audio:http://msx.benzac.de/media/audio1.mp3"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "8,0,2,3",
+                    "icon": "msx-white-soft:music-note",
+                    "color": "msx-glass",
+                    "background": "http://msx.benzac.de/img/bg2.jpg",
+                    "title": "Audio 2",
+                    "playerLabel": "Audio 2",
+                    "action": "audio:http://msx.benzac.de/media/audio2.mp3"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "10,0,2,3",
+                    "icon": "msx-white-soft:music-note",
+                    "color": "msx-glass",
+                    "background": "http://msx.benzac.de/img/bg3.jpg",
+                    "title": "Audio 3",
+                    "playerLabel": "Audio 3",
+                    "action": "audio:http://msx.benzac.de/media/audio3.mp3"
+                }, {
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "0,4,3,2",       
+                    "color": "msx-glass",
+                    "titleFooter": "Image 1",
+                    "image": "http://msx.benzac.de/img/bg1.jpg",
+                    "imageFiller": "cover",
+                    "imageLabel": "Image 1",
+                    "action": "image:http://msx.benzac.de/img/bg1.jpg"
+                }, {      
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "3,4,3,2",  
+                    "color": "msx-glass",
+                    "titleFooter": "Image 2",
+                    "image": "http://msx.benzac.de/img/bg2.jpg",
+                    "imageFiller": "cover",
+                    "imageLabel": "Image 2",
+                    "action": "image:http://msx.benzac.de/img/bg2.jpg"
+                }, {
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "6,4,3,2",      
+                    "color": "msx-glass",
+                    "titleFooter": "Image 3",
+                    "image": "http://msx.benzac.de/img/bg3.jpg",
+                    "imageFiller": "cover",
+                    "imageLabel": "Image 3",
+                    "action": "image:http://msx.benzac.de/img/bg3.jpg"
+                }, {
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "9,4,3,2",      
+                    "color": "msx-glass",
+                    "titleFooter": "Image 4",
+                    "image": "http://msx.benzac.de/img/test.jpg",
+                    "imageFiller": "cover",
+                    "imageLabel": "Image 4",
+                    "action": "image:http://msx.benzac.de/img/test.jpg"
+                }
+            ]
+        }, {
+            "items": [{ 
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "0,0,2,3",
+                    "icon": "msx-white-soft:public",
+                    "color": "msx-glass",
+                    "title": "Link 1",            
+                    "action": "link:http://benzac.de"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "2,0,2,3",
+                    "icon": "msx-white-soft:public",
+                    "color": "msx-glass",
+                    "title": "Link 2",           
+                    "action": "link:http://msx.benzac.de/info/"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "separate",
+                    "layout": "4,0,2,3",
+                    "icon": "msx-white-soft:public",
+                    "color": "msx-glass",
+                    "title": "Link 3",
+                    "action": "link:window:http://msx.benzac.de/info/"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "6,0,3,3",
+                    "icon": "msx-white-soft:movie",
+                    "color": "msx-glass",
+                    "titleFooter": "Video playlist without content page",                
+                    "action": "playlist:http://msx.benzac.de/info/data/guide/videos.json"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "9,0,3,3",
+                    "icon": "msx-white-soft:music-note",
+                    "color": "msx-glass",
+                    "titleFooter": "Audio playlist without content page",                
+                    "action": "playlist:http://msx.benzac.de/info/data/guide/audios.json"
+                }, {
+                    "tag": "Web",
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "0,3,6,3",
+                    "icon": "msx-white-soft:video-library",
+                    "color": "msx-glass",
+                    "titleFooter": "Mixed playlist without content page",                
+                    "action": "playlist:data",
+                    "data": {
+                        "items": [{                               
+                                "playerLabel": "Video 1",
+                                "action": "video:http://msx.benzac.de/media/video1.mp4"
+                            }, {
+                                "playerLabel": "Audio 1",
+                                "background": "http://msx.benzac.de/img/bg1.jpg",      
+                                "action": "audio:http://msx.benzac.de/media/audio1.mp3"
+                            }, {                              
+                                "playerLabel": "Video 2",
+                                "action": "video:http://msx.benzac.de/media/video2.mp4"
+                            }, {                                                         
+                                "playerLabel": "Audio 2",
+                                "background": "http://msx.benzac.de/img/bg2.jpg",
+                                "action": "audio:http://msx.benzac.de/media/audio2.mp3"
+                            }, {                              
+                                "playerLabel": "Video 3",
+                                "action": "video:http://msx.benzac.de/media/video3.mp4"
+                            }, {                                                    
+                                "playerLabel": "Audio 3",
+                                "background": "http://msx.benzac.de/img/bg3.jpg",
+                                "action": "audio:http://msx.benzac.de/media/audio3.mp3"
+                            }]
+                    }
+                }, {                   
+                    "enumerate": true,
+                    "type": "default",
+                    "layout": "6,3,6,3",                
+                    "color": "msx-glass",
+                    "image": "http://msx.benzac.de/img/bg1.jpg",
+                    "imageFiller": "cover",
+                    "titleFooter": "Slidehsow without content page",
+                    "action": "slideshow:http://msx.benzac.de/info/data/guide/images.json"
+                }
+            ]
+        }]
+}

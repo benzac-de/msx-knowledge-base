@@ -1,0 +1,70 @@
+{
+    "type": "list",
+    "headline": "Tizen Player Test",
+    "template": {       
+        "type": "separate",
+        "layout": "0,0,2,4",       
+        "color": "msx-glass",
+        "properties": {
+            "tizen:buffer:size": "10",
+            "tizen:buffer:timeout": "20",          
+            "tizen:load": "logger:debug:Tizen player loaded.",
+            "tizen:ready": "logger:debug:Tizen player ready.",
+            "tizen:start": "logger:debug:Tizen player started.",            
+            "button:content:icon": "build",
+            "button:content:action": "content:request:interaction:init@http://msx.benzac.de/interaction/tizen.html"			
+        }
+    },
+    "items": [{
+            "icon": "msx-white-soft:movie",
+            "title": "Video 1",
+            "playerLabel": "Video 1",
+            "action": "video:http://msx.benzac.de/media/video1.mp4"
+        }, {
+            "icon": "msx-white-soft:movie",
+            "title": "Video 2",
+            "playerLabel": "Video 2",
+            "action": "video:http://msx.benzac.de/media/video2.mp4"
+        }, {
+            "icon": "msx-white-soft:movie",
+            "title": "Video 3",
+            "playerLabel": "Video 3",
+            "action": "video:http://msx.benzac.de/media/video3.mp4"
+        }, {
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "http://msx.benzac.de/img/bg1.jpg",
+            "title": "Audio 1",
+            "playerLabel": "Audio 1",
+            "action": "audio:http://msx.benzac.de/media/audio1.mp3"
+        }, {
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "http://msx.benzac.de/img/bg2.jpg",
+            "title": "Audio 2",
+            "playerLabel": "Audio 2",
+            "action": "audio:http://msx.benzac.de/media/audio2.mp3"
+        }, {
+            "offset": "0,0,0,-1",
+            "icon": "msx-white-soft:music-note",
+            "background": "http://msx.benzac.de/img/bg3.jpg",
+            "title": "Audio 3",
+            "playerLabel": "Audio 3",
+            "action": "audio:http://msx.benzac.de/media/audio3.mp3"
+        }, {
+            "icon": "msx-white-soft:subtitles",
+            "title": "Sintel",      
+            "titleFooter": "0.1.145+",
+            "playerLabel": "Sintel © copyright Blender Foundation | durian.blender.org",
+            "action": "video:http://msx.benzac.de/media/sintel/sintel.mp4",
+            "properties": {
+                "resume:position": "102",
+                "label:extension": "{ico:msx-white:subtitles} EN",
+                "tizen:subtitle:url": "http://msx.benzac.de/media/sintel/en.srt",          
+                "button:content:icon": "build",
+                "button:content:action": "content:request:interaction:init@http://msx.benzac.de/interaction/tizen.html",          
+                "button:speed:icon": "subtitles",
+                "button:speed:action": "panel:http://msx.benzac.de/info/xp/data/tizen_test_subtitles.json"
+            }
+        }]
+}

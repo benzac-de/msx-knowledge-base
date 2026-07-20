@@ -1,0 +1,125 @@
+{
+    "type": "list",
+    "headline": "Large Offsets",
+    "pages": [{
+            "headline": "Page 1",
+            "offset": "0,0,0,1.5",
+            "items": [{
+                    "type": "space",
+                    "layout": "0,0,12,6",
+                    "offset": "-0.75,-1,1.5,1.67",
+                    "color": "msx-glass",
+                    "image": "http://msx.benzac.de/img/bg1.jpg",
+                    "imageOverlay": 4,
+                    "round": false
+                }, {
+                    "type": "space",
+                    "layout": "0,1,12,4",
+                    "offset": "-0.75,1,1.5,0.67",
+                    "color": "msx-black-soft",
+                    "round": false
+                }, {
+                    "type": "separate",
+                    "layout": "0,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 1.1"
+                }, {
+                    "type": "separate",
+                    "layout": "2,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 1.2"
+                }, {
+                    "type": "separate",
+                    "layout": "4,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 1.3"
+                }, {
+                    "type": "separate",
+                    "layout": "6,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 1.4"
+                }, {
+                    "type": "separate",
+                    "layout": "8,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 1.5"
+                }, {
+                    "type": "separate",
+                    "layout": "10,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 1.6"
+                }]
+        }, {
+            "headline": "Page 2",
+            "offset": "0,0,0,1.5",
+            "items": [{
+                    "type": "space",
+                    "layout": "0,0,12,6",
+                    "offset": "-0.75,-1,1.5,1.67",
+                    "color": "msx-glass",
+                    "image": "http://msx.benzac.de/img/bg2.jpg",
+                    "imageOverlay": 4,
+                    "round": false
+                }, {
+                    "type": "space",
+                    "layout": "0,1,12,4",
+                    "offset": "-0.75,1,1.5,0.67",
+                    "color": "msx-black-soft",
+                    "round": false
+                }, {
+                    "type": "separate",
+                    "layout": "0,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 2.1"
+                }, {
+                    "type": "separate",
+                    "layout": "2,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 2.2"
+                }, {
+                    "type": "separate",
+                    "layout": "4,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 2.3"
+                }, {
+                    "type": "separate",
+                    "layout": "6,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 2.4"
+                }, {
+                    "type": "separate",
+                    "layout": "8,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 2.5"
+                }, {
+                    "type": "separate",
+                    "layout": "10,2,2,4",
+                    "offset": "0,0.5,0,0",
+                    "icon": "msx-white-soft:adb",
+                    "color": "msx-glass",
+                    "title": "Item 2.6"
+                }]
+        }]
+}

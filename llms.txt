@@ -1,0 +1,275 @@
+# MSX Knowledge Base
+
+Media Station X (MSX) is a white-label TV app driven entirely by JSON served over HTTP, covering app versions 0.1.0–0.1.166.
+
+> LLM usage: Load this file first to get the index of all KB files. Read AGENTS.md next for a concise usage guide, then fetch individual files on demand.
+
+---
+
+## Meta / Navigation
+
+- [README.md](README.md) — Human-readable project/hosting entry point (not MSX content)
+- [index.md](index.md) — Master navigation page with full API taxonomy and links to all sections
+- [AGENTS.md](AGENTS.md) — LLM usage guide: how to read this KB, mental model of MSX, key gotchas
+- [LICENSE.md](LICENSE.md) — License for this KB itself (CC BY 4.0), separate from MSX's own license
+
+---
+
+## Overview
+
+- [overview/home.md](overview/home.md) — MSX feature overview, use cases, and introduction
+- [overview/quick-start-guide.md](overview/quick-start-guide.md) — Step-by-step setup instructions for serving MSX content
+- [overview/platform-support.md](overview/platform-support.md) — Supported TV/mobile platforms and current app version per platform
+- [overview/release-notes.md](overview/release-notes.md) — Version history and changelog for MSX app versions
+- [overview/tips-tricks.md](overview/tips-tricks.md) — Practical tips: legacy TV distribution, the Web Version Loader, safely opening external links/apps, unique device IDs, the Launcher MSX service, common errors, platform quirks, and the Emergency Combination
+- [overview/showcases.md](overview/showcases.md) — Real-world MSX content implementations
+- [overview/about.md](overview/about.md) — About the MSX project
+- [overview/license.md](overview/license.md) — License terms for MSX
+- [overview/data-privacy.md](overview/data-privacy.md) — Data privacy information
+- [overview/welcome.md](overview/welcome.md) — Original wiki welcome page and API taxonomy overview
+
+---
+
+## Main API — Start
+
+- [main-api/start/start-object.md](main-api/start/start-object.md) — Start object: the root JSON served at the start URL; sets up menu and/or content
+- [main-api/start/setup-precondition.md](main-api/start/setup-precondition.md) — Preconditions for the start parameter
+- [main-api/start/setup-start-parameter.md](main-api/start/setup-start-parameter.md) — How to configure the MSX start parameter
+
+---
+
+## Main API — Menu
+
+- [main-api/menu/menu-root-object.md](main-api/menu/menu-root-object.md) — Menu root object: container for menu items
+- [main-api/menu/menu-item-object.md](main-api/menu/menu-item-object.md) — Menu item object: each entry in a menu (label, icon, data/content URL)
+- [main-api/menu/menu-examples.md](main-api/menu/menu-examples.md) — Worked menu examples
+
+---
+
+## Main API — Content
+
+- [main-api/content/content-root-object.md](main-api/content/content-root-object.md) — Content root object: top-level container; type "pages" or "list"
+- [main-api/content/content-page-object.md](main-api/content/content-page-object.md) — Content page object: a single page/screen within a content root
+- [main-api/content/content-item-object.md](main-api/content/content-item-object.md) — Content item object: one cell/tile (types: default, separate, teaser, button, space, control)
+- [main-api/content/content-examples.md](main-api/content/content-examples.md) — Worked content examples
+- [main-api/content/content-guide.md](main-api/content/content-guide.md) — Links to the built-in Content Guide and Experts Content Guide demo pages
+
+---
+
+## Main API — Common
+
+- [main-api/common/requests.md](main-api/common/requests.md) — HTTP request mechanics and URL conventions
+- [main-api/common/responses.md](main-api/common/responses.md) — HTTP response formats and status codes
+- [main-api/common/colors.md](main-api/common/colors.md) — Color syntax: CSS colors plus 11 predefined msx-* colors
+- [main-api/common/icons.md](main-api/common/icons.md) — Icon names and usage syntax {ico:NAME} / {ico:COLOR:NAME}
+- [main-api/common/inline-expressions.md](main-api/common/inline-expressions.md) — Standard inline expressions: {sp}, {tb}, {br}, {ico:…}, {txt:…}, {chr:…}, {context:…}
+- [main-api/common/actions.md](main-api/common/actions.md) — All official main actions with syntax, examples, and since-version
+
+---
+
+## Extended API
+
+- [extended-api/youtube-vimeo-co.md](extended-api/youtube-vimeo-co.md) — YouTube, Vimeo, and other video service integration
+- [extended-api/m3u-pls-files.md](extended-api/m3u-pls-files.md) — Loading M3U and PLS playlist files
+- [extended-api/mrss-feeds.md](extended-api/mrss-feeds.md) — Loading MRSS media RSS feeds
+
+---
+
+## Experts API — Special
+
+- [experts-api/special/internal-actions.md](experts-api/special/internal-actions.md) — Internal actions (0.1.160+); includes which are also official main actions
+- [experts-api/special/url-parameters.md](experts-api/special/url-parameters.md) — URL parameters for the MSX app start URL
+- [experts-api/special/extended-properties.md](experts-api/special/extended-properties.md) — Extended item properties for advanced use cases
+- [experts-api/special/attached-data-examples.md](experts-api/special/attached-data-examples.md) — Attached data object examples
+- [experts-api/special/dictionary-structure.md](experts-api/special/dictionary-structure.md) — Dictionary object structure for key-value lookups
+- [experts-api/special/tizen-player.md](experts-api/special/tizen-player.md) — Samsung Tizen player integration
+- [experts-api/special/netcast-menu.md](experts-api/special/netcast-menu.md) — LG NetCast menu integration
+- [experts-api/special/android-player.md](experts-api/special/android-player.md) — Android player integration
+
+---
+
+## Experts API — Live
+
+- [experts-api/live/live-object.md](experts-api/live/live-object.md) — Live object: periodic content item updates
+- [experts-api/live/live-inline-expressions.md](experts-api/live/live-inline-expressions.md) — Live inline expressions used in live data and extension properties
+- [experts-api/live/live-examples.md](experts-api/live/live-examples.md) — Worked live update examples
+
+---
+
+## Experts API — Selection
+
+- [experts-api/selection/selection-object.md](experts-api/selection/selection-object.md) — Selection object: behavior when a content item has focus
+- [experts-api/selection/selection-examples.md](experts-api/selection/selection-examples.md) — Worked selection examples
+
+---
+
+## Experts API — Plugins
+
+- [experts-api/plugins/video-audio-plugin.md](experts-api/plugins/video-audio-plugin.md) — Video/Audio plugin: custom media player integration
+- [experts-api/plugins/interaction-plugin.md](experts-api/plugins/interaction-plugin.md) — Interaction plugin: custom interactive content
+- [experts-api/plugins/image-plugin.md](experts-api/plugins/image-plugin.md) — Image plugin
+- [experts-api/plugins/html5x-plugin.md](experts-api/plugins/html5x-plugin.md) — HTML5X plugin: extended HTML5 rendering
+- [experts-api/plugins/panorama-plugin.md](experts-api/plugins/panorama-plugin.md) — Panorama plugin (wide, >16:9 sliding image pan)
+- [experts-api/plugins/background-plugin.md](experts-api/plugins/background-plugin.md) — Background plugin
+- [experts-api/plugins/backdrop-plugin.md](experts-api/plugins/backdrop-plugin.md) — Backdrop plugin
+- [experts-api/plugins/ad-plugin.md](experts-api/plugins/ad-plugin.md) — Ad plugin (advertising)
+- [experts-api/plugins/android-plugin.md](experts-api/plugins/android-plugin.md) — Android-specific plugin
+- [experts-api/plugins/play-plugin.md](experts-api/plugins/play-plugin.md) — Play plugin
+- [experts-api/plugins/ima-plugin.md](experts-api/plugins/ima-plugin.md) — IMA (Interactive Media Ads) plugin
+- [experts-api/plugins/paging-plugin.md](experts-api/plugins/paging-plugin.md) — Paging plugin
+- [experts-api/plugins/input-plugin.md](experts-api/plugins/input-plugin.md) — Input plugin
+- [experts-api/plugins/plugin-api-reference.md](experts-api/plugins/plugin-api-reference.md) — Full plugin API reference: three access forms (global, Classic-Module, TypeScript-Module)
+- [experts-api/plugins/plugin-events-reference.md](experts-api/plugins/plugin-events-reference.md) — Complete reference for all handleEvent() event types (app, video, slider, settings, custom) with payload structures
+
+---
+
+## Experts API — Hidden Features
+
+- [experts-api/hidden-features/start-action.md](experts-api/hidden-features/start-action.md) — Start action hidden feature
+- [experts-api/hidden-features/settings-menu-item.md](experts-api/hidden-features/settings-menu-item.md) — Settings menu item type
+- [experts-api/hidden-features/execute-property.md](experts-api/hidden-features/execute-property.md) — Execute property: automatically execute an item's action on load
+- [experts-api/hidden-features/focus-separator.md](experts-api/hidden-features/focus-separator.md) — Focus separator
+- [experts-api/hidden-features/hide-images.md](experts-api/hidden-features/hide-images.md) — Hide images feature
+- [experts-api/hidden-features/number-inline-expressions.md](experts-api/hidden-features/number-inline-expressions.md) — {num:…} number formatting expressions
+- [experts-api/hidden-features/color-inline-expressions.md](experts-api/hidden-features/color-inline-expressions.md) — {col:…} color override expressions
+- [experts-api/hidden-features/key-property.md](experts-api/hidden-features/key-property.md) — Key property: keyboard shortcut binding on items
+- [experts-api/hidden-features/large-offsets.md](experts-api/hidden-features/large-offsets.md) — Large offsets for item positioning
+- [experts-api/hidden-features/page-action.md](experts-api/hidden-features/page-action.md) — Page-level action triggers
+- [experts-api/hidden-features/dictionary-inline-expressions.md](experts-api/hidden-features/dictionary-inline-expressions.md) — {dic:…} dictionary lookup expressions (0.1.120+), {dix:…} wrapper form (0.1.123+)
+- [experts-api/hidden-features/compress-property.md](experts-api/hidden-features/compress-property.md) — Compress property: extends layout grid from 12×6 to 16×8 (0.1.123+)
+- [experts-api/hidden-features/resolve-action.md](experts-api/hidden-features/resolve-action.md) — Resolve action: dynamic URL resolution
+- [experts-api/hidden-features/option-shortcut.md](experts-api/hidden-features/option-shortcut.md) — Option shortcut for control items
+- [experts-api/hidden-features/replace-action.md](experts-api/hidden-features/replace-action.md) — Replace action: replace content section in-place
+- [experts-api/hidden-features/image-options.md](experts-api/hidden-features/image-options.md) — Image options: advanced image display control
+- [experts-api/hidden-features/advanced-text-image.md](experts-api/hidden-features/advanced-text-image.md) — Advanced text and image layout options
+- [experts-api/hidden-features/keep-ratio.md](experts-api/hidden-features/keep-ratio.md) — Keep-ratio keyword for background images
+- [experts-api/hidden-features/advanced-templated-items.md](experts-api/hidden-features/advanced-templated-items.md) — Advanced templated items with context expressions
+
+---
+
+## Experts API — Benchmark Tests
+
+- [experts-api/benchmark/renderer-plugin.md](experts-api/benchmark/renderer-plugin.md) — Renderer plugin benchmark
+- [experts-api/benchmark/drawing-plugin.md](experts-api/benchmark/drawing-plugin.md) — Drawing plugin benchmark
+- [experts-api/benchmark/particles-plugin.md](experts-api/benchmark/particles-plugin.md) — Particles plugin benchmark
+
+---
+
+## Reference
+
+- [reference/type-definitions.md](reference/type-definitions.md) — TypeScript interfaces: all MSX* JSON object types and TVX plugin classes
+- [reference/actions-reference.md](reference/actions-reference.md) — Consolidated reference for main actions and internal actions
+- [reference/json-building-guide.md](reference/json-building-guide.md) — Step-by-step guide to building valid MSX JSON pages
+- [reference/cookbook.md](reference/cookbook.md) — Curated tour of the most practically-relevant real examples, grouped by purpose: functional pages (media lists, adaptive playback, live data, interaction, plugins) and beautiful layouts (github/extended)
+- [reference/best-practices.md](reference/best-practices.md) — Two dedicated practical-reference sections not spelled out on any single main-api page: Best Practices (item-type/`"list"`-vs-`"pages"` choices, `transparent`/`background` chains, the grid `image` pixel-sizing formula, `imageOverlay`/icon-contrast pitfalls) and Good to Know (why background video/audio keeps playing after `back`, player UI timing, why a `"separate"` item's `layout` height isn't all image/focus space)
+- [reference/versioning.md](reference/versioning.md) — Version model, backward compatibility, forward behavior, three version systems
+- [reference/glossary.md](reference/glossary.md) — Key MSX terms defined
+- [reference/common-misconceptions.md](reference/common-misconceptions.md) — Anti-hallucination reference: plausible-sounding properties/values/actions/versions that do NOT exist, each corrected against the KB (menu `data`/`content:` prefix, grid coordinate/compress traps, `image`+`icon` combination, action version edge cases, and more)
+- [reference/settings-reference.md](reference/settings-reference.md) — The native, end-user-facing Settings screen: every panel, its allowed values, how to open/set it from a JSON action, and how a plugin reads it. Covers what the URL Parameters and Settings Menu Item pages don't: which settings are runtime-adjustable vs. launch-only, the Context Menu (Home/Player/Volume/Settings/Exit), and the `layout` `fix:` prefix
+
+---
+
+## Examples
+
+- [examples/index.md](examples/index.md) — Searchable catalog of all 101 JSON example files with metadata
+- [examples/guide/actions.json](examples/guide/actions.json) — Menu grouping the other guide categories (contains no action strings itself)
+- [examples/guide/audios.json](examples/guide/audios.json) — Audio pages
+- [examples/guide/icon_names.json](examples/guide/icon_names.json) — Icon name showcase
+- [examples/guide/icon_sizes.json](examples/guide/icon_sizes.json) — Icon sizes
+- [examples/guide/icons.json](examples/guide/icons.json) — Icon showcase
+- [examples/guide/image_filler.json](examples/guide/image_filler.json) — Image filler
+- [examples/guide/image_height.json](examples/guide/image_height.json) — Image height options
+- [examples/guide/image_width.json](examples/guide/image_width.json) — Image width options
+- [examples/guide/images.json](examples/guide/images.json) — Image gallery
+- [examples/guide/links.json](examples/guide/links.json) — External links
+- [examples/guide/list.json](examples/guide/list.json) — Simple list
+- [examples/guide/menu.json](examples/guide/menu.json) — Menu structure
+- [examples/guide/messages.json](examples/guide/messages.json) — Message actions
+- [examples/guide/mixed.json](examples/guide/mixed.json) — Mixed item types with enumerate
+- [examples/guide/pages.json](examples/guide/pages.json) — Basic pages
+- [examples/guide/panel.json](examples/guide/panel.json) — Panel layout
+- [examples/guide/panel_wrapped.json](examples/guide/panel_wrapped.json) — Wrapped panel
+- [examples/guide/references.json](examples/guide/references.json) — Item references
+- [examples/guide/special.json](examples/guide/special.json) — Special features
+- [examples/guide/stacked_list.json](examples/guide/stacked_list.json) — Stacked list
+- [examples/guide/template.json](examples/guide/template.json) — Basic template
+- [examples/guide/template_item.json](examples/guide/template_item.json) — Template item
+- [examples/guide/template_list.json](examples/guide/template_list.json) — Template list
+- [examples/guide/template_pages.json](examples/guide/template_pages.json) — Template pages
+- [examples/guide/template_panel.json](examples/guide/template_panel.json) — Template panel
+- [examples/guide/text.json](examples/guide/text.json) — Text formatting with all inline expressions
+- [examples/guide/text_image.json](examples/guide/text_image.json) — Text + image combination
+- [examples/guide/types.json](examples/guide/types.json) — Five of six item types (all but control)
+- [examples/guide/videos.json](examples/guide/videos.json) — Video gallery
+- [examples/github/menu.json](examples/github/menu.json) — GitHub baseline menu
+- [examples/github/welcome.json](examples/github/welcome.json) — GitHub baseline welcome content
+- [examples/github/base/audios.json](examples/github/base/audios.json) — Baseline audio example
+- [examples/github/base/images.json](examples/github/base/images.json) — Baseline image gallery
+- [examples/github/base/videos.json](examples/github/base/videos.json) — Baseline video example
+- [examples/github/base/youtube.json](examples/github/base/youtube.json) — Baseline YouTube example (requires the YouTube plugin, since 0.1.40)
+- [examples/github/extended/list0.json](examples/github/extended/list0.json) — Extended list 0 (group/enumerate/selection/overlay, 0.1.112+)
+- [examples/github/extended/list1.json](examples/github/extended/list1.json) — Extended list 1 (0.1.112+)
+- [examples/github/extended/list2.json](examples/github/extended/list2.json) — Extended list 2 (0.1.112+)
+- [examples/github/extended/list3_section0.json](examples/github/extended/list3_section0.json) — Multi-section list3, section 0 (0.1.144+, tab-switching relies on replace:content:)
+- [examples/github/extended/list3_section1.json](examples/github/extended/list3_section1.json) — Multi-section list3, section 1 (0.1.144+, tab-switching relies on replace:content:)
+- [examples/github/extended/list3_section2.json](examples/github/extended/list3_section2.json) — Multi-section list3, section 2 (0.1.144+, tab-switching relies on replace:content:)
+- [examples/github/extended/list3_section3.json](examples/github/extended/list3_section3.json) — Multi-section list3, section 3 (0.1.144+, tab-switching relies on replace:content:)
+- [examples/github/extended/list4.json](examples/github/extended/list4.json) — Extended list 4 with template+selection (0.1.112+)
+- [examples/github/extended/list5.json](examples/github/extended/list5.json) — Extended list 5 with template+selection (0.1.112+)
+- [examples/github/extended/pages0.json](examples/github/extended/pages0.json) — Extended pages 0 (full features, 0.1.112+)
+- [examples/github/extended/pages1.json](examples/github/extended/pages1.json) — Extended pages 1 with teaser items (0.1.112+)
+- [examples/github/extended/sublist0.json](examples/github/extended/sublist0.json) — Sublist 0 (0.1.112+)
+- [examples/github/extended/sublist1.json](examples/github/extended/sublist1.json) — Sublist 1 (0.1.112+)
+- [examples/github/extended/sublist3.json](examples/github/extended/sublist3.json) — Sublist 3 (0.1.112+)
+- [examples/xp/android_test.json](examples/xp/android_test.json) — Android integration test
+- [examples/xp/benchmark_test_1.json](examples/xp/benchmark_test_1.json) — Benchmark test 1
+- [examples/xp/benchmark_test_2.json](examples/xp/benchmark_test_2.json) — Benchmark test 2 (live + playback)
+- [examples/xp/benchmark_test_3.json](examples/xp/benchmark_test_3.json) — Benchmark test 3
+- [examples/xp/hidden_feature_1.json](examples/xp/hidden_feature_1.json) — Hidden feature 1 (start action)
+- [examples/xp/hidden_feature_2.json](examples/xp/hidden_feature_2.json) — Hidden feature 2 (settings menu item)
+- [examples/xp/hidden_feature_3.json](examples/xp/hidden_feature_3.json) — Hidden feature 3 (execute property)
+- [examples/xp/hidden_feature_4.json](examples/xp/hidden_feature_4.json) — Hidden feature 4 (focus separator)
+- [examples/xp/hidden_feature_5.json](examples/xp/hidden_feature_5.json) — Hidden feature 5 (hide images)
+- [examples/xp/hidden_feature_6.json](examples/xp/hidden_feature_6.json) — Hidden feature 6 (number inline expressions)
+- [examples/xp/hidden_feature_7.json](examples/xp/hidden_feature_7.json) — Hidden feature 7 (color inline expressions)
+- [examples/xp/hidden_feature_8.json](examples/xp/hidden_feature_8.json) — Hidden feature 8 (key property)
+- [examples/xp/hidden_feature_9.json](examples/xp/hidden_feature_9.json) — Hidden feature 9 (large offsets)
+- [examples/xp/hidden_feature_10.json](examples/xp/hidden_feature_10.json) — Hidden feature 10 (page action)
+- [examples/xp/hidden_feature_11.json](examples/xp/hidden_feature_11.json) — Hidden feature 11 (dictionary inline expressions)
+- [examples/xp/hidden_feature_12.json](examples/xp/hidden_feature_12.json) — Hidden feature 12 (compress property, 0.1.123+)
+- [examples/xp/hidden_feature_13.json](examples/xp/hidden_feature_13.json) — Hidden feature 13 (resolve action; does not itself use the video/audio plugin)
+- [examples/xp/hidden_feature_14.json](examples/xp/hidden_feature_14.json) — Hidden feature 14 (option shortcut)
+- [examples/xp/hidden_feature_15_section1.json](examples/xp/hidden_feature_15_section1.json) — Hidden feature 15, section 1 (replace action)
+- [examples/xp/hidden_feature_15_section2.json](examples/xp/hidden_feature_15_section2.json) — Hidden feature 15, section 2 (replace action)
+- [examples/xp/hidden_feature_15_section3.json](examples/xp/hidden_feature_15_section3.json) — Hidden feature 15, section 3 (replace action)
+- [examples/xp/hidden_feature_15_section4.json](examples/xp/hidden_feature_15_section4.json) — Hidden feature 15, section 4 (replace action)
+- [examples/xp/hidden_feature_16.json](examples/xp/hidden_feature_16.json) — Hidden feature 16 (image options)
+- [examples/xp/hidden_feature_17.json](examples/xp/hidden_feature_17.json) — Hidden feature 17 (advanced text & image)
+- [examples/xp/hidden_feature_18.json](examples/xp/hidden_feature_18.json) — Hidden feature 18 (keep ratio)
+- [examples/xp/hidden_feature_19.json](examples/xp/hidden_feature_19.json) — Hidden feature 19 (advanced templated items)
+- [examples/xp/live_test_1.json](examples/xp/live_test_1.json) — Live test 1 (execute + lifetime)
+- [examples/xp/live_test_2.json](examples/xp/live_test_2.json) — Live test 2 (enumerate + playback)
+- [examples/xp/live_test_3.json](examples/xp/live_test_3.json) — Live test 3 (live + selection + enumerate)
+- [examples/xp/live_test_4.json](examples/xp/live_test_4.json) — Live test 4 (menu level)
+- [examples/xp/netcast_test.json](examples/xp/netcast_test.json) — LG NetCast integration test
+- [examples/xp/next_video_test.json](examples/xp/next_video_test.json) — Next-video queuing with live updates
+- [examples/xp/plugin_test_1.json](examples/xp/plugin_test_1.json) — Plugin test 1
+- [examples/xp/plugin_test_2.json](examples/xp/plugin_test_2.json) — Plugin test 2 (enumerated)
+- [examples/xp/plugin_test_3.json](examples/xp/plugin_test_3.json) — Plugin test 3 (pages)
+- [examples/xp/plugin_test_4.json](examples/xp/plugin_test_4.json) — Plugin test 4 (context expressions)
+- [examples/xp/plugin_test_5.json](examples/xp/plugin_test_5.json) — Plugin test 5 (grouped pages)
+- [examples/xp/plugin_test_6.json](examples/xp/plugin_test_6.json) — Plugin test 6 (demo entry point, not a start object)
+- [examples/xp/plugin_test_6_content.json](examples/xp/plugin_test_6_content.json) — Plugin test 6 content
+- [examples/xp/plugin_test_6_menu.json](examples/xp/plugin_test_6_menu.json) — Plugin test 6 menu
+- [examples/xp/plugin_test_7.json](examples/xp/plugin_test_7.json) — Plugin test 7
+- [examples/xp/plugin_test_8.json](examples/xp/plugin_test_8.json) — Plugin test 8 (selection + preload + multi-action)
+- [examples/xp/plugin_test_9.json](examples/xp/plugin_test_9.json) — Plugin test 9 (live + playback)
+- [examples/xp/plugin_test_10.json](examples/xp/plugin_test_10.json) — Plugin test 10 (live + playback)
+- [examples/xp/plugin_test_11.json](examples/xp/plugin_test_11.json) — Plugin test 11 (compress, 0.1.123+)
+- [examples/xp/plugin_test_12.json](examples/xp/plugin_test_12.json) — Plugin test 12
+- [examples/xp/plugin_test_13.json](examples/xp/plugin_test_13.json) — Plugin test 13 (pages + enumerate)
+- [examples/xp/properties_test.json](examples/xp/properties_test.json) — Extended properties test
+- [examples/xp/selection_test_1.json](examples/xp/selection_test_1.json) — Selection test 1
+- [examples/xp/selection_test_2.json](examples/xp/selection_test_2.json) — Selection test 2 (enumerate + multi-action)
+- [examples/xp/tizen_test.json](examples/xp/tizen_test.json) — Samsung Tizen integration test
+- [examples/xp/tizen_test_subtitles.json](examples/xp/tizen_test_subtitles.json) — Tizen subtitle control

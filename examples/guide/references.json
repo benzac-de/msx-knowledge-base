@@ -1,0 +1,78 @@
+{
+    "type": "pages",
+    "headline": "References",
+    "pages": [{  
+            "items": [{
+                    "type": "button",                                
+                    "layout": "0,0,3,3",                  
+                    "icon": "movie",
+                    "label": "Videos",
+                    "action": "content:http://msx.benzac.de/info/data/guide/videos.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "3,0,3,3",                   
+                    "icon": "music-note",
+                    "label": "Audios",
+                    "action": "content:http://msx.benzac.de/info/data/guide/audios.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "6,0,3,3",                  
+                    "icon": "image",
+                    "label": "Images",
+                    "action": "content:http://msx.benzac.de/info/data/guide/images.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "9,0,3,3",                   
+                    "icon": "public",
+                    "label": "Links",
+                    "action": "content:http://msx.benzac.de/info/data/guide/links.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "0,3,3,3",                   
+                    "icon": "list",
+                    "label": "Actions",
+                    "action": "menu:http://msx.benzac.de/info/data/guide/actions.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "3,3,3,3",                   
+                    "icon": "web-asset",
+                    "label": "Panel",
+                    "action": "panel:data",
+                    "data": {
+                        "headline": "Panel",
+                        "template": {
+                            "type": "button",                                
+                            "layout": "0,0,2,2",
+                            "iconSize": "small",
+                            "enumerate": false
+                        },
+                        "items": [{
+                                "icon": "movie",
+                                "label": "Videos",
+                                "action": "content:http://msx.benzac.de/info/data/guide/videos.json"
+                            }, {                                             
+                                "icon": "music-note",
+                                "label": "Audios",
+                                "action": "content:http://msx.benzac.de/info/data/guide/audios.json"
+                            }, {                                         
+                                "icon": "image",
+                                "label": "Images",
+                                "action": "content:http://msx.benzac.de/info/data/guide/images.json"
+                            }, {                                         
+                                "icon": "public",
+                                "label": "Links",
+                                "action": "content:http://msx.benzac.de/info/data/guide/links.json"
+                            }, {                                        
+                                "icon": "list",
+                                "label": "Actions",
+                                "action": "menu:http://msx.benzac.de/info/data/guide/actions.json"
+                            }, {                                        
+                                "icon": "web-asset",
+                                "label": "Panel",
+                                "action": "panel:http://msx.benzac.de/info/data/guide/panel.json"
+                            }
+                        ]
+                    }
+                }]
+        }]
+}

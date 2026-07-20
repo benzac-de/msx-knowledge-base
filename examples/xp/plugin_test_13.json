@@ -1,0 +1,45 @@
+{
+    "type": "pages",
+    "headline": "Input Plugin Test",
+    "template": {
+        "enumerate": false,
+        "type": "button",
+        "layout": "0,0,3,3"
+    },
+    "items": [{
+            "icon": "keyboard",
+            "label": "Default",
+            "action": "content:request:interaction:http://msx.benzac.de/services/input.php?input={INPUT}&type=default|default|en|Default Input Example|||Click on {ico:msx-white:done} to submit input@http://msx.benzac.de/interaction/input.html"
+        }, {
+            "icon": "password",
+            "label": "Secret",
+            "action": "content:request:interaction:http://msx.benzac.de/services/input.php?input={INPUT}&type=secret|secret|en|Secret Input Example|||Click on {ico:msx-white:done} to submit secret input@http://msx.benzac.de/interaction/input.html"
+        }, {
+            "badge": "Compressed",
+            "icon": "search",
+            "label": "Icon Search",
+            "action": "content:request:interaction:http://msx.benzac.de/services/input.php?input={INPUT}&type=search|search|en|{ico:search} {col:msx-white-soft}Search for Icons|||Enter at least one character to start searching|Icon Name@http://msx.benzac.de/interaction/input.html"
+        }, {
+            "badge": "Decompressed",
+            "icon": "search",
+            "label": "Image Search",
+            "titleFooter": "0.1.155+{br}{br}{br}",
+            "alignment": "center",
+            "action": "content:request:interaction:http://msx.benzac.de/services/input.php?input={INPUT}&type=pixabay|search|en|{ico:search} {col:msx-white-soft}Search for Images|||Enter at least one character to start searching|Image Name@http://msx.benzac.de/interaction/input.html"
+        }, {
+            "badge": "Decompressed + Paging",
+            "icon": "search",
+            "label": "Image Search",
+            "titleFooter": "0.1.155+{br}{br}{br}",
+            "alignment": "center",
+            "action": "content:request:interaction:http://msx.benzac.de/services/input.php?input={INPUT}&offset={OFFSET}&limit={LIMIT}&type=pixabay|search|en|{ico:search} {col:msx-white-soft}Search for Images|||Enter at least one character to start searching|Image Name|36@http://msx.benzac.de/interaction/input.html"
+        }, {
+            "icon": "login",
+            "label": "Login",
+            "action": "execute:fetch:http://msx.benzac.de/services/input.php?type=login"
+        }, {
+            "icon": "build",
+            "label": "Execute Action",
+            "action": "content:request:interaction:http://msx.benzac.de/services/input.php?input={INPUT}&type=action|default|en|Execute Action Input Example|||Click on {ico:msx-white:done} to execute any action (e.g. '{txt:msx-white:video:http://...}', '{txt:msx-white:audio:http://...}', '{txt:msx-white:image:http://...}', '{txt:msx-white:link:http://...}', etc.)@http://msx.benzac.de/interaction/input.html"
+        }]
+}

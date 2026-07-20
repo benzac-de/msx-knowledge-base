@@ -1,0 +1,31 @@
+{
+    "type": "pages",
+    "headline": "Template",
+    "pages": [{  
+            "items": [{
+                    "type": "button",                                
+                    "layout": "0,0,3,3",
+                    "icon": "stop",
+                    "label": "Item",
+                    "action": "content:http://msx.benzac.de/info/data/guide/template_item.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "3,0,3,3",
+                    "icon": "view-array",
+                    "label": "Pages",
+                    "action": "content:http://msx.benzac.de/info/data/guide/template_pages.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "6,0,3,3",
+                    "icon": "view-stream",
+                    "label": "List",
+                    "action": "content:http://msx.benzac.de/info/data/guide/template_list.json"
+                }, {
+                    "type": "button",                                
+                    "layout": "9,0,3,3",
+                    "icon": "web-asset",
+                    "label": "Panel",
+                    "action": "panel:http://msx.benzac.de/info/data/guide/template_list.json"
+                }]
+        }]
+}

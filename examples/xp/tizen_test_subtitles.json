@@ -1,0 +1,66 @@
+{
+    "headline": "Tizen Player Test {col:msx-white-soft}- Subtitles",
+    "template": {
+        "enumerate": false,
+        "type": "control",
+        "layout": "0,0,8,1",       
+        "action": "data",
+        "data": {
+            "actions": [{
+                    "action": "cleanup"
+                }, {
+                    "action": "player:label:extension:{ico:msx-white:subtitles} {context:subtitleLabel}"
+                }, {
+                    "action": "player:commit:message:tizen:subtitle:url:{context:subtitleUrl}"
+                }]
+        }
+    },
+    "items": [{
+            "label": "Off",          
+            "data": {
+                "actions": [{
+                        "action": "cleanup"
+                    }, {
+                        "action": "player:label:extension:default"
+                    }, {
+                        "action": "player:commit:message:tizen:subtitle:silent:true"
+                    }]
+            }
+        }, {          
+            "label": "English (EN)",   
+            "subtitleLabel": "EN",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/en.srt"           
+        }, {          
+            "label": "Deutsch (DE)",   
+            "subtitleLabel": "DE",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/de.srt"
+        }, {          
+            "label": "Español (ES)",   
+            "subtitleLabel": "ES",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/es.srt"
+        }, {          
+            "label": "Français (FR)",   
+            "subtitleLabel": "FR",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/fr.srt"
+        }, {          
+            "label": "Italiano (IT)",   
+            "subtitleLabel": "IT",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/it.srt"
+        }, {          
+            "label": "Nederlands (NL)",   
+            "subtitleLabel": "NL",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/nl.srt"
+        }, {          
+            "label": "Język polski (PL)",   
+            "subtitleLabel": "PL",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/pl.srt"
+        }, {          
+            "label": "Português (PT)",   
+            "subtitleLabel": "PT",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/pt.srt"
+        }, {          
+            "label": "Pусский (RU)",   
+            "subtitleLabel": "RU",
+            "subtitleUrl": "http://msx.benzac.de/media/sintel/ru.srt"
+        }]
+}

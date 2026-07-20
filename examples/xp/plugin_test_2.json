@@ -1,0 +1,37 @@
+{
+    "type": "list",
+    "headline": "Interaction Plugin Test",
+    "template": {
+        "type": "separate",
+        "layout": "0,0,2,4",
+        "icon": "msx-white-soft:gamepad",
+        "color": "msx-glass"
+    },
+    "items": [{
+            "title": "Template",
+            "action": "interaction:load:http://msx.benzac.de/interaction/template.html"
+        }, {
+            "title": "Search Example",
+            "action": "content:request:interaction:init@http://msx.benzac.de/interaction/search.html"
+        }, {
+            "title": "Settings Example",
+            "action": "content:request:interaction:init@http://msx.benzac.de/interaction/settings.html"
+        }, {
+            "title": "Observer Example",
+            "action": "content:request:interaction:init@http://msx.benzac.de/interaction/observer.html"
+        }, {            
+            "enumerate": false,
+            "type": "button",
+            "offset": "0,0,0,-1",
+            "icon": "refresh",
+            "label": "Reload",
+            "action": "interaction:reload"
+        }, {           
+            "enumerate": false,
+            "type": "button",
+            "offset": "0,0,0,-1",
+            "icon": "highlight-off",
+            "label": "Unload",
+            "action": "interaction:unload"
+        }]
+}

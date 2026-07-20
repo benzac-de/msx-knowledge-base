@@ -1,0 +1,45 @@
+{
+    "type": "list",
+    "headline": "Android Plugin Test",
+    "template": {
+        "type": "separate",
+        "layout": "0,0,2,4",
+        "icon": "msx-white-soft:adb",
+        "color": "msx-glass",
+        "titleFooter": "",
+        "progress": -1,
+        "live": {
+            "type": "playback",            
+            "titleFooter": "{progress:time:hh:mm:ss}",  
+            "action": "player:show"
+        },
+        "properties": {
+            "resume:key": "url"
+        }
+    },
+    "items": [{
+            "title": "Video 1",
+            "playerLabel": "Video 1",
+            "action": "video:plugin:http://msx.benzac.de/plugins/android.html?url=http://msx.benzac.de/media/video1.mp4"
+        }, {
+            "title": "Video 2",
+            "playerLabel": "Video 2",
+            "action": "video:plugin:http://msx.benzac.de/plugins/android.html?url=http://msx.benzac.de/media/video2.mp4"
+        }, {
+            "title": "Video 3",
+            "playerLabel": "Video 3",
+            "action": "video:plugin:http://msx.benzac.de/plugins/android.html?url=http://msx.benzac.de/media/video3.mp4"
+        }, {
+            "title": "Video 4",
+            "playerLabel": "Video 4",
+            "action": "video:plugin:http://msx.benzac.de/plugins/android.html?url=http://msx.benzac.de/media/video4.mp4"
+        }, {
+            "title": "Video 5",
+            "playerLabel": "Video 5",
+            "action": "video:plugin:http://msx.benzac.de/plugins/android.html?url=http://msx.benzac.de/media/video5.mp4"
+        }, {
+            "title": "Video 6",
+            "playerLabel": "Video 6",
+            "action": "video:plugin:http://msx.benzac.de/plugins/android.html?url=http://msx.benzac.de/media/video6.mp4"
+        }]
+}

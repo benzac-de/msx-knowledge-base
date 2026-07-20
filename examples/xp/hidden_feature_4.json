@@ -1,0 +1,35 @@
+{
+    "type": "pages",
+    "headline": "References",
+    "pages": [{
+            "items": [{
+                    "type": "button",
+                    "layout": "0,0,3,3",
+                    "icon": "movie",
+                    "text": "Focus second item.",
+                    "label": "Videos (Content)",
+                    "action": "content:http://msx.benzac.de/info/data/guide/videos.json>index:1"
+                }, {
+                    "type": "button",
+                    "layout": "3,0,3,3",
+                    "icon": "music-note",
+                    "text": "Focus third item.",
+                    "label": "Audios (Panel)",
+                    "action": "panel:http://msx.benzac.de/info/data/guide/audios.json>index:2"
+                }, {
+                    "type": "button",
+                    "layout": "6,0,3,3",
+                    "icon": "image",
+                    "text": "Focus fourth item.",
+                    "label": "Images (Slideshow)",
+                    "action": "slideshow:http://msx.benzac.de/info/data/guide/images.json>index:3"
+                }, {
+                    "type": "button",
+                    "layout": "9,0,3,3",
+                    "icon": "list",
+                    "text": "Execute first item from fifth section.",
+                    "label": "Actions (Menu)",
+                    "action": "menu:http://msx.benzac.de/info/data/guide/actions.json>index:4>index:0>execute"
+                }]
+        }]
+}

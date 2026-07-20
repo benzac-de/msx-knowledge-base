@@ -1,0 +1,81 @@
+{
+    "type": "pages",
+    "headline": "Delayed Selection Test",
+    "underlay": {
+        "action": "[update:content:overlay:info|background:none|delay:selection:cancel]",
+        "data": {
+            "text": ""
+        }
+    },
+    "overlay": {
+        "items": [{
+                "id": "info",
+                "type": "space",
+                "layout": "0,4,12,2",
+                "text": ""
+            }]
+    },
+    "template": {
+        "enumerate": false,
+        "badge": "{col:msx-white}important",
+        "badgeColor": "msx-red",
+        "type": "separate",
+        "layout": "0,0,2,4",
+        "icon": "msx-white-soft:adb",
+        "color": "msx-glass",        
+        "selection": {
+            "important": true,
+            "headline": "{context:title}",
+            "action": "[invalidate:content:overlay:info|delay:selection:1:data]",
+            "data": {
+                "actions": [{
+                        "action": "update:content:overlay:info",
+                        "data": {
+                            "text": "{ico:msx-blue:info} {context:selectionInfo}"
+                        }
+                    }, {
+                        "action": "background:{context:selectionBackground}"
+                    }]
+            }
+        },
+        "action": "data",
+        "data": {
+            "actions": [{
+                    "action": "info:{context:executionInfo}"                    
+                }, {
+                    "action": "delay:selection:execute"
+                }]
+        }
+    },
+    "items": [{
+            "title": "Item 1",
+            "executionInfo": "Item 1 executed.",
+            "selectionInfo": "Item 1 selected.",
+            "selectionBackground": "http://msx.benzac.de/img/bg1.jpg"
+        }, {
+            "title": "Item 2",
+            "executionInfo": "Item 2 executed.",
+            "selectionInfo": "Item 2 selected.",
+            "selectionBackground": "http://msx.benzac.de/img/bg2.jpg"
+        }, {
+            "title": "Item 3",
+            "executionInfo": "Item 3 executed.",
+            "selectionInfo": "Item 3 selected.",
+            "selectionBackground": "http://msx.benzac.de/img/bg3.jpg"
+        }, {
+            "title": "Item 4",
+            "executionInfo": "Item 4 executed.",
+            "selectionInfo": "Item 4 selected.",
+            "selectionBackground": "none"
+        }, {
+            "title": "Item 5",
+            "executionInfo": "Item 5 executed.",
+            "selectionInfo": "Item 5 selected.",
+            "selectionBackground": "none"
+        }, {
+            "title": "Item 6",
+            "executionInfo": "Item 6 executed.",
+            "selectionInfo": "Item 6 selected.",
+            "selectionBackground": "none"
+        }]
+}

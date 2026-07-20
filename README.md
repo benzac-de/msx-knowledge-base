@@ -42,7 +42,7 @@ The curated reference documents (`AGENTS.md`, `reference/actions-reference.md`, 
 
 ## How to use with an LLM
 
-For an LLM/agent fetching files by URL, use the raw Markdown source at **[https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/)**. Every workflow below starts the same way: get the LLM to load `llms.txt` (the file index) and `AGENTS.md` (the usage guide) first, then fetch or read further files on demand rather than loading the whole KB at once. All internal links are relative paths, so they resolve correctly on the raw source, the hosted Pages site below, and in a local clone.
+For an LLM/agent fetching files by URL, use the raw Markdown source under the base path `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/` — e.g. [`llms.txt`](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/llms.txt) and [`AGENTS.md`](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/AGENTS.md). Every workflow below starts the same way: get the LLM to load `llms.txt` (the file index) and `AGENTS.md` (the usage guide) first, then fetch or read further files on demand rather than loading the whole KB at once. All internal links are relative paths, so they resolve correctly on the raw source, the hosted Pages site below, and in a local clone.
 
 As a nice extra for human readers, the same content is also hosted at **[https://benzac-de.github.io/msx-knowledge-base/](https://benzac-de.github.io/msx-knowledge-base/)**, where GitHub Pages renders the Markdown as HTML for browsing. Its Markdown source lives in the repository at **[https://github.com/benzac-de/msx-knowledge-base](https://github.com/benzac-de/msx-knowledge-base)**.
 

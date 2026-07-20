@@ -42,7 +42,9 @@ The curated reference documents (`AGENTS.md`, `reference/actions-reference.md`, 
 
 ## How to use with an LLM
 
-The KB is hosted at **[https://benzac-de.github.io/msx-knowledge-base/](https://benzac-de.github.io/msx-knowledge-base/)** and its Markdown source lives in the repository at **[https://github.com/benzac-de/msx-knowledge-base](https://github.com/benzac-de/msx-knowledge-base)**. Every workflow below starts the same way: get the LLM to load `llms.txt` (the file index) and `AGENTS.md` (the usage guide) first, then fetch or read further files on demand rather than loading the whole KB at once. All internal links are relative paths, so they resolve correctly both on the hosted site and in a local clone.
+For an LLM/agent fetching files by URL, use the raw Markdown source at **[https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/)**. Every workflow below starts the same way: get the LLM to load `llms.txt` (the file index) and `AGENTS.md` (the usage guide) first, then fetch or read further files on demand rather than loading the whole KB at once. All internal links are relative paths, so they resolve correctly on the raw source, the hosted Pages site below, and in a local clone.
+
+As a nice extra for human readers, the same content is also hosted at **[https://benzac-de.github.io/msx-knowledge-base/](https://benzac-de.github.io/msx-knowledge-base/)**, where GitHub Pages renders the Markdown as HTML for browsing. Its Markdown source lives in the repository at **[https://github.com/benzac-de/msx-knowledge-base](https://github.com/benzac-de/msx-knowledge-base)**.
 
 **Language:** the KB's own text is written in English on purpose (consistent terminology, higher information density), but that doesn't limit which language you *use* it in — an LLM that has read these English files can just as well explain MSX or build JSON while conversing in German, Spanish, French, Portuguese, Italian, Dutch, Russian, Japanese, Chinese, or any other widely-used language; translating on the fly from an English source is a general LLM capability, not something this KB needs to support explicitly. Expect the most reliable results in major, well-resourced world languages; very low-resource or niche languages/dialects may read a little less fluently, simply because the underlying model has less training data there, independent of this KB. One rule holds no matter the conversation language: literal MSX syntax — property names, action strings, color/icon names, JSON keys, and code itself (e.g. `titleFooter`, `video:plugin:{URL}`, `msx-red`) — must stay exactly as documented and never get translated, even when every word around it is.
 
@@ -52,7 +54,7 @@ If the LLM (or the agent/client it runs in) can fetch arbitrary URLs, point it a
 
 Example starting prompt:
 
-> Fetch `https://benzac-de.github.io/msx-knowledge-base/llms.txt` and `https://benzac-de.github.io/msx-knowledge-base/AGENTS.md`. Use them as the index and usage guide for the MSX Knowledge Base, and fetch further files from `https://benzac-de.github.io/msx-knowledge-base/` on demand to answer my questions about Media Station X.
+> Fetch `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/llms.txt` and `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/AGENTS.md`. Use them as the index and usage guide for the MSX Knowledge Base, and fetch further files from `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/` on demand to answer my questions about Media Station X.
 
 This works with e.g. Claude's or ChatGPT's web-fetch/browsing tools, Gemini's URL-context tool, or any agent with a generic HTTP/fetch tool (Claude Code, Cursor, custom agents built on the Claude Agent SDK, etc.).
 

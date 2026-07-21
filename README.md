@@ -54,7 +54,21 @@ If the LLM (or the agent/client it runs in) can fetch arbitrary URLs, point it a
 
 Example starting prompt:
 
-> Fetch `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/llms.txt` and `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/AGENTS.md`. Use them as the index and usage guide for the MSX Knowledge Base, and fetch further files from `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/` on demand to answer my questions about Media Station X.
+```
+Act as my Media Station X (MSX) expert.
+
+Directly fetch and read these files first:
+- https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/llms.txt
+- https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/AGENTS.md
+
+This is a direct document retrieval task, not a web search.
+Do not search for alternative sources.
+
+Use llms.txt as the index and AGENTS.md as the usage guide.
+Fetch additional referenced files from https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/ whenever you need them.
+
+From now on, answer all my Media Station X questions and build any MSX JSON I ask for strictly from this KB rather than general knowledge or guesses.
+```
 
 This works with e.g. Claude's or ChatGPT's web-fetch/browsing tools, Gemini's URL-context tool, or any agent with a generic HTTP/fetch tool (Claude Code, Cursor, custom agents built on the Claude Agent SDK, etc.).
 
@@ -68,9 +82,22 @@ git clone https://github.com/benzac-de/msx-knowledge-base.git
 
 Example starting prompt (run from inside the cloned repository):
 
-> Read `llms.txt` and `AGENTS.md` in this repository, then use them as the index and usage guide for the MSX Knowledge Base. Read further files from this repository on demand to answer my questions about Media Station X.
+```
+Act as my Media Station X (MSX) expert.
+
+Read these files first:
+- llms.txt
+- AGENTS.md
+
+Use llms.txt as the index and AGENTS.md as the usage guide.
+Read additional referenced files from this repository whenever you need them.
+
+From now on, answer all my Media Station X questions and build any MSX JSON I ask for strictly from this KB rather than general knowledge or guesses.
+```
 
 This works with any tool that reads local files on demand — Claude Code, other CLI coding agents, or IDE-integrated assistants (Cursor, Continue, etc.) run with the cloned repository open as the workspace.
+
+**A note on these starting prompts:** they're a general-purpose default, not a guarantee. `AGENTS.md` is trimmed and optimized to cover the large majority of cases well, but even a highly-optimized KB doesn't guarantee a correct result every time — a big, open-ended ask (e.g. "build me a beautiful example app with several content pages") can still come back with real mistakes, depending on the LLM. That's a limit of the LLM you're talking to, not something this KB alone can fully rule out.
 
 ### Other ways to use this KB
 

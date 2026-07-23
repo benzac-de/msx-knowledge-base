@@ -122,14 +122,15 @@ Unless a "since" annotation says otherwise, assume a feature is available from `
 | `0.1.117` | Start Object `welcome` property |
 | `0.1.120` | Dictionary inline expressions: `{dic:…}`; `transparent` (boolean-only) on Content Root and Content Page Object; `restore` (Content Root, Menu Root Object); `options` (Content Item, Content Page, Content Root, Menu Item, and Menu Root Object); `execute` property on menu items (hidden feature — auto-*enters* that menu item's content data on load, rather than executing anything directly; the same `execute` property directly auto-executes a content item, since `0.1.0`) |
 | `0.1.123` | Content Root `compress: true` (expands content grid from 12×6 to 16×8, panel grid from 8×6 to 10×8); `{dix}` wrapper; dictionary inline `{dix:…}` |
-| `0.1.130` | `image` (menu item), `caption`; `options` now also accepts a Content Root Object as value (previously only Content Page Object) |
+| `0.1.130` | `image` (menu item), `caption`; `options` now also accepts a Content Root Object as value (previously only Content Page Object); Page Action's underlay variant now also executes when the content becomes inactive while still visible (e.g. a corresponding menu regains focus), not just when it becomes active |
 | `0.1.134` | `reference` property (Content Root, Menu Root Object) — loads the actual startup data from another location; `reload:menu` / `reload:content` also work with data set via `reference` |
 | `0.1.136` | `"Preselect"` value of the `hover_effect` setting — **not** the same as the `preselect` property below (`0.1.160`); see the note after this table |
 | `0.1.142` | `transparent` newly added to Menu Root and Menu Item Object; `transparent` on Content Root and Content Page Object extended from boolean-only to `number\|boolean` (the 3-state form documented on those pages); `ready` (content root, menu root objects); `lineColor` (menu item objects); `style` (menu root object) |
 | `0.1.144` | `replace:menu/content/panel:…` hidden feature actions |
 | `0.1.145` | `{chr:…}` inline expression; Resolve Action response can also contain `label`, `background`, `properties` to extend/override video/audio info |
 | `0.1.146` | `imageBoundary` property (Content Item Object); `badge-*`/`stamp-*` `alignment` variants; Dynamic Extended Properties `info:overlay`, `info:size`, `progress:duration`, `progress:position` |
-| `0.1.153` | `refocus`, `captionUnderlay` |
+| `0.1.153` | `refocus`, `captionUnderlay`; Emergency Combination recovery mechanism (`911` / `↑↑↓↓←→←→` + `OK`) |
+| `0.1.154` | Settings-validation panel (guards Layout, Scale Factor, Zoom Factor, Transform, Remote Control, and Input Type after a restart); `info:headline` Dynamic Extended Property mirror action |
 | `0.1.155` | Template-only `decompress` property (author template `layout` in uncompressed grid coordinates while content is compressed) |
 | `0.1.156` | `separation` property and the `separation-*` `alignment` variants (only take effect once `separation` is set); `"space"` items can share a grid position with other items (excluded from the selection engine); `info:round` Dynamic Extended Property |
 | `0.1.160` | All internal actions; `preselect` property — **not** the same as the `"Preselect"` hover-effect setting value above (`0.1.136`); see the note below; `{#1}` / `{#2}` insertion expressions; basic format expressions for `{num:…}` |

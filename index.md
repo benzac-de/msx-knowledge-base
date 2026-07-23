@@ -173,12 +173,12 @@ Consolidated cross-cutting reference documents synthesized from all sources.
 - [Type Definitions](reference/type-definitions.md) — TypeScript interfaces for all MSX JSON objects (`MSX*` types) and TVX plugin classes
 - [Actions Reference](reference/actions-reference.md) — Complete reference for all main and internal actions
 - [JSON Building Guide](reference/json-building-guide.md) — Step-by-step guide to building valid MSX JSON pages
-- [Cookbook](reference/cookbook.md) — Curated tour of the most practical real examples: functional pages (media, live data, plugins) and beautiful layouts. Includes deep dives on resuming playback position, the live TV/EPG guide backend, and building your own interaction/video plugin
+- [Cookbook](reference/cookbook.md) — Curated tour of the most practical real examples: functional pages (media lists, adaptive playback, live data, interaction, plugins) and beautiful layouts. Includes deep dives on resuming playback position, the live TV/EPG guide backend, building your own interaction/video plugin, and `layout`-vs-`offset` navigation
 - [Best Practices & Good to Know](reference/best-practices.md) — Recommendations learned from building real pages, plus rendering behaviors/quirks worth knowing — not covered on any single API reference page
 - [Versioning](reference/versioning.md) — Version model, compatibility rules, feature minimum versions
 - [Glossary](reference/glossary.md) — Key MSX terms defined
 - [Common Misconceptions](reference/common-misconceptions.md) — Anti-hallucination reference: plausible-sounding things that do NOT exist
-- [In-App Settings Reference](reference/settings-reference.md) — The native Settings screen: every panel, its values, how to open/set it from JSON, and how a plugin reads it
+- [In-App Settings Reference](reference/settings-reference.md) — The native, end-user-facing Settings screen: every panel, its allowed values, how to open/set it from a JSON action, and how a plugin reads it. Covers what the URL Parameters and Settings Menu Item pages don't: which settings are runtime-adjustable vs. launch-only, the Context Menu (Home/Player/Volume/Settings/Exit), and the `layout` `fix:` prefix
 
 ---
 

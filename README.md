@@ -54,7 +54,7 @@ If the LLM (or the agent/client it runs in) can fetch arbitrary URLs, point it a
 
 **Many chat UIs don't fetch URLs by default — the browsing/fetch capability usually needs to be turned on first, or the model will just answer from its general training instead of the actual KB files:**
 
-- **ChatGPT:** enable Developer Mode in Settings before sending the starting prompt below; this is what exposes the tool-use/URL-fetch capability.
+- **ChatGPT:** make sure browsing or another URL-access capability is enabled for your setup before sending the starting prompt below — without a retrieval tool, the model may answer from its own general knowledge instead of the actual KB files.
 - **Claude (claude.ai):** turn on the web-fetch/browsing tool in the chat's tool settings; agent clients with a built-in HTTP/fetch tool (Claude Code, other coding agents) work without extra setup.
 - **Gemini:** its URL Context tool needs to be enabled for the model/surface you're using (Gemini app vs. AI Studio), and it has proven unreliable for these specific URLs — uploading the files directly, pasting them into the chat, or adding them to a Gem's knowledge base is more reliable than URL fetch here.
 - **Perplexity:** retrieves web content as part of its normal search behavior, so pointing it at these URLs typically works without extra setup, though a narrow Focus/mode setting can restrict what it's willing to fetch.

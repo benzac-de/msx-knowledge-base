@@ -302,10 +302,10 @@ All guide examples are available since `0.1.0`.
 
 - **Top-level type:** `pages`
 - **Item types:** `default`
-- **Structural properties:** `template`
+- **Structural properties:** `template`, `action` (`panel:data`), `data` (embedded Content Root Object)
 - **Inline expressions:** `{context:...}`
-- **Description:** Icon showcase using template iteration with `{context:...}` expressions to display all available icons.
-- **Related API:** [Icons](../main-api/common/icons.md)
+- **Description:** Icon browser using template iteration to display all available icons; each cell's `template`-defined `action`/`data` opens a detail panel showing the icon enlarged with its name, substituted via `{context:icon}` in the panel's nested `data`. Written once in `template.data` rather than repeated per item.
+- **Related API:** [Icons](../main-api/common/icons.md), [Actions](../main-api/common/actions.md), [Content Root Object](../main-api/content/content-root-object.md)
 - **Version:** `0.1.0`
 
 ### [guide/image_filler.json](guide/image_filler.json)

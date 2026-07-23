@@ -343,7 +343,7 @@ See [Colors](../main-api/common/colors.md).
 
 ## Multi-Action
 
-A special action syntax (since `0.1.58`) that executes multiple actions in sequence: `[action1|action2|…]`. Actions separated by `|`. If the triggering content item provides a `data` property, it is shared by **all** actions in the list. Use `{pipe}` inside action arguments when a literal `|` is needed.
+A special action syntax (since `0.1.58`) that executes multiple actions in sequence: `[action1|action2|…]`. Actions separated by `|`. If the triggering content item provides a `data` property, it is shared by **all** actions in the list. Use `{pipe}` inside action arguments when a literal `|` is needed. Not transactional: each action executes independently, so if one fails, warns, or is a no-op (e.g. an internal action unsupported on the client's current MSX version), the remaining actions still execute — nothing aborts the rest of the sequence.
 
 Not to be confused with the [`data` Action](#data-action), a second, same-version (`0.1.58`) way to execute multiple actions in a row — more verbose, but each action gets its own `action`/`data` pair instead of one shared `data` property.
 

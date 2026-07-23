@@ -165,7 +165,7 @@ Without a `label`, the width minimums above apply symmetrically to height too �
 
 **`badge` overlaps `headline`/`text` unless you adjust the alignment.** Both are positioned in the upper-left corner by default (see [Content Item Object](../main-api/content/content-item-object.md)), so combining `badge` with `headline`/`text` without any adjustment lets the badge sit directly on top of them. Fix it with the `alignment` property on either side: `"alignment": "text-right"` (since `0.1.97`) moves `headline`/`text` out of the way, or `"alignment": "badge-right"` (since `0.1.146`) moves the badge instead — from a UX standpoint, moving the badge (`badge-right`) is the recommended choice of the two. `"badge-center"` doesn't help here: a centered badge still renders across the item's full width, just centered within it, rather than shrinking to the text's own size — only `badge-left`/`badge-right` size the badge to its actual text width.
 
-**Combining `alignment: "badge-right"` with a `tag`?** Add `{tb}{tb}` at the end of the `badge` text. `tag` renders as a diagonal ribbon in the upper-right corner, and without extra spacing a right-aligned badge text can disappear behind it. Three non-breaking tabs push enough space toward the right edge that the tag no longer covers the badge text, letting both render cleanly side by side:
+**Combining `alignment: "badge-right"` with a `tag`?** Add `{tb}{tb}` at the end of the `badge` text. `tag` renders as a diagonal ribbon in the upper-right corner, and without extra spacing a right-aligned badge text can disappear behind it. Two non-breaking tabs push enough space toward the right edge that the tag no longer covers the badge text, letting both render cleanly side by side:
 
 ```json
 {

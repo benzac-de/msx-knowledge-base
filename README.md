@@ -6,7 +6,7 @@ summary: Human-readable project entry point for the MSX LLM Knowledge Base repos
 
 # MSX Knowledge Base
 
-**KB Version:** `2026-07-20` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
+**KB Version:** `2026-07-23` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
 
 An LLM-optimized knowledge base for **Media Station X (MSX)**, covering the MSX app API from version `0.1.0` to `0.1.166`. It is aimed at MSX JSON authors and at LLMs that need to answer MSX questions or build valid MSX JSON pages from scratch.
 
@@ -52,6 +52,15 @@ As a nice extra for human readers, the same content is also hosted at **[https:/
 
 If the LLM (or the agent/client it runs in) can fetch arbitrary URLs, point it at the hosted `llms.txt` and let it pull further files as needed.
 
+**Many chat UIs don't fetch URLs by default — the browsing/fetch capability usually needs to be turned on first, or the model will just answer from its general training instead of the actual KB files:**
+
+- **ChatGPT:** enable Developer Mode in Settings before sending the starting prompt below; this is what exposes the tool-use/URL-fetch capability.
+- **Claude (claude.ai):** turn on the web-fetch/browsing tool in the chat's tool settings; agent clients with a built-in HTTP/fetch tool (Claude Code, other coding agents) work without extra setup.
+- **Gemini:** its URL Context tool needs to be enabled for the model/surface you're using (Gemini app vs. AI Studio), and it has proven unreliable for these specific URLs — uploading the files directly, pasting them into the chat, or adding them to a Gem's knowledge base is more reliable than URL fetch here.
+- **Perplexity:** retrieves web content as part of its normal search behavior, so pointing it at these URLs typically works without extra setup, though a narrow Focus/mode setting can restrict what it's willing to fetch.
+
+Exact menu locations change between app versions and subscription plans — if the model doesn't seem to have actually fetched anything, look for a browsing/web-search/tool-use setting in that client rather than assuming the KB itself is unreachable.
+
 Example starting prompt:
 
 ```
@@ -70,7 +79,7 @@ Fetch additional referenced files from https://raw.githubusercontent.com/benzac-
 From now on, answer all my Media Station X questions and build any MSX JSON I ask for strictly from this KB rather than general knowledge or guesses.
 ```
 
-This works with e.g. Claude's or ChatGPT's web-fetch/browsing tools, Gemini's URL-context tool, or any agent with a generic HTTP/fetch tool (Claude Code, Cursor, custom agents built on the Claude Agent SDK, etc.).
+**Confirm the files were actually loaded before relying on the answers.** A model can acknowledge the fetch instruction and then answer from general training instead of the retrieved content, without any visible error. Before asking real MSX questions, send a quick follow-up such as: "Please confirm you successfully loaded llms.txt and AGENTS.md, and name a few of the specific files or topics you found in the index." A model that actually fetched the files can name concrete file names/topics from them; one that didn't will typically give a vague answer or admit it couldn't fetch anything.
 
 ### Option B — Local clone + local/CLI LLM client
 
@@ -97,12 +106,19 @@ From now on, answer all my Media Station X questions and build any MSX JSON I as
 
 This works with any tool that reads local files on demand — Claude Code, other CLI coding agents, or IDE-integrated assistants (Cursor, Continue, etc.) run with the cloned repository open as the workspace.
 
-**A note on these starting prompts:** they're a general-purpose default, not a guarantee. `AGENTS.md` is trimmed and optimized to cover the large majority of cases well, but even a highly-optimized KB doesn't guarantee a correct result every time — a big, open-ended ask (e.g. "build me a beautiful example app with several content pages") can still come back with real mistakes, depending on the LLM. That's a limit of the LLM you're talking to, not something this KB alone can fully rule out.
+**Two things worth checking here:**
+
+- **Working directory:** the relative paths in the prompt above (`llms.txt`, `AGENTS.md`) only resolve if the tool's working directory or open workspace is the cloned repository's root — point it there, not at a parent folder or a subfolder.
+- **RAG/semantic-search clients:** some IDE assistants (e.g. Cursor, Continue) don't necessarily read a file in full on request — they index the repository semantically and pull back only the chunks that match your query, which can mean `llms.txt`/`AGENTS.md` never actually get loaded in full even though the files are technically accessible. The same follow-up used for Option A applies here too: ask the model to confirm it loaded `llms.txt` and `AGENTS.md`, and to name a few specific files or topics it found in the index, before relying on its answers.
+
+### A note on these starting prompts
+
+They're a general-purpose default, not a guarantee. `AGENTS.md` is trimmed and optimized to cover the large majority of cases well, but even a highly-optimized KB doesn't guarantee a correct result every time — a big, open-ended ask (e.g. "build me a beautiful example app with several content pages") can still come back with real mistakes, depending on the LLM. That's a limit of the LLM you're talking to, not something this KB alone can fully rule out.
 
 ### Other ways to use this KB
 
 - **Paste into a chat:** For one-off questions, paste the content of `AGENTS.md` plus the specific topic file(s) you need directly into a chat window — no tools or hosting required.
-- **Project/knowledge upload:** Most chat UIs with a "Project" or custom-knowledge feature (Claude Projects, ChatGPT Projects/Custom GPTs, Gemini Gems) let you upload a handful of files — e.g. `AGENTS.md`, `llms.txt`, and the reference files you need most — as persistent knowledge, from a local clone or, where the client supports it, a direct GitHub connection.
+- **Project/knowledge upload:** Most chat UIs with a "Project" or custom-knowledge feature (Claude Projects, ChatGPT Projects/Custom GPTs, Gemini Gems) let you upload a handful of files — e.g. `AGENTS.md`, `llms.txt`, and the reference files you need most — as persistent knowledge, from a local clone or, where the client supports it, a direct GitHub connection. Uploading the whole KB as a zip? Leave out `img/` — those images only exist so the converted Markdown's image links resolve for human readers browsing the hosted site, not for the LLM to look at, and skipping that folder keeps the zip well under 1 MB instead of tens of megabytes.
 - **Bulk ingestion / RAG:** To build your own retrieval system, clone the repo (or fetch individual files via `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/...`) and index the raw Markdown in a vector store; `llms.txt` gives you the full file list to seed the crawl/embedding job.
 - **MCP server:** If your client supports the Model Context Protocol, point an MCP filesystem server at a local clone, or an MCP GitHub server at `benzac-de/msx-knowledge-base`, so the LLM can list and read files directly through the tool.
 
@@ -120,7 +136,7 @@ This KB itself is a derived, generated artifact, maintained in this repository b
 
 ## Coverage & version scope
 
-- **KB Version (this snapshot): `2026-07-20`.** Not to be confused with the MSX app version range below — this date tracks the KB document set itself. Whenever this KB is regenerated or updated, this value is replaced with the new generation date.
+- **KB Version (this snapshot): `2026-07-23`.** Not to be confused with the MSX app version range below — this date tracks the KB document set itself. Whenever this KB is regenerated or updated, this value is replaced with the new generation date.
 - MSX app version range covered: **`0.1.0`** to **`0.1.166`**.
 - TVX Framework version mentioned in sources: `0.1.35` (no changelog or per-version feature list available in the sources).
 - TVX Plugin Library version mentioned in sources: `0.0.79` (no changelog available).

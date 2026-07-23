@@ -54,7 +54,7 @@ Please see following example.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_11.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_11.json)
 
-## See also
+## See Also
 
 - [Dictionary Structure](../special/dictionary-structure.md)
 - [In-App Settings Reference → What is not covered by any native setting](../../reference/settings-reference.md#6-what-is-not-covered-by-any-native-setting) — why MSX externalizes language handling into this mechanism instead of a native setting

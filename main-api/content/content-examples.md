@@ -140,7 +140,7 @@ summary: Two worked JSON examples of content items — non-templated (manual pag
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/data/guide/template_list.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/data/guide/template_list.json)
 
-## See also
+## See Also
 
 - [Content Root Object](content-root-object.md)
 - [Content Page Object](content-page-object.md)

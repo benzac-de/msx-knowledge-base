@@ -175,7 +175,7 @@ Parameter syntax of content service for input plugin.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_13.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_13.json)
 
-## See also
+## See Also
 
 - [Interaction Plugin](./interaction-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)

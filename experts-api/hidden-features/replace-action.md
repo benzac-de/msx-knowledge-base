@@ -169,7 +169,7 @@ Please see following example code.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_15_section1.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_15_section1.json)
 
-## See also
+## See Also
 
 - [Actions Reference → Replace Actions (since `0.1.144`)](../../reference/actions-reference.md#replace-actions-since-01144)
 - [Glossary → Replace](../../reference/glossary.md#replace)

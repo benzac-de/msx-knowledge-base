@@ -91,7 +91,7 @@ Parameter syntax of Android plugin.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_9.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_9.json)
 
-## See also
+## See Also
 
 - [Video/Audio Plugin](./video-audio-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)

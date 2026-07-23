@@ -87,7 +87,7 @@ Parameter syntax of play plugin.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_10.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_10.json)
 
-## See also
+## See Also
 
 - [Interaction Plugin](./interaction-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)

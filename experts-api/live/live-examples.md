@@ -315,7 +315,9 @@ A more complex example is the TV guide, which shows how you can display channel 
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/xp/data/live_test_4.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/xp/data/live_test_4.json)
 
-## See also
+## See Also
 
 - [Live Object](./live-object.md)
 - [Live Inline Expressions](./live-inline-expressions.md)
+- [Cookbook → Deep dive — a minimal "resume playback" item](../../reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern) — property-by-property walkthrough of Example 2 above
+- [Cookbook → Deep dive — the live channels / EPG backend](../../reference/cookbook.md#deep-dive--the-live-channels--epg-backend-live_test_4) — the server-driven backend pattern behind Example 4 above

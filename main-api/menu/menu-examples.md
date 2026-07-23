@@ -293,7 +293,7 @@ summary: Code examples demonstrating menu configurations in MSX.
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/data/example_menu_4.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/data/example_menu_4.json)
 
-## See also
+## See Also
 
 - [Menu Root Object](menu-root-object.md)
 - [Menu Item Object](menu-item-object.md)

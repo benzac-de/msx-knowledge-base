@@ -173,7 +173,7 @@ Consolidated cross-cutting reference documents synthesized from all sources.
 - [Type Definitions](reference/type-definitions.md) — TypeScript interfaces for all MSX JSON objects (`MSX*` types) and TVX plugin classes
 - [Actions Reference](reference/actions-reference.md) — Complete reference for all main and internal actions
 - [JSON Building Guide](reference/json-building-guide.md) — Step-by-step guide to building valid MSX JSON pages
-- [Cookbook](reference/cookbook.md) — Curated tour of the most practical real examples: functional pages (media, live data, plugins) and beautiful layouts
+- [Cookbook](reference/cookbook.md) — Curated tour of the most practical real examples: functional pages (media, live data, plugins) and beautiful layouts. Includes deep dives on resuming playback position, the live TV/EPG guide backend, and building your own interaction/video plugin
 - [Best Practices & Good to Know](reference/best-practices.md) — Recommendations learned from building real pages, plus rendering behaviors/quirks worth knowing — not covered on any single API reference page
 - [Versioning](reference/versioning.md) — Version model, compatibility rules, feature minimum versions
 - [Glossary](reference/glossary.md) — Key MSX terms defined

@@ -94,3 +94,7 @@ Please see following example.
 
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_4.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_4.json)
+
+## See Also
+
+- [Cookbook → Deep dive — the TV Guide (EPG grid) backend](../../reference/cookbook.md#deep-dive--the-tv-guide-epg-grid-backend-guidephp) — a real "watch" button jumping straight into a channel and executing it via `content:{URL}>{ID}>execute`

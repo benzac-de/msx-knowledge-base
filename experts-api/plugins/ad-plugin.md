@@ -52,7 +52,7 @@ Please note that this example uses the MRSS Feeds interaction plugin to load exa
 
 **Note: This demo will only work properly if ad blockers are disabled.**
 
-## See also
+## See Also
 
 - [Video/Audio Plugin](./video-audio-plugin.md)
 - [IMA Plugin](./ima-plugin.md)

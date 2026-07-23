@@ -33,7 +33,7 @@ summary: Platform support matrix showing MSX compatibility across TV platforms a
 | HbbTV devices | - | HbbTV 1.1+ | - | - | 0.1.166 | Please use an HbbTV-capable browser and open the URL [http://msx.benzac.de/hbbtv.html](http://msx.benzac.de/hbbtv.html). |
 | AR/VR headsets | - | - | - | - | 0.1.166 | Please use an AR/VR browser/application and open the URL [http://msx.benzac.de/xr.html](http://msx.benzac.de/xr.html). |
 
-## See also
+## See Also
 
 - [Versioning](../reference/versioning.md) — how a platform's current app version relates to feature minimum versions
 - [Tips & Tricks → Distributed Versions](tips-tricks.md#distributed-versions) — installing/updating on the legacy Samsung models marked above

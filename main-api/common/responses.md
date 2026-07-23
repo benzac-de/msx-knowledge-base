@@ -94,7 +94,7 @@ There are three distinct error scenarios.
 
 The `response` wrapper was introduced specifically to work around the limitation that many TV platforms cannot reliably display non-200 HTTP errors. By always returning HTTP 200 and encoding the error state inside the `response` object, errors are guaranteed to reach the user.
 
-## See also
+## See Also
 
 - [Requests](requests.md)
 - [JSON Building Guide → Step 8 — Actions](../../reference/json-building-guide.md#step-8--actions) — the exact error text MSX throws when a server action response omits `response.data.action` or the `response` object itself, and the full `accurate:`/`service:`/`silent:` prefix behavior

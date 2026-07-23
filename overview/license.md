@@ -42,6 +42,6 @@ If you do not agree with the terms and conditions of this agreement, you must pr
 - Donations received by the author support the development and ongoing maintenance of Media Station X and its officially recognized projects.
 - Donations are voluntary and made without the expectation of goods, services, or any other form of compensation.
 
-## See also
+## See Also
 
 - [Common Misconceptions → Licensing, authorship & open source](../reference/common-misconceptions.md#licensing-authorship--open-source) — MSX itself is freeware, not open source, but the documented plugins are

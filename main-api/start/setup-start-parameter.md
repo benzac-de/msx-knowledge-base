@@ -14,10 +14,6 @@ If the JSON file is hosted, please go to your corresponding application store, i
 
 For corresponding application stores, please visit: [https://msx.benzac.de/info/?tab=PlatformSupport](https://msx.benzac.de/info/?tab=PlatformSupport).
 
-## See also
-
-- [In-App Settings Reference → Other Settings-scene entries](../../reference/settings-reference.md#5-other-settings-scene-entries-and-safety-mechanisms) — the `settings:start` panel that runs this setup from inside the app
-
 ## Example Screenshot (Setup Start Parameter)
 
 ![Setup Start Parameter Screenshot](../../img/start.png)
@@ -65,7 +61,8 @@ If the `start` URL parameter is set, you can also set an `alias` URL parameter, 
 
 The special start parameter ID syntax is also supported by the **Launcher MSX** service. For this service, you can (if the `start` URL parameter is set) set additional URL parameters (`type`, `icon`, `image`, and `color`) that are also extracted and used as launcher properties. Please see [Tips & Tricks — Launcher MSX](../../overview/tips-tricks.md#launcher-msx) for more information.
 
-## See also
+## See Also
 
 - [Start Object](./start-object.md)
 - [Setup Precondition](./setup-precondition.md)
+- [In-App Settings Reference → Other Settings-scene entries](../../reference/settings-reference.md#5-other-settings-scene-entries-and-safety-mechanisms) — the `settings:start` panel that runs this setup from inside the app

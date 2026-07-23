@@ -193,6 +193,7 @@ One cell/tile on the grid. Key properties:
 - `label`, `title`, `titleHeader`, `titleFooter`, `badge`, `stamp`: Text properties (all support inline expressions).
 - `image`, `background`, `icon`, `color`: Visual properties.
 - `options` (since `0.1.120`): A Content Page Object (or since `0.1.130` also a Content Root Object) shown as a panel when this item is selected and the menu button is pressed. Highest priority in the `options` fallback chain — see [Glossary: Options](reference/glossary.md#options).
+- `properties` (object): The **Extended Properties bag** — a large, separate set of advanced, mostly player/plugin-facing item properties (e.g. `resume:key`/`resume:position`/`resume:context` for remembering playback position, `trigger:{TRIGGER_KEY}`, `control:load`, `tizen:*`, `html5x:*`, `image:*`, player-button overrides) that do **not** live at the top level of a Content Item Object — they are nested inside this one `properties` object instead, e.g. `"properties": { "resume:key": "url" }`. Not every `key:value` inside `properties` is necessarily an MSX-defined property, either — some are free-form data a specific plugin reads (see [Common Misconceptions → Extended properties (the `properties` bag)](reference/common-misconceptions.md#extended-properties-the-properties-bag)). See [Extended Properties](experts-api/special/extended-properties.md).
 
 See: [Content Item Object](main-api/content/content-item-object.md)
 
@@ -487,6 +488,10 @@ There is also a `tvx-plugin-ux-module.min.js` variant — the same library plus 
 | How to set up an MSX start URL? | `main-api/start/start-object.md` |
 | Menu structure | `main-api/menu/menu-root-object.md`, `main-api/menu/menu-item-object.md` |
 | Content layout, grid, item types | `main-api/content/content-root-object.md`, `main-api/content/content-item-object.md` |
+| Remembering / resuming playback position ("continue watching") | `experts-api/special/extended-properties.md` (`resume:key`/`resume:position`/`resume:context`) + `reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern` |
+| Item-type/image/icon sizing & contrast pitfalls (`icon`+`image` combined, `"button"`/`"control"` height, `tag`/`stamp`/`badge` defaults, `imageOverlay`) | `reference/best-practices.md` (Best Practices section) |
+| Why `layout` (not `offset`) decides what gets focused next | `reference/cookbook.md#deep-dive--layout-drives-navigation-offset-doesnt-list0json` |
+| Choosing between M3U/PLS and MRSS for playlist import | `reference/cookbook.md#m3upls-vs-mrss-two-different-playlist-import-mechanisms`, `extended-api/m3u-pls-files.md`, `extended-api/mrss-feeds.md` |
 | Available actions (full list) | `main-api/common/actions.md` + `reference/actions-reference.md` |
 | Inline expressions (standard) | `main-api/common/inline-expressions.md` |
 | Colors | `main-api/common/colors.md` |
@@ -495,9 +500,12 @@ There is also a `tvx-plugin-ux-module.min.js` variant — the same library plus 
 | Dictionary expressions | `experts-api/hidden-features/dictionary-inline-expressions.md` |
 | Color override expressions | `experts-api/hidden-features/color-inline-expressions.md` |
 | Live updates (scheduling, timers) | `experts-api/live/live-object.md`, `experts-api/live/live-inline-expressions.md` |
+| Building a live TV channel list / EPG guide backend (server-driven) | `reference/cookbook.md#deep-dive--the-live-channels--epg-backend-live_test_4`, `reference/cookbook.md#deep-dive--the-tv-guide-epg-grid-backend-guidephp` |
 | Selection behavior on focus | `experts-api/selection/selection-object.md` |
 | Compress grid (16×8 layout) | `experts-api/hidden-features/compress-property.md` |
 | Plugin development | `experts-api/plugins/video-audio-plugin.md`, `experts-api/plugins/plugin-api-reference.md` |
+| Building your own interaction plugin (handler pattern: `handleEvent`/`handleData`/`handleRequest`) | `experts-api/plugins/interaction-plugin.md`, `reference/cookbook.md#deep-dive--building-an-interaction-plugin-plugin_test_2` |
+| Building your own video plugin (player pattern: `MyPlayer`, progress polling) | `experts-api/plugins/video-audio-plugin.md`, `reference/cookbook.md#deep-dive--building-a-video-plugin-plugin_test_4-html5x` |
 | Plugin event types / `handleEvent` payloads | `experts-api/plugins/plugin-events-reference.md` |
 | TypeScript types for JSON objects | `reference/type-definitions.md` |
 | Step-by-step JSON building | `reference/json-building-guide.md` |

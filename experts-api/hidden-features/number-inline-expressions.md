@@ -99,3 +99,7 @@ Expression syntax of basic number format expressions.
 
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_6.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_6.json)
+
+## See Also
+
+- [Cookbook → Deep dive — the TV Guide (EPG grid) backend](../../reference/cookbook.md#deep-dive--the-tv-guide-epg-grid-backend-guidephp) — real fixed-timestamp slot headers built with `{num:...:date:...}`/`{num:...:time:...}`

@@ -94,7 +94,7 @@ Property syntax of content root object.
 - [Option Shortcut](../../experts-api/hidden-features/option-shortcut.md)
 - [Replace Action](../../experts-api/hidden-features/replace-action.md)
 
-## See also
+## See Also
 
 - [Content Page Object](content-page-object.md)
 - [Content Item Object](content-item-object.md)
@@ -102,4 +102,6 @@ Property syntax of content root object.
 - [Content Guide](content-guide.md)
 - [Best Practices & Good to Know → `transparent` and background images/videos](../../reference/best-practices.md#transparent-and-background-imagesvideos) — the exact two-state overlay mechanics behind the `transparent` values above
 - [Best Practices & Good to Know → Video/audio keeps playing in the background after `back`](../../reference/best-practices.md#videoaudio-keeps-playing-in-the-background-after-back-by-default) — why a running background video interacts with `transparent` the way it does
+- [Best Practices & Good to Know → Choosing `"list"` vs `"pages"`, and `template`+`items` vs manual `pages`](../../reference/best-practices.md#choosing-list-vs-pages-and-templateitems-vs-manual-pages) — which combination fits which use case in practice
+- [Cookbook → Media lists](../../reference/cookbook.md#media-lists) — real `template`+`items` starting points (audio/image/video/YouTube lists)
 - [Glossary → Cache](../../reference/glossary.md#cache), [→ Reuse](../../reference/glossary.md#reuse), [→ Restore](../../reference/glossary.md#restore), and [→ Grid](../../reference/glossary.md#grid) — the full load/reuse mechanics and exact compress-grid math behind these properties

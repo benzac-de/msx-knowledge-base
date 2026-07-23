@@ -65,9 +65,11 @@ Property syntax of menu root object.
 - [Option Shortcut](../../experts-api/hidden-features/option-shortcut.md)
 - [Replace Action](../../experts-api/hidden-features/replace-action.md)
 
-## See also
+## See Also
 
 - [Menu Item Object](menu-item-object.md)
 - [Menu Examples](menu-examples.md)
 - [Common Misconceptions → Right property, wrong object](../../reference/common-misconceptions.md#right-property-wrong-object) — `logo`/`logoSize` exist only here, not on the Content Root Object
+- [Best Practices & Good to Know → `transparent` and background images/videos](../../reference/best-practices.md#transparent-and-background-imagesvideos) — the priority chain (Content Page → Content Root → Menu Item → Menu Root) and overlay mechanics behind `transparent`/`background` here
+- [Cookbook → Live data (EPG, progress, countdowns)](../../reference/cookbook.md#live-data-epg-progress-countdowns) — the live-clock pattern built on this object's `extension` property
 - [Glossary → Cache](../../reference/glossary.md#cache), [→ Reuse](../../reference/glossary.md#reuse), and [→ Restore](../../reference/glossary.md#restore) — the full load/reuse mechanics behind these properties

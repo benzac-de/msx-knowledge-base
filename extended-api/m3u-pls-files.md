@@ -107,6 +107,6 @@ Parameter syntax of playlist converter.
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/data/playlist.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/data/playlist.json)
 
-## See also
+## See Also
 
 - [Cookbook → M3U/PLS vs. MRSS](../reference/cookbook.md#m3upls-vs-mrss-two-different-playlist-import-mechanisms) — how this compares to MRSS Feeds, including the CORS and launcher-service differences

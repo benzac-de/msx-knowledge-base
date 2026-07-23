@@ -33,6 +33,6 @@ Most of the text properties support inline expressions for adding icons or color
 - [Color Inline Expressions](../../experts-api/hidden-features/color-inline-expressions.md)
 - [Dictionary Inline Expressions](../../experts-api/hidden-features/dictionary-inline-expressions.md)
 
-## See also
+## See Also
 
 - [Common Misconceptions → Inline expressions](../../reference/common-misconceptions.md#inline-expressions) — the placeholder-braces trap, why unknown expressions fail silently, and which properties do/don't support inline expressions at all

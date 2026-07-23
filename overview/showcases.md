@@ -202,6 +202,6 @@ For this service, Media Station X **0.1.132** or higher is needed. Enter the sta
 - [Show Video](https://www.youtube.com/watch?v=9Xapp9Kc1ok)
 - [Launch Demo](https://msx.benzac.de/?start=menu:request:interaction:init@https://launcher.msx.benzac.de/interaction)
 
-## See also
+## See Also
 
 - [Common Misconceptions → Licensing, authorship & open source](../reference/common-misconceptions.md#licensing-authorship--open-source) — these Showcases are not generally open source; only RBTV MSX is

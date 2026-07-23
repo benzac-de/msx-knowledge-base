@@ -161,7 +161,7 @@ Interaction plugin examples.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_2.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_2.json)
 
-## See also
+## See Also
 
 - [Plugin API Reference](./plugin-api-reference.md)
 - [Plugin Events Reference](./plugin-events-reference.md)

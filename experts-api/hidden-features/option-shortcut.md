@@ -88,3 +88,7 @@ If you would like to test this example on a desktop device, please use the numbe
 ## Related Hidden Features
 
 - [Key Property](key-property.md)
+
+## See Also
+
+- [Cookbook → Interaction & UX](../../reference/cookbook.md#interaction--ux) — a real, commonly-used pattern: option items with a `key` shortcut for quick single-remote-key actions

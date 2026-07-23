@@ -199,6 +199,6 @@ This example uses an interaction plugin to create the content and to handle the 
 
 **Note: This demo will only work properly on an Android or FireTV device with Media Station X 0.1.136 or higher.**
 
-## See also
+## See Also
 
 - [Android Plugin](../plugins/android-plugin.md)

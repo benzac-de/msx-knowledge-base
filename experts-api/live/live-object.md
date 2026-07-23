@@ -91,9 +91,11 @@ Property syntax of live object.
 | `action` | `string` | `null` | No | **0.1.70** | The live action that is executed if the `type` property is set to `"setup"` and the corresponding content item becomes visible. The live action will also be executed if the `type` property is set to `"playback"`, the live object is in state `"running"`, and the corresponding content item is executed.<br><br>**Note: If this property is set inside a state object (i.e. `coming`, `running`, or `over`), it is executed if the live object enters the corresponding state.** |
 | `data` | `object` | `null` | No | **0.1.70** | The additional data of the live action that is used if the action is executed. |
 
-## See also
+## See Also
 
 - [Live Inline Expressions](./live-inline-expressions.md)
 - [Live Examples](./live-examples.md)
+- [Cookbook → Live data (EPG, progress, countdowns)](../../reference/cookbook.md#live-data-epg-progress-countdowns) — the `lifetime`/`playback`/`schedule` state-machine walkthroughs and the live-clock pattern
+- [Cookbook → Deep dive — the live channels / EPG backend](../../reference/cookbook.md#deep-dive--the-live-channels--epg-backend-live_test_4) — a full server-driven `type: "setup"`/`"schedule"` EPG built on this object
 - [Cookbook → Deep dive — a minimal "resume playback" item (`live_test_2` pattern)](../../reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern) — why `resume:key` and a `type: "playback"` live object are normally used together, and how this pattern also works through a plugin player
 - [Glossary → Live Object](../../reference/glossary.md#live-object)

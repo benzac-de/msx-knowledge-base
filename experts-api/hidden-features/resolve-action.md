@@ -138,7 +138,8 @@ This example uses a web service and an interaction plugin to resolve the assets.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_13.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_13.json)
 
-## See also
+## See Also
 
 - [Actions Reference → Resolve Action (since `0.1.107`)](../../reference/actions-reference.md#resolve-action-since-01107) — why it keeps its `0.1.107` minimum instead of the Internal Actions' `0.1.160+` blanket, including its `request:interaction:` sub-variant
 - [Common Misconceptions → Actions](../../reference/common-misconceptions.md#actions) and [→ Server responses](../../reference/common-misconceptions.md#server-responses) — the exact `response.data.url`/`response.data.error` shape
+- [Cookbook → Adaptive & dynamic playback](../../reference/cookbook.md#adaptive--dynamic-playback) — real examples using Resolve to serve a platform-specific codec or a token-protected link, including the Play Plugin's runtime player-selection pattern

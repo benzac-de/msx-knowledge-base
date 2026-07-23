@@ -12,7 +12,7 @@ These actions are used internally, but can also be used to create more complex a
 
 If you would like to search for an action, please have a look at this link: [https://msx.benzac.de/info/xp/actions.html](https://msx.benzac.de/info/xp/actions.html).
 
-## See also
+## See Also
 
 - [Actions Reference](../../reference/actions-reference.md) — consolidated Main + Internal actions, including cases where "Main Action: No" still carries a tighter since-version than the `0.1.160+` blanket (`execute:service:...` since `0.1.90`, the entire broadcast/HbbTV family since `0.1.30`, the `content:json:`/`menu:json:`/`panel:json:`/`playlist:json:`/`slideshow:json:` base64-embedding variants since `0.1.0`, `system:tvx:launch`/`system:tvx:launch:{APP_ID}` and `system:netcast:menu` since `0.1.136`, `request:interaction:{DATA_ID}@{URL}` combinations since `0.1.82`) — see that page for the complete, authoritative list
 - [Actions Reference → Actions That Mirror a "Dynamic" Extended Property](../../reference/actions-reference.md#actions-that-mirror-a-dynamic-extended-property) — the largest exception group: the full `player:*`/`slider:*`/`resume:position`/`trigger:{KEY}:{ACTION}` cross-reference table, each action sharing its property's own since-version (`0.1.58`–`0.1.156`, not blanket `0.1.160+`)
@@ -21,6 +21,7 @@ If you would like to search for an action, please have a look at this link: [htt
 - [Common Misconceptions → Actions](../../reference/common-misconceptions.md#actions) and [→ Server actions](../../reference/common-misconceptions.md#server-actions-execute)
 - [Versioning → Forward Compatibility](../../reference/versioning.md#forward-compatibility) — why an unrecognized internal action on an older client surfaces as a warning, not a hard error
 - [Glossary → Invalidate](../../reference/glossary.md#invalidate) and [→ Release](../../reference/glossary.md#release) — the distinction between `invalidate:*` (visual only) and `release:*` (actually clears cache)
+- [Best Practices & Good to Know → The player UI shows for several seconds by default](../../reference/best-practices.md#the-player-ui-shows-for-several-seconds-by-default-when-starting-videoaudio--several-mechanisms-shorten-or-suppress-it) — how `auto:{URL}`/`auto:` (internal-only, `0.1.160+`) fits alongside `control:load`/`trigger:load`/`trigger:start` to suppress or shorten the player UI
 
 **Column guide:**
 - **Main Action = Yes**: This action is also an official Main Action (documented in [Actions](../../main-api/common/actions.md)) and is version-stable.

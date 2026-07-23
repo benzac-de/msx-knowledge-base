@@ -1197,7 +1197,7 @@ tvx.InteractionPlugin;//instance of TVXInteractionPlugin (like static class)
 /******************************************************************************/
 ```
 
-## See also
+## See Also
 
 - [Video/Audio Plugin](./video-audio-plugin.md)
 - [Interaction Plugin](./interaction-plugin.md)

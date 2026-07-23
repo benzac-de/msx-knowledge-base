@@ -74,6 +74,6 @@ Please note that this example also shows an usage example of the [Ad Plugin](../
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/data/mrss.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/data/mrss.json)
 
-## See also
+## See Also
 
 - [Cookbook → M3U/PLS vs. MRSS](../reference/cookbook.md#m3upls-vs-mrss-two-different-playlist-import-mechanisms) — how this compares to M3U/PLS Files, including the CORS and launcher-service differences

@@ -299,6 +299,6 @@ This is not really a hidden feature, but a good-to-know information. It is possi
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_19.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_19.json)
 
-## See also
+## See Also
 
 - [Common Misconceptions → Custom & unknown properties](../../reference/common-misconceptions.md#custom--unknown-properties) — `{context:{PROPERTY}}` can reference any custom field name, not just official properties

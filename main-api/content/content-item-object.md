@@ -151,7 +151,7 @@ Property syntax of content item object.
 - [Option Shortcut](../../experts-api/hidden-features/option-shortcut.md)
 - [Advanced Text & Image](../../experts-api/hidden-features/advanced-text-image.md)
 
-## See also
+## See Also
 
 - [Content Root Object](content-root-object.md)
 - [Content Page Object](content-page-object.md)
@@ -159,4 +159,13 @@ Property syntax of content item object.
 - [Content Guide](content-guide.md)
 - [Best Practices & Good to Know → Item `type: "separate"` reserves less image/focus space than its `layout` height suggests](../../reference/best-practices.md#item-type-separate-reserves-less-imagefocus-space-than-its-layout-height-suggests) — also covers `image`+`icon` combining and the `image` boundary on `"control"`/`"button"` items
 - [Best Practices & Good to Know → Sizing `image` sources for the grid vs. for full-screen](../../reference/best-practices.md#sizing-image-sources-for-the-grid-vs-for-full-screen)
+- [Best Practices & Good to Know → Image sizing, overlay, and boundaries within an item](../../reference/best-practices.md#image-sizing-overlay-and-boundaries-within-an-item-imagewidth-imageheight-imageoverlay-imageboundary) — `imageWidth`/`imageHeight`/`imageOverlay`/`imageBoundary` worked through in detail
+- [Best Practices & Good to Know → Don't combine `image` + `icon` on the same item](../../reference/best-practices.md#dont-combine-image--icon-on-the-same-item--contrast-risk-imageoverlay-cant-fix) — the contrast risk `imageOverlay` can't fix
+- [Best Practices & Good to Know → Choosing `"teaser"` over `"default"`](../../reference/best-practices.md#choosing-teaser-over-default--reserve-it-for-large-items) — reserve it for large items
+- [Best Practices & Good to Know → Give `"button"` items enough height when combining `icon` + `label`](../../reference/best-practices.md#give-button-items-enough-height-when-combining-icon--label) — exact height/`iconSize` combinations that fit
+- [Best Practices & Good to Know → Give `"control"` items a `layout` height of `1`](../../reference/best-practices.md#give-control-items-a-layout-height-of-1)
+- [Best Practices & Good to Know → Set `separation` on a `"control"` item combining `label` with `extensionIcon`/`extensionLabel`](../../reference/best-practices.md#set-separation-on-a-control-item-combining-label-with-extensioniconextensionlabel)
+- [Best Practices & Good to Know → `tag`/`stamp`/`badge`](../../reference/best-practices.md#tagstampbadge--short-single-line-text-and-default-colors-that-already-fit) — short single-line text, and default colors that already fit
+- [Best Practices & Good to Know → `"space"` items needed a layout/offset workaround before `0.1.156`](../../reference/best-practices.md#space-items-needed-a-layoutoffset-workaround-to-share-a-position-before-01156)
+- [Cookbook → Deep dive — `layout` drives navigation, `offset` doesn't](../../reference/cookbook.md#deep-dive--layout-drives-navigation-offset-doesnt-list0json) — a real example steering focus without changing how anything looks
 - [Common Misconceptions → Content & layout](../../reference/common-misconceptions.md#content--layout)

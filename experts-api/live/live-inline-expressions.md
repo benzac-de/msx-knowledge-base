@@ -129,8 +129,9 @@ Expression syntax of live inline expressions.
 | `date_time` | `10/30/24, 11:09 AM` | **0.1.160** |
 | `date_time_long` | `October 30, 2024, 11:09 AM` | **0.1.160** |
 
-## See also
+## See Also
 
 - [Live Object](./live-object.md)
 - [Live Examples](./live-examples.md)
+- [Cookbook → Live data (EPG, progress, countdowns)](../../reference/cookbook.md#live-data-epg-progress-countdowns) — the live-clock `extension`/`headline` pattern built from `{now:date:...}`/`{now:time:...}`
 - [Common Misconceptions → Date / time / duration format tokens](../../reference/common-misconceptions.md#date--time--duration-format-tokens) — lowercase/case-sensitive tokens, `MM`/`DD` are names not padded numbers, and the fixed duration-family list (also used by `{num:...}`)

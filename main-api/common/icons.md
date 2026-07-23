@@ -14,6 +14,12 @@ The Material Icons ([https://fonts.google.com/icons?selected=Material+Icons](htt
 
 If you would like to search for an icon or to see icon additions/adaptations from version **0.1.137+** and version **0.1.161+** or the outline versions of the icons, please have a look at this link: [https://msx.benzac.de/info/icons.html](https://msx.benzac.de/info/icons.html).
 
+## See Also
+
+- [Best Practices & Good to Know → Don't combine `image` + `icon` on the same item](../../reference/best-practices.md#dont-combine-image--icon-on-the-same-item--contrast-risk-imageoverlay-cant-fix) — the contrast risk `imageOverlay` can't fix
+- [Best Practices & Good to Know → Give `"button"` items enough height when combining `icon` + `label`](../../reference/best-practices.md#give-button-items-enough-height-when-combining-icon--label) — exact height/`iconSize` combinations that fit
+- [Content Item Object](../content/content-item-object.md) — `icon`/`iconSize` and how `icon` is positioned per item type
+
 ## Icon Names
 - 10k
 - 10mp

@@ -61,7 +61,7 @@ Property syntax of content page object.
 - [Option Shortcut](../../experts-api/hidden-features/option-shortcut.md)
 - [Advanced Templated Items](../../experts-api/hidden-features/advanced-templated-items.md)
 
-## See also
+## See Also
 
 - [Content Root Object](content-root-object.md)
 - [Content Item Object](content-item-object.md)

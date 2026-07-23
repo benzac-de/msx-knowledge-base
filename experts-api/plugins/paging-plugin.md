@@ -69,7 +69,7 @@ Parameter syntax of content service for paging plugin.
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/xp/data/plugin_test_12.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/xp/data/plugin_test_12.json)
 
-## See also
+## See Also
 
 - [Interaction Plugin](./interaction-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)

@@ -204,6 +204,6 @@ summary: Code examples demonstrating selection object configurations in MSX.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/selection_test_2.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/selection_test_2.json)
 
-## See also
+## See Also
 
 - [Selection Object](./selection-object.md)

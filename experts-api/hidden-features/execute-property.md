@@ -50,6 +50,6 @@ Please see following example.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_3.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_3.json)
 
-## See also
+## See Also
 
 - [Common Misconceptions → Hidden features](../../reference/common-misconceptions.md#hidden-features) — confirms `execute` auto-runs on load, not on selection/activation, and clarifies what it does on a menu item vs. a content item

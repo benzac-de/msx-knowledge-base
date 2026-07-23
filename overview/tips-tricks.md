@@ -522,6 +522,6 @@ Please see following templates.
 - **CodePen**: [codepen.io/benzac-de/pen/gOQJZGX](https://codepen.io/benzac-de/pen/gOQJZGX)
 - **JSFiddle**: [jsfiddle.net/fnL3pzqd/](https://jsfiddle.net/fnL3pzqd/)
 
-## See also
+## See Also
 
 - [In-App Settings Reference](../reference/settings-reference.md) — the Context Menu (Home/Player/Volume/Settings/Exit) reachable via the menu key, referenced from the External HTML5 Games/Apps and Emergency Combination sections above

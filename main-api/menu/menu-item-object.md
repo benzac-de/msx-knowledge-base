@@ -56,9 +56,10 @@ Property syntax of menu item object.
 - [Option Shortcut](../../experts-api/hidden-features/option-shortcut.md)
 - [Replace Action](../../experts-api/hidden-features/replace-action.md)
 
-## See also
+## See Also
 
 - [Menu Root Object](menu-root-object.md)
 - [Menu Examples](menu-examples.md)
 - [Common Misconceptions → Menu objects](../../reference/common-misconceptions.md#menu-objects) — the `data`-vs-`content:`-prefix error and the "menu items have no `action`" rule
 - [Glossary → `data` Property](../../reference/glossary.md#data-property) — unset/`null` data (graceful "Content Not Available" fallback) vs. an invalid/malformed value (produces an error)
+- [Cookbook → Deep dive — the live channels / EPG backend](../../reference/cookbook.md#deep-dive--the-live-channels--epg-backend-live_test_4) — a real menu item whose `data` uses the `user:` prefix (credentialed request) to point at a stateful backend service

@@ -152,7 +152,7 @@ For non-simple requests, the browser first sends a **preflight request** using t
 
 For more information, please see the [Cross-Origin Resource Sharing article on Wikipedia](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
-## See also
+## See Also
 
 - [Start Object](./start-object.md)
 - [Setup Start Parameter](./setup-start-parameter.md)

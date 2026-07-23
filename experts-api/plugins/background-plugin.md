@@ -80,7 +80,7 @@ Please note that this example uses some properties that are only available in ve
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/xp/data/plugin_test_6_menu.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/xp/data/plugin_test_6_menu.json)
 
-## See also
+## See Also
 
 - [Video/Audio Plugin](./video-audio-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)

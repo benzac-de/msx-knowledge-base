@@ -35,7 +35,7 @@ Please see following example.
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/xp/data/hidden_feature_1.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/xp/data/hidden_feature_1.json)
 
-## See also
+## See Also
 
 - [Actions Reference → Start Action (since `0.1.0`)](../../reference/actions-reference.md#start-action-since-010)
 - [Common Misconceptions → Actions](../../reference/common-misconceptions.md#actions) — why this is not the same thing as the `start` Main Action (`0.1.30`), which sets a *new* start parameter at runtime instead

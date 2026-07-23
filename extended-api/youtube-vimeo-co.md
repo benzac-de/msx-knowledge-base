@@ -95,3 +95,10 @@ Action syntax of plugin actions.
 
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/data/plugins.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/data/plugins.json)
+
+## See Also
+
+- [Cookbook → Media lists](../reference/cookbook.md#media-lists) — the `github/base/youtube.json` starting point for a plugin-based video list
+- [Cookbook → Deep dive — a minimal "resume playback" item](../reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern) — remembering playback position (`resume:key`) works through a plugin player like `video:plugin:{URL}` just as well as a plain `video:{URL}` item, as long as the plugin reports position/duration back to MSX
+- [Extended Properties](../experts-api/special/extended-properties.md) — `resume:key`/`resume:position`/`resume:context` and other per-item properties that apply to plugin-played items too
+- [Live Object](../experts-api/live/live-object.md) — `type: "playback"` for showing live progress on a plugin-played item

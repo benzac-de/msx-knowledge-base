@@ -211,9 +211,10 @@ Since version **0.1.155**, the template object supports the `decompress` propert
 }
 ```
 
-## See also
+## See Also
 
 - [Common Misconceptions → Content & layout](../../reference/common-misconceptions.md#content--layout) — the exact 0-based "out of range" edge (column ≥ 12 or row ≥ 6) that older clients drop
 - [JSON Building Guide → Step 5 — Compress Property](../../reference/json-building-guide.md#step-5--compress-property)
 - [Best Practices & Good to Know → Sizing `image` sources for the grid vs. for full-screen](../../reference/best-practices.md#sizing-image-sources-for-the-grid-vs-for-full-screen) — the exact pixel formula for compressed vs. uncompressed grid cells
+- [Best Practices & Good to Know → Making a compressed header/footer look uncompressed](../../reference/best-practices.md#making-a-compressed-headerfooter-look-uncompressed) — the `offset` scaling recipe worked through this page's own header example
 - [Glossary → Grid](../../reference/glossary.md#grid) — the exact compress cell-shrink math

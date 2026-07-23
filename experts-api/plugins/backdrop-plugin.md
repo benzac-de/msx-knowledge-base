@@ -193,7 +193,7 @@ Please note that this example uses some properties that are only available in ve
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_8.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_8.json)
 
-## See also
+## See Also
 
 - [Interaction Plugin](./interaction-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)

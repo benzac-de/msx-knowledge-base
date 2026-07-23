@@ -231,9 +231,10 @@ if (data.event === "custom:myEvent") {
 
 ---
 
-## See also
+## See Also
 - [Plugin API Reference](plugin-api-reference.md)
 - [Video/Audio Plugin](video-audio-plugin.md)
 - [Interaction Plugin](interaction-plugin.md)
 - [Attached Data Examples](../special/attached-data-examples.md)
 - [Android Player](../special/android-player.md)
+- [Cookbook → Deep dive — building an interaction plugin](../../reference/cookbook.md#deep-dive--building-an-interaction-plugin-plugin_test_2) — a worked `handleEvent`/`handleData`/`handleRequest` handler, including Immersive Mode alignment via the `app:resize`/`settings:immersive_mode` events

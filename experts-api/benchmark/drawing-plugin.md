@@ -64,7 +64,7 @@ The plugin can be used with version **0.1.144** or higher.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/benchmark_test_2.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/benchmark_test_2.json)
 
-## See also
+## See Also
 
 - [Renderer Plugin](./renderer-plugin.md)
 - [Particles Plugin](./particles-plugin.md)

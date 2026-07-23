@@ -44,6 +44,6 @@ Parameter syntax of URL parameters.
 | `welcome` | `string` | `welcome=menu:user:http://sc.msx.benzac.de/msx/service.php`<br>`welcome=menu:user:http://sc.msx.benzac.de/msx/service.php>index:2`<br>`welcome=menu:user:http://sc.msx.benzac.de/msx/service.php>index:2>index:4`<br>`welcome=menu:user:http://sc.msx.benzac.de/msx/service.php>index:2>index:4>execute` | Sets the welcome pages that are used if no start parameter is set. The focus separator `>` can be used to focus (and execute) an item on load.<br><br>**Note: This parameter will override the welcome pages in the application settings, however, it will not disable the function to setup the start parameter (and to setup welcome pages via the `welcome` property).** |
 | `zoom` | `string` | `zoom=default`<br>`zoom=auto`<br>`zoom=0.75` | Sets the zoom settings.<br><br>- `default`: No zooming (default for most platforms)<br>- `auto`: Auto detect (with resize adjustment)<br>- `{NUMBER}`: Set zoom factor to specific number |
 
-## See also
+## See Also
 
 - [In-App Settings Reference](../../reference/settings-reference.md) — how these same settings appear as in-app panels (which of them are launch-only vs. runtime-adjustable, the `fix:` prefix behind `layout`, and what each panel's values mean in practice)

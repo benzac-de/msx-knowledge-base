@@ -60,6 +60,6 @@ Please see following example.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_10.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_10.json)
 
-## See also
+## See Also
 
 - [Common Misconceptions → Right property, wrong object](../../reference/common-misconceptions.md#right-property-wrong-object) — using an underlay page action to reset a selection `action`'s lasting effect once focus moves away, since there is no built-in "on focus leaves" action

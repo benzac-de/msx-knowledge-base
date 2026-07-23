@@ -682,7 +682,7 @@ The dictionary selection service allows you to set or reset a custom dictionary.
 
 ![Dictionary Selector](../../img/dictionary_selector.png)
 
-## See also
+## See Also
 
 - [Common Misconceptions → Dictionary file](../../reference/common-misconceptions.md#dictionary-file) — confirms the structure is not a flat key-value map, and that a `dictionary` property only takes effect when loaded at startup
 - [In-App Settings Reference → What is not covered by any native setting](../../reference/settings-reference.md#6-what-is-not-covered-by-any-native-setting) — why language selection is handled through this Dictionary mechanism instead of a native app setting

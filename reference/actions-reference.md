@@ -443,7 +443,7 @@ The Main Actions tables and the "Yes"-flag list above are both literal, source-f
 
 ---
 
-## See also
+## See Also
 
 - [Actions](../main-api/common/actions.md) — primary source for all Main Actions
 - [Internal Actions](../experts-api/special/internal-actions.md) — full list of all internal actions

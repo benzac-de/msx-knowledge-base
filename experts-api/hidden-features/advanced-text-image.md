@@ -411,3 +411,8 @@ This is not really a hidden feature, but a good-to-know information. It is possi
 
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_17.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_17.json)
+
+## See Also
+
+- [Best Practices & Good to Know → Image sizing, overlay, and boundaries within an item](../../reference/best-practices.md#image-sizing-overlay-and-boundaries-within-an-item-imagewidth-imageheight-imageoverlay-imageboundary) — the `imageFiller`+`separation` technique and `imageBoundary` explained in detail, building on this page's example
+- [Content Item Object](../../main-api/content/content-item-object.md) — the underlying `imageWidth`/`imageHeight`/`imageOverlay`/`imageBoundary`/`separation`/`alignment`/`truncation`/`centration` properties

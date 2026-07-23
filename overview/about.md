@@ -34,6 +34,6 @@ Media Station X is built on the TVX Framework that has been developed for this a
 | May 12, 2022 | 0.1.145 | First version online in the VIDAA App Store. |
 | May 8, 2026 | 0.1.166 | Latest version released in stores. |
 
-## See also
+## See Also
 
 - [In-App Settings Reference → Other Settings-scene entries](../reference/settings-reference.md#5-other-settings-scene-entries-and-safety-mechanisms) — `settings:about` is a separate, in-app content/session info panel, not this page

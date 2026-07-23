@@ -20,7 +20,7 @@ The experts content guide contains demos of the extended properties, the live AP
 
 - [Launch Demo](https://msx.benzac.de/?start=menu:https://xp.msx.benzac.de/msx/start.json)
 
-## See also
+## See Also
 
 - [Content Root Object](content-root-object.md)
 - [Content Page Object](content-page-object.md)

@@ -210,10 +210,12 @@ Property syntax of extended properties.
 - [Option Shortcut](../hidden-features/option-shortcut.md)
 - [Image Options](../hidden-features/image-options.md)
 
-## See also
+## See Also
 
 - [Best Practices & Good to Know → Video/audio keeps playing in the background after `back`](../../reference/best-practices.md#videoaudio-keeps-playing-in-the-background-after-back-by-default) — why `trigger:back`/`player:stop` is the opt-out for the default background-playback behavior
 - [Cookbook → Deep dive — a minimal "resume playback" item (`live_test_2` pattern)](../../reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern) — `resume:key`/`resume:position` used together with a Live Object
 - [Actions Reference → Actions That Mirror a "Dynamic" Extended Property](../../reference/actions-reference.md#actions-that-mirror-a-dynamic-extended-property) — the complete cross-reference of which internal action sets which `Dynamic: Yes` property above at runtime, and why it shares that property's since-version instead of the internal-actions blanket `0.1.160+`
 - [Tizen Player](tizen-player.md) — platform-specific `tizen:*` properties (with their own `Dynamic` column) are not listed on this page at all; they're documented only there, due to how narrow/platform-specific they are
 - [Glossary → Trigger](../../reference/glossary.md#trigger) — what the `shot:` prefix inside a `trigger:{TRIGGER_KEY}` action does (fires once instead of repeatedly)
+- [Cookbook → Interaction & UX](../../reference/cookbook.md#interaction--ux) — `xp/properties_test.json`, a broad showcase of these properties in a real page
+- [Best Practices & Good to Know → The player UI shows for several seconds by default](../../reference/best-practices.md#the-player-ui-shows-for-several-seconds-by-default-when-starting-videoaudio--several-mechanisms-shorten-or-suppress-it) — how `control:load`, `trigger:load`, and `trigger:start` combine to suppress or shorten it

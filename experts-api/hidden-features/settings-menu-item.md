@@ -35,6 +35,6 @@ Please see following example.
 - [Launch via App](https://msx.benzac.de/?start=menu:https://msx.benzac.de/info/xp/data/hidden_feature_2.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=menu:https://msx.benzac.de/info/xp/data/hidden_feature_2.json)
 
-## See also
+## See Also
 
 - [In-App Settings Reference](../../reference/settings-reference.md) — full map of every panel this menu item opens into, its allowed values, and how it relates to JSON-driven actions

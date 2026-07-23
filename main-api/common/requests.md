@@ -24,7 +24,7 @@ Please see following action examples and the corresponding HTTP requests.
 
 **Note: If you want to use the `{LANGUAGE}` keyword for the startup data, you have to use the `reference` property, because the dictionary (which defines the language) is loaded after the startup data. The language at startup (when no dictionary is loaded yet) always has the value `"default"`.**
 
-## See also
+## See Also
 
 - [Common Misconceptions → Dictionary file](../../reference/common-misconceptions.md#dictionary-file) — why a `dictionary` property only takes effect when loaded at startup, the same restriction behind the `{LANGUAGE}`/`reference` note above
 - [Responses](responses.md)

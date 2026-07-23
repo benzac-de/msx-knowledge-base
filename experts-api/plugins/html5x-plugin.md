@@ -108,7 +108,7 @@ Property syntax of extended properties for HTML5X plugin.
 
 **Note: These demo links are opened in an insecure context (i.e. via `http://`) to avoid mixed content issues.**
 
-## See also
+## See Also
 
 - [Video/Audio Plugin](./video-audio-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)

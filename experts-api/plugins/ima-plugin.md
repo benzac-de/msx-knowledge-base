@@ -476,7 +476,7 @@ Please note that this example uses the ad tag URLs from the Google IMA SDK sampl
 
 **Note: This demo will only work properly if ad blockers are disabled.**
 
-## See also
+## See Also
 
 - [Video/Audio Plugin](./video-audio-plugin.md)
 - [Ad Plugin](./ad-plugin.md)

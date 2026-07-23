@@ -60,3 +60,7 @@ Please see following example.
 
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_16.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/hidden_feature_16.json)
+
+## See Also
+
+- [Cookbook → Interaction & UX](../../reference/cookbook.md#interaction--ux) — a real image list enabling this panel via `properties` (`image:options`, `image:icon`, `image:action`)

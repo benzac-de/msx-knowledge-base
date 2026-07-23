@@ -241,9 +241,12 @@ Video/Audio plugin examples.
 - [Launch via App](https://msx.benzac.de/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_1.json)
 - [Launch via Demo Page](https://msx.benzac.de/info/?start=content:https://msx.benzac.de/info/xp/data/plugin_test_1.json)
 
-## See also
+## See Also
 
 - [Plugin API Reference](./plugin-api-reference.md)
 - [Plugin Events Reference](./plugin-events-reference.md)
 - [Cookbook → Plugins (media, immersive, platform, ads)](../../reference/cookbook.md#plugins-media-immersive-platform-ads)
+- [Cookbook → Deep dive — building a video plugin (`plugin_test_4`, HTML5X)](../../reference/cookbook.md#deep-dive--building-a-video-plugin-plugin_test_4-html5x) — the full `MyPlayer` contract worked through a real HTML5X example
+- [Cookbook → Deep dive — a minimal "resume playback" item](../../reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern) — resume/live progress derive from the position/duration a plugin reports back to MSX, regardless of which action variant started playback
+- [Extended Properties](../special/extended-properties.md) — `resume:key`, `control:load`, and other per-item properties that apply equally to plugin-played items
 - [Common Misconceptions → Plugins](../../reference/common-misconceptions.md#plugins) — plugins are display/logic only, they don't receive key/mouse input directly

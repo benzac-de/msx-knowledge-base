@@ -401,7 +401,7 @@ This example uses an interaction plugin to interact with the Tizen player. You c
 
 **Note: This demo will only work properly on a Samsung TV (2016+ model) with Media Station X 0.1.128 or higher.**
 
-## See also
+## See Also
 
 - [Cookbook → Plugins (media, immersive, platform, ads)](../../reference/cookbook.md#plugins-media-immersive-platform-ads)
 - [Actions Reference → Plugin-Commit Actions (`player:commit`, `interaction:commit:response:...`) and Tizen Player](../../reference/actions-reference.md#plugin-commit-actions-playercommit-interactioncommitresponse-and-tizen-player) — the `player:commit`/`player:commit:message:`/`interaction:commit:response:request:player:` actions used on this page predate the Tizen Player (built originally for video/audio plugins in general, confirmed back to `0.1.74` via Image Plugin) and are `0.1.128` here as the confirmed floor for their Tizen-specific forms, not the internal-actions blanket `0.1.160+`; also cross-references this page's own `Dynamic` column for `tizen:*` properties (since `0.1.128`–`0.1.153`, per property)

@@ -28,8 +28,10 @@ Property syntax of selection object.
 | `action` | `string` | `null` | No | **0.1.110** | The selection action that is executed if the corresponding content item becomes the focus. Please see [Internal Actions](../special/internal-actions.md) for possible values. |
 | `data` | `object` | `null` | No | **0.1.110** | The additional data of the selection action that is used if the action is executed. Please see [Internal Actions](../special/internal-actions.md) for possible values. |
 
-## See also
+## See Also
 
 - [Selection Examples](./selection-examples.md)
 - [Common Misconceptions → Right property, wrong object](../../reference/common-misconceptions.md#right-property-wrong-object) — confirms these are the only five properties (no `text`, `image`, `title`, `delay`, or `preview`)
 - [In-App Settings Reference → Hover Effect](../../reference/settings-reference.md#hover-effect--hovereffect-settingshover_effect) — how `Preselect` (since `0.1.136`) makes hover also count as focus for the `important` property above
+- [Cookbook → Interaction & UX](../../reference/cookbook.md#interaction--ux) — real focus-preview examples, including a `delay:selection:{DELAY}:{ACTION}`-based variant
+- [Cookbook → Deep dive — the TV Guide (EPG grid) backend](../../reference/cookbook.md#deep-dive--the-tv-guide-epg-grid-backend-guidephp) — a `selection.action: "data"` multi-action fanning out to three preview items at once

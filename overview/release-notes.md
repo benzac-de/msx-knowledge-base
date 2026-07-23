@@ -943,6 +943,6 @@ These release notes contain major API extensions, fundamental UI/UX changes, and
 
 - Initial release
 
-## See also
+## See Also
 
 - [Versioning → Version Baseline: 0.1.0](../reference/versioning.md#version-baseline-010) — curated timeline of feature-introduction milestones distilled from this full changelog

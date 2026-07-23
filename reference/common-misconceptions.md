@@ -131,6 +131,8 @@ Many properties are real but only valid on a *specific* object type. Placing the
 
 - ❌ `important` and `transparent` are **not** Content Item properties.
   ✅ `important` belongs on the Content Root / Content Page / Selection Object; `transparent` on the Content Root / Content Page / Menu Root / Menu Item. **`important` is not one concept reused three times** — each object gives it a different meaning (headline enforcement on Content Root since `0.1.58`; overlay/underlay visibility on Content Page since `0.1.110`; mouse/touch focus-only execution on Selection Object since `0.1.110`). See [Glossary: `important`](glossary.md#important) for all three.
+- ❌ `background` on a Content Item is **not** the same general-purpose page background as `background` on Content Root/Content Page/Menu Root/Menu Item Object.
+  ✅ On those four objects, `background` is unconditional (used whenever no lower-level background is set). On a **Content Item**, `background` only applies while that item's own action uses the `audio:` prefix (`audio:{URL}`, `audio:plugin:{URL}`, `audio:resolve:...`, etc. — the whole `audio:` family, not only the plain `audio:{URL}` form) — it has no effect for any `video:`-prefixed action (`video:{URL}`, `video:plugin:{URL}`, etc.) or other action type. For a page-level background behind a video/plugin item, set `background` on the Content Root or Content Page Object instead, not on the item. See [Content Item Object](../main-api/content/content-item-object.md).
 - ❌ `lineColor` is **not** a Content Item property.
   ✅ It is a Menu Item property (also updatable via `update:menu:{ID}`).
 - ❌ `logo` / `logoSize` are **not** Content Root properties.

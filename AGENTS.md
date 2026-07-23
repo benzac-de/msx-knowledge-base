@@ -110,6 +110,8 @@ The `parameter` supports `{SERVER}` (since `0.1.65`) and `{PREFIX}` (since `0.1.
 
 Two further optional top-level properties: `welcome` (string, since `0.1.117`) sets this start parameter as the app's welcome pages (start action or content); `launcher` (object, since `0.1.164`, `icon`/`image`/`color` only) sets up this start parameter's own tile in the settings and setup-completion panel — a deliberate subset of the separate, older Launcher MSX service's own richer `launcher` object (`type` plus `name`/`version`/`parameter` overrides), see [Glossary: Launcher MSX](reference/glossary.md#launcher-msx).
 
+**All Properties:** `name`, `version`, `parameter`, `welcome`, `launcher`. This list is exhaustive — the JSON example above only illustrates the mandatory subset; if a property isn't in this list, it doesn't exist on the Start Object. For the type/default/since-version of each, see the full property table linked below.
+
 See: [Start Object](main-api/start/start-object.md)
 
 ### Menu Root Object
@@ -127,6 +129,8 @@ A JSON object with a `menu` array of Menu Item Objects (the property is named `m
 }
 ```
 
+**All Properties:** `name`, `version`, `reference`, `flag`, `reuse`, `cache`, `restore`, `refocus`, `transparent`, `style`, `logo`, `logoSize`, `headline`, `background`, `extension`, `dictionary`, `menu`, `action`, `data`, `ready`, `options`. This list is exhaustive — the JSON example above only illustrates a minimal subset; if a property isn't in this list, it doesn't exist on the Menu Root Object. For the type/default/since-version of each, see the full property table linked below.
+
 See: [Menu Root Object](main-api/menu/menu-root-object.md)
 
 ### Menu Item Object — critical `data` rule
@@ -137,6 +141,10 @@ The `data` property of a Menu Item Object references content to display. It acce
 2. **Inline Content Root Object:** `"data": { "type": "pages", "items": [...], "template": {...} }` — the content is embedded directly.
 
 > **Common error:** Do NOT use `"data": "content:https://..."` for a Menu Item. The `content:` prefix is an **action** syntax (for the `action` property of **content items**), not a menu `data` value. A menu item's `data` is a raw URL or an embedded Content Root Object. Menu items have no `action` property of their own.
+
+**All Properties:** `id`, `type`, `display`, `enable`, `focus`, `execute`, `transparent`, `icon`, `image`, `label`, `background`, `extensionIcon`, `extensionLabel`, `lineColor`, `data`, `options`. This list is exhaustive; if a property isn't in this list, it doesn't exist on the Menu Item Object. For the type/default/since-version of each, see the full property table linked below.
+
+See: [Menu Item Object](main-api/menu/menu-item-object.md)
 
 ### Content Root Object
 
@@ -181,7 +189,17 @@ The top-level content container. Two layout modes:
   - `"list"`: pages are stacked vertically with the empty gaps between them removed. Because of this, pages that come after the active one can already be fully or partially visible (peeking into view) before you focus an item on them — this "preview" of upcoming pages does not happen with `"pages"`. Focusing an item still triggers a vertical transition to that item's page even if the item was already visible. Scroll indicators (not a page indicator) are shown at the bottom when there is more content to scroll to.
 - **Which to pick?** Both work mechanically either way, but see [Best Practices & Good to Know → Best Practices](reference/best-practices.md#best-practices-learned-from-building-real-pages) for practical guidance — in short, `"list"` fits classic scrollable lists and sees more real-world use overall, `"pages"` fits special one-off screens that fit on a single page.
 
+**All Properties:** `name`, `version`, `reference`, `flag`, `reuse`, `cache`, `restore`, `important`, `wrap`, `compress`, `preselect`, `refocus`, `transparent`, `type`, `preload`, `headline`, `background`, `extension`, `dictionary`, `template`, `items`, `pages`, `header`, `footer`, `inserts`, `overlay`, `underlay`, `action`, `data`, `ready`, `options`, `caption`, `captionUnderlay`, `navigationOffset`, `navigationSpan`. This list is exhaustive — the two JSON examples above only illustrate the `template`/`items` vs. `pages` split; if a property isn't in this list, it doesn't exist on the Content Root Object. For the type/default/since-version of each, see the full property table linked below.
+
 See: [Content Root Object](main-api/content/content-root-object.md)
+
+### Content Page Object
+
+One page/screen within a Content Root Object's `pages[]` array (manual layout) — or, since `0.1.53`/`0.1.110`/`0.1.112`/`0.1.156`, an individually-configured `header`/`overlay`/`underlay`/insert page attached to a `template`+`items` (templated) Content Root Object. Not used at all for pure templated content with no `header`/`footer`/`overlay`/`underlay`/`inserts`.
+
+**All Properties:** `display`, `important`, `wrap`, `compress`, `transparent`, `headline`, `background`, `area`, `offset`, `position`, `template`, `items`, `action`, `data`, `options`, `caption`, `captionUnderlay`, `navigationOffset`, `navigationSpan`. This list is exhaustive; if a property isn't in this list, it doesn't exist on the Content Page Object. For the type/default/since-version of each, see the full property table linked below.
+
+See: [Content Page Object](main-api/content/content-page-object.md)
 
 ### Content Item Object
 
@@ -191,9 +209,12 @@ One cell/tile on the grid. Key properties:
 - `type`: `"default"` | `"separate"` | `"teaser"` | `"button"` | `"space"` | `"control"`.
 - `action`: The action string executed when the item is selected.
 - `label`, `title`, `titleHeader`, `titleFooter`, `badge`, `stamp`: Text properties (all support inline expressions).
-- `image`, `background`, `icon`, `color`: Visual properties.
+- `image`, `icon`, `color`: Visual properties.
+- `background` — **narrower than it looks: only applies if this item's own `action` uses the `audio:` prefix** (`audio:{URL}`, `audio:plugin:{URL}`, `audio:resolve:...`, `audio:auto:...` — any `audio:`-prefixed variant counts, not only the plain `audio:{URL}` form; see the general prefix-family rule in Section 3). It sets the backdrop shown while that item's audio is playing — it does nothing for a `video:`-prefixed action (`video:{URL}`, `video:plugin:{URL}`, etc.) or any other action type. Do not confuse it with the general page-background chain on Content Root/Content Page/Menu Root/Menu Item Object (also called `background`, but unconditional there) — see [Best Practices & Good to Know → `transparent` and background images/videos](reference/best-practices.md#transparent-and-background-imagesvideos) for that chain. For a background image on a video/plugin item's page, set `background` on the Content Root (or Content Page) Object instead, not on the item.
 - `options` (since `0.1.120`): A Content Page Object (or since `0.1.130` also a Content Root Object) shown as a panel when this item is selected and the menu button is pressed. Highest priority in the `options` fallback chain — see [Glossary: Options](reference/glossary.md#options).
 - `properties` (object): The **Extended Properties bag** — a large, separate set of advanced, mostly player/plugin-facing item properties (e.g. `resume:key`/`resume:position`/`resume:context` for remembering playback position, `trigger:{TRIGGER_KEY}`, `control:load`, `tizen:*`, `html5x:*`, `image:*`, player-button overrides) that do **not** live at the top level of a Content Item Object — they are nested inside this one `properties` object instead, e.g. `"properties": { "resume:key": "url" }`. Not every `key:value` inside `properties` is necessarily an MSX-defined property, either — some are free-form data a specific plugin reads (see [Common Misconceptions → Extended properties (the `properties` bag)](reference/common-misconceptions.md#extended-properties-the-properties-bag)). See [Extended Properties](experts-api/special/extended-properties.md).
+
+**All Properties:** `id`, `type`, `key`, `layout`, `area`, `offset`, `display`, `enable`, `focus`, `execute`, `enumerate`, `compress`, `decompress`, `shortcut`, `round`, `break`, `group`, `color`, `title`, `titleHeader`, `titleFooter`, `label`, `icon`, `iconSize`, `headline`, `text`, `alignment`, `truncation`, `centration`, `separation`, `tag`, `tagColor`, `badge`, `badgeColor`, `stamp`, `stampColor`, `progress`, `progressColor`, `progressBackColor`, `wrapperColor`, `image`, `imageFiller`, `imageWidth`, `imageHeight`, `imageOverlay`, `imagePreload`, `imageLabel`, `imageColor`, `imageScreenFiller`, `imageBoundary`, `playerLabel`, `background` (`audio:`-prefix actions only, see above), `extensionIcon`, `extensionLabel`, `action`, `data`, `properties`, `live`, `selection`, `options`. This list is exhaustive — the bullets above only name the most commonly-used properties; if a property isn't in this list, it doesn't exist on the Content Item Object. For the type/default/since-version of each, see the full property table linked below.
 
 See: [Content Item Object](main-api/content/content-item-object.md)
 
@@ -249,6 +270,8 @@ All actions are strings. They appear in the `action` property of:
 | `execute:{URL}` | `execute:https://example.com/service.php` | 0.1.30 | Server-side action |
 
 For a full list of all actions with all modifiers and version details, see: [Actions](main-api/common/actions.md) and [Actions Reference](reference/actions-reference.md). Replace Actions, the Start Action, and the Resolve Action are hidden features with their own since-versions, not Main Actions — see [Actions Reference](reference/actions-reference.md#hidden-feature-actions-replace-start--resolve).
+
+> **General rule for reading `audio:`/`video:`-conditioned properties and behaviors:** Wherever this KB states a property or behavior is only valid "if the content action is `audio:{URL}`" (or `video:{URL}`), read this as **the whole prefix family**, not only the plain URL form — `audio:plugin:{URL}`, `audio:resolve:...`, `audio:auto:...`, and any other `audio:`-prefixed variant all count equally as "an `audio:` action" (and likewise for every `video:`-prefixed variant as "a `video:` action"). The distinguishing factor is always the prefix itself, never which specific mechanism (plain URL, plugin, resolve, auto-mode, …) started playback. This applies KB-wide, not just to one property — e.g. Content Item Object's `background` (Section 2 above).
 
 ### Multi-Action Syntax (since `0.1.58`)
 

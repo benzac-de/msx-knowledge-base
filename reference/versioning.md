@@ -104,6 +104,7 @@ Unless a "since" annotation says otherwise, assume a feature is available from `
 | `0.1.0` | All basic API (Start, Menu, Content, basic Actions, Inline Expressions, Colors) |
 | `0.1.30` | Server actions (`execute:`, `execute:code:`, `execute:user:`), `video:broadcast:current`, `system:hbbtv:launch:`, and their internal-only broadcast/HbbTV sibling variants — including the entire `audio:broadcast:...` family, which has no individually-documented Main Action of its own but shares the same `0.1.30` (see [Broadcast and HbbTV Actions: A Third Case](actions-reference.md#broadcast-and-hbbtv-actions-a-third-case)); the `start` action (sets a new start parameter — not to be confused with the "Start Action" hidden feature, available since `0.1.0`, see [Actions Reference](actions-reference.md#hidden-feature-actions-replace-start--resolve)) |
 | `0.1.40` | Plugin actions (`video:plugin:`, `audio:plugin:`) |
+| `0.1.53` | `header` / `footer` properties (Content Root Object) — individually-configured Content Page Objects layered as a fixed header/footer row onto templated (`template`+`items`) content |
 | `0.1.58` | Extended actions: multi-action `[a|b]`, `reload`, `update:*`, `data`; `cache` (Content Root, Menu Root Object) and `important` (Content Root Object only) |
 | `0.1.65` | `{SERVER}` placeholder in the Start Object's `parameter` (start file only) |
 | `0.1.70` | Live inline expressions: `{now:…}`, `{from:…}`, `{to:…}`, `{duration:…}`, `{progress:…}`, `{countdown:…}`, `{overflow:…}`, `{creation:…}` |

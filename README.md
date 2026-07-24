@@ -6,7 +6,7 @@ summary: Human-readable project entry point for the MSX LLM Knowledge Base repos
 
 # MSX Knowledge Base
 
-**KB Version:** `2026-07-23` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
+**KB Version:** `2026-07-24` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
 
 An LLM-optimized knowledge base for **Media Station X (MSX)**, covering the MSX app API from version `0.1.0` to `0.1.166`. It is aimed at MSX JSON authors and at LLMs that need to answer MSX questions or build valid MSX JSON pages from scratch.
 
@@ -136,7 +136,7 @@ This KB itself is a derived, generated artifact, maintained in this repository b
 
 ## Coverage & version scope
 
-- **KB Version (this snapshot): `2026-07-23`.** Not to be confused with the MSX app version range below — this date tracks the KB document set itself. Whenever this KB is regenerated or updated, this value is replaced with the new generation date.
+- **KB Version (this snapshot): `2026-07-24`.** Not to be confused with the MSX app version range below — this date tracks the KB document set itself. Whenever this KB is regenerated or updated, this value is replaced with the new generation date.
 - MSX app version range covered: **`0.1.0`** to **`0.1.166`**.
 - TVX Framework version mentioned in sources: `0.1.35` (no changelog or per-version feature list available in the sources).
 - TVX Plugin Library version mentioned in sources: `0.0.79` (no changelog available).

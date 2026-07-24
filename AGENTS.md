@@ -116,7 +116,7 @@ See: [Start Object](main-api/start/start-object.md)
 
 ### Menu Root Object
 
-A JSON object with a `menu` array of Menu Item Objects (the property is named `menu`, not `items`). No top-level `type` field. The optional `flag` property (string, since `0.1.120`) is a custom content flag that can be evaluated by plugins and/or servers. Since `0.1.144`, it is also used by the `replace:` action to reload menu data at runtime. Since `0.1.153`, it is used with the `refocus` property. The Content Root Object has the same `flag` property with identical behavior — this includes when a Content Root Object is displayed in a panel, since a panel is not a separate object type but a Content Root Object rendered in a panel view.
+A JSON object with a `menu` array of Menu Item Objects (the property is named `menu`, not `items`).
 
 ```json
 {
@@ -129,13 +129,35 @@ A JSON object with a `menu` array of Menu Item Objects (the property is named `m
 }
 ```
 
+Key properties beyond `menu`/`headline` above — many are **shared with Content Root Object below**, since both objects can serve as the Start Object's `menu:`/`content:` target (marked *shared*; see there for the properties specific to Content Root Object instead):
+
+- `name`, `version` (*shared*): shown in the app's About panel (only used when this data is loaded at startup).
+- `reference` (*shared*, since `0.1.134`): load the actual data from another URL at runtime instead — most other properties are ignored if set.
+- `reuse`, `cache`, `restore`, `refocus` (*shared*): lifecycle/focus-caching flags — `reuse`/`cache`/`restore` all default `true`; `refocus` (since `0.1.153`) requires the (non-key) `flag` property to also be set.
+- `background`, `transparent` (*shared*): the general page-background chain and its dimming override — see [Best Practices & Good to Know → `transparent` and background images/videos](reference/best-practices.md#transparent-and-background-imagesvideos) below.
+- `extension`, `dictionary` (*shared*): a small top-right label shown on each content screen (overridden by the content's own `extension` if set), and a URL to a UI-translation dictionary file.
+- `options` (*shared concept*, since `0.1.120`): a Content Page Object (or since `0.1.130` also a Content Root Object) shown as a panel when the menu button is pressed — ignored if the selected menu item has its own `options`.
+- `action`, `data`, `ready` (*shared*): Start Action and the `ready` object — see Section 3 below.
+- `logo`, `logoSize` (**Menu Root only**, since `0.1.60`/`0.1.130`): a logo image instead of `headline`.
+- `style` (**Menu Root only**, since `0.1.142`): the menu's own visual style — `"default"` | `"flat"` | `"flat-separator"` | `"overlay"` | `"overlay-separator"`.
+
 **All Properties:** `name`, `version`, `reference`, `flag`, `reuse`, `cache`, `restore`, `refocus`, `transparent`, `style`, `logo`, `logoSize`, `headline`, `background`, `extension`, `dictionary`, `menu`, `action`, `data`, `ready`, `options`. This list is exhaustive — the JSON example above only illustrates a minimal subset; if a property isn't in this list, it doesn't exist on the Menu Root Object. For the type/default/since-version of each, see the full property table linked below.
 
 See: [Menu Root Object](main-api/menu/menu-root-object.md)
 
-### Menu Item Object — critical `data` rule
+### Menu Item Object
 
-The `data` property of a Menu Item Object references content to display. It accepts exactly two forms:
+One entry in a Menu Root Object's `menu` array. Key properties:
+
+- `type`: `"default"` (default) | `"separator"` (grouping line — can carry its own `label`; line color via `lineColor`, since `0.1.142`) | `"settings"` (hidden feature that opens the app's native Settings screen — see [Settings Menu Item](experts-api/hidden-features/settings-menu-item.md)).
+- `icon` / `image`: Visual properties — `image` (since `0.1.130`) overrides `icon` if both are set.
+- `label`: The item's text label (supports inline expressions).
+- `extensionIcon` / `extensionLabel`: An additional icon/label shown on the item's right side (`extensionLabel` only used if `extensionIcon` is unset).
+- `focus` / `execute` (since `0.1.120`): Control initial focus and — via [Execute Property](experts-api/hidden-features/execute-property.md) — auto-entering this item's content on load.
+- `options` (since `0.1.120`): A Content Page Object (or since `0.1.130` also a Content Root Object) shown as a panel when this item is selected and the menu button is pressed.
+- `data`: references the content to display — see the critical rule right below.
+
+**Critical `data` rule:** The `data` property of a Menu Item Object references content to display. It accepts exactly two forms:
 
 1. **URL string:** `"data": "https://example.com/msx/content.json"` — MSX fetches this URL and expects a Content Root Object.
 2. **Inline Content Root Object:** `"data": { "type": "pages", "items": [...], "template": {...} }` — the content is embedded directly.
@@ -189,13 +211,30 @@ The top-level content container. Two layout modes:
   - `"list"`: pages are stacked vertically with the empty gaps between them removed. Because of this, pages that come after the active one can already be fully or partially visible (peeking into view) before you focus an item on them — this "preview" of upcoming pages does not happen with `"pages"`. Focusing an item still triggers a vertical transition to that item's page even if the item was already visible. Scroll indicators (not a page indicator) are shown at the bottom when there is more content to scroll to.
 - **Which to pick?** Both work mechanically either way, but see [Best Practices & Good to Know → Best Practices](reference/best-practices.md#best-practices-learned-from-building-real-pages) for practical guidance — in short, `"list"` fits classic scrollable lists and sees more real-world use overall, `"pages"` fits special one-off screens that fit on a single page.
 
+Further key properties beyond `type`/`template`/`items`/`pages` above — `name`/`version`, `reference`, `reuse`/`cache`/`restore`/`refocus`, `background`/`transparent`, `extension`/`dictionary`, `options`, and `action`/`data`/`ready` all work identically to Menu Root Object above (see there for details); this list covers only what's specific to Content Root Object:
+
+- `wrap`, `important`: `wrap` (since `0.1.102`) blocks left/right navigation into the menu at the content's edges; `important` (since `0.1.58`) forces the content `headline` to display even when this content is loaded via a menu (the menu item's `label` is used as headline otherwise).
+- `header`, `footer`, `overlay`, `underlay`, `inserts`: individually-configured Content Page Objects layered onto **templated** (`template`+`items`) content — a fixed header/footer row (since `0.1.53`), a page shown over/under every page (`overlay` since `0.1.110`, `underlay` since `0.1.112`), or pages inserted at specific positions (`inserts`, since `0.1.156`). All five require `template`+`items` to be set, otherwise ignored.
+- `caption` (since `0.1.130`): customizes the `options` panel's own lower-right label.
+- `preload` (since `0.1.92`), `preselect` (since `0.1.160`): preload the next/previous visible page's content (images, live updates); execute page/selection actions *before* (instead of after) a content scroll animation.
+- `navigationOffset`, `navigationSpan` (since `0.1.164`): align the list scroll indicators to a specific screen area — only take effect for `type: "list"` content or in a panel.
+
 **All Properties:** `name`, `version`, `reference`, `flag`, `reuse`, `cache`, `restore`, `important`, `wrap`, `compress`, `preselect`, `refocus`, `transparent`, `type`, `preload`, `headline`, `background`, `extension`, `dictionary`, `template`, `items`, `pages`, `header`, `footer`, `inserts`, `overlay`, `underlay`, `action`, `data`, `ready`, `options`, `caption`, `captionUnderlay`, `navigationOffset`, `navigationSpan`. This list is exhaustive — the two JSON examples above only illustrate the `template`/`items` vs. `pages` split; if a property isn't in this list, it doesn't exist on the Content Root Object. For the type/default/since-version of each, see the full property table linked below.
 
 See: [Content Root Object](main-api/content/content-root-object.md)
 
 ### Content Page Object
 
-One page/screen within a Content Root Object's `pages[]` array (manual layout) — or, since `0.1.53`/`0.1.110`/`0.1.112`/`0.1.156`, an individually-configured `header`/`overlay`/`underlay`/insert page attached to a `template`+`items` (templated) Content Root Object. Not used at all for pure templated content with no `header`/`footer`/`overlay`/`underlay`/`inserts`.
+One page/screen within a Content Root Object's `pages[]` array (manual layout) — or, since `0.1.53`/`0.1.110`/`0.1.112`/`0.1.156`, an individually-configured `header`/`overlay`/`underlay`/insert page attached to a `template`+`items` (templated) Content Root Object. Not used at all for pure templated content with no `header`/`footer`/`overlay`/`underlay`/`inserts`. Key properties:
+
+- `items` (mandatory for a `pages[]` entry): the Content Item Objects placed on this page.
+- `display`, `important` (since `0.1.110`): `important` controls whether a corresponding overlay/underlay page is hidden while this page is active (and vice versa — an overlay/underlay page with `important: true` is never hidden).
+- `wrap` (since `0.1.102`): blocks left/right navigation into the menu from this page — only actually matters on the content's first/last page (`type: "pages"`) or on every page (`type: "list"`); no effect on overlay/underlay pages or in a panel.
+- `background`, `transparent`: this page's own link in the general page-background chain — same mechanics as Content Root Object above.
+- `area`, `position`, `template` (all since `0.1.156`): insert-page placement — only take effect when this page is set inside the Content Root Object's own `inserts` array (see above); `template` here overrides properties of the content items being integrated, not the page's own properties.
+- `action`, `data` (since `0.1.112`, hidden feature): the Page Action, executed when this page becomes active — see [Page Action](experts-api/hidden-features/page-action.md).
+- `options`, `caption`: the same options-panel mechanism as Content Root Object, scoped to this page.
+- `navigationOffset`, `navigationSpan` (since `0.1.164`): align the list scroll indicators to a specific screen area — only take effect for `type: "list"` content or in a panel.
 
 **All Properties:** `display`, `important`, `wrap`, `compress`, `transparent`, `headline`, `background`, `area`, `offset`, `position`, `template`, `items`, `action`, `data`, `options`, `caption`, `captionUnderlay`, `navigationOffset`, `navigationSpan`. This list is exhaustive; if a property isn't in this list, it doesn't exist on the Content Page Object. For the type/default/since-version of each, see the full property table linked below.
 
@@ -208,9 +247,12 @@ One cell/tile on the grid. Key properties:
 - `layout`: `"col,row,width,height"` (e.g. `"0,0,4,3"`) — required for each item inside a Content Page Object's `items[]` (manual layout, `pages[]`). By contrast, for templated items (the content root object's own `template` + `items[]`), only the `template` object needs a `layout` (and only its `w`/`h` components are used); the individual items inside that `items[]` array must **not** set their own `layout`, it has no effect there.
 - `type`: `"default"` | `"separate"` | `"teaser"` | `"button"` | `"space"` | `"control"`.
 - `action`: The action string executed when the item is selected.
-- `label`, `title`, `titleHeader`, `titleFooter`, `badge`, `stamp`: Text properties (all support inline expressions).
+- `headline`, `text`, `label`, `title`, `titleHeader`, `titleFooter`, `badge`, `stamp`: Text properties (all support inline expressions). `headline`/`text` sit in the upper-left corner, `title`/`titleHeader`/`titleFooter` in the lower-left, `badge` upper-left (overlapping `headline`/`text` — see [Best Practices → `badge` overlapping `headline`/`text`](reference/best-practices.md#tagstampbadge--short-single-line-text-and-default-colors-that-already-fit)), `tag` upper-right, `stamp` lower-right.
 - `image`, `icon`, `color`: Visual properties.
 - `background` — **narrower than it looks: only applies if this item's own `action` uses the `audio:` prefix** (`audio:{URL}`, `audio:plugin:{URL}`, `audio:resolve:...`, `audio:auto:...` — any `audio:`-prefixed variant counts, not only the plain `audio:{URL}` form; see the general prefix-family rule in Section 3). It sets the backdrop shown while that item's audio is playing — it does nothing for a `video:`-prefixed action (`video:{URL}`, `video:plugin:{URL}`, etc.) or any other action type. Do not confuse it with the general page-background chain on Content Root/Content Page/Menu Root/Menu Item Object (also called `background`, but unconditional there) — see [Best Practices & Good to Know → `transparent` and background images/videos](reference/best-practices.md#transparent-and-background-imagesvideos) for that chain. For a background image on a video/plugin item's page, set `background` on the Content Root (or Content Page) Object instead, not on the item.
+- `enumerate`, `group` (since `0.1.92`): playlist/slideshow auto-advance mechanics. Enumerated items (`enumerate: true` — the default for templated items, `false` otherwise) execute in a row and show a `(1/10)`-style position label in the headline; `group` (requires `enumerate: true`) splits the enumeration counter per group and optionally adds its own label after the position — see [Best Practices → The player UI shows for several seconds by default](reference/best-practices.md#the-player-ui-shows-for-several-seconds-by-default-when-starting-videoaudio--several-mechanisms-shorten-or-suppress-it) for the full playlist-formation recipe.
+- `live` (object, since `0.1.70`): periodically updates this item's visual properties (live data, playback progress, countdowns) and fires a one-shot action on state transitions. Combined with `resume:key` (since `0.1.74`), a `type: "playback"` live object doesn't just show progress while playing — it also shows the *resume* progress (the saved position from a previous session) on the `progress` bar while the item sits idle/at rest, before it's ever selected. See [Live Object](experts-api/live/live-object.md) and the resume/EPG deep dives in [Cookbook](reference/cookbook.md#live-data-epg-progress-countdowns).
+- `selection` (object, since `0.1.110`): runs an action immediately when this item receives focus (auto-preview, load a backdrop, update another item) — see [Selection Object](experts-api/selection/selection-object.md).
 - `options` (since `0.1.120`): A Content Page Object (or since `0.1.130` also a Content Root Object) shown as a panel when this item is selected and the menu button is pressed. Highest priority in the `options` fallback chain — see [Glossary: Options](reference/glossary.md#options).
 - `properties` (object): The **Extended Properties bag** — a large, separate set of advanced, mostly player/plugin-facing item properties (e.g. `resume:key`/`resume:position`/`resume:context` for remembering playback position, `trigger:{TRIGGER_KEY}`, `control:load`, `tizen:*`, `html5x:*`, `image:*`, player-button overrides) that do **not** live at the top level of a Content Item Object — they are nested inside this one `properties` object instead, e.g. `"properties": { "resume:key": "url" }`. Not every `key:value` inside `properties` is necessarily an MSX-defined property, either — some are free-form data a specific plugin reads (see [Common Misconceptions → Extended properties (the `properties` bag)](reference/common-misconceptions.md#extended-properties-the-properties-bag)). See [Extended Properties](experts-api/special/extended-properties.md).
 
@@ -228,9 +270,13 @@ All actions are strings. They appear in the `action` property of:
 - **Content page objects** — executed when the page becomes active (hidden feature, since `0.1.112`). See [Page Action](experts-api/hidden-features/page-action.md).
 - **Content root / menu root objects** — Start Action executed when data is loaded at startup (hidden feature, since `0.1.0`; not to be confused with the `start` Main Action at `0.1.30`, which sets a *new* start parameter). See [Start Action](experts-api/hidden-features/start-action.md).
 - **Content root / menu root objects (again) — a separate mechanism.** A `ready` object (`action` + optional `data`, since `0.1.142`) fires every time that content/menu (including in a panel) becomes freshly displayed — not just once at startup like the Start Action above, but on every appearance, whether the data was freshly fetched, served from `cache`, or its DOM kept via `reuse`. Use `ready` for behavior that must re-arm on every appearance of a page (e.g. re-registering `trigger:` actions); use the Start Action above only for genuine one-time startup behavior. See [Glossary: Ready](reference/glossary.md#ready).
+- **Live objects** (`action` + optional `data`, since `0.1.70`) — fires when a `type: "setup"` live object's item becomes visible, or when a `type: "playback"` live object in state `"running"` is executed (instead of the item's own `action`). A state-specific override set inside `coming`/`running`/`over` fires when the live object enters that state instead of the base `action`. See [Live Object](experts-api/live/live-object.md).
+- **Selection objects** (`action` + optional `data`, since `0.1.110`) — fires immediately when the corresponding content item receives focus. See [Selection Object](experts-api/selection/selection-object.md).
 - **Server response objects** — `response.data.action`, returned by `execute:{URL}` calls.
 
 > **Note: Menu items have no `action` property** — they associate content exclusively via `data`.
+>
+> **Note: Several Extended Properties also expect an action string as their value** — e.g. `trigger:{TRIGGER_KEY}`, `button:{BUTTON_ID}:action`, `control:action`, `image:trigger`, `image:rotation:trigger`. Unlike the object-level `action`/`data` pairs above, these "property actions" **cannot** carry an action-related `data` property — use `execute:fetch:{URL}` instead if the action needs data (stated explicitly on [Extended Properties](experts-api/special/extended-properties.md) itself for each of these).
 
 ### Basic Action Patterns
 
@@ -509,26 +555,36 @@ There is also a `tvx-plugin-ux-module.min.js` variant — the same library plus 
 |---|---|
 | What is MSX? General overview | `overview/home.md` |
 | How to set up an MSX start URL? | `main-api/start/start-object.md` |
+| MSX app start URL parameters (`?start=`, `secure`, `alias`, etc.) | `experts-api/special/url-parameters.md` |
 | Menu structure | `main-api/menu/menu-root-object.md`, `main-api/menu/menu-item-object.md` |
-| Content layout, grid, item types | `main-api/content/content-root-object.md`, `main-api/content/content-item-object.md` |
+| Content layout, grid, item types | `main-api/content/content-root-object.md`, `main-api/content/content-page-object.md`, `main-api/content/content-item-object.md` |
 | Remembering / resuming playback position ("continue watching") | `experts-api/special/extended-properties.md` (`resume:key`/`resume:position`/`resume:context`) + `reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern` |
+| A "cool"/atmospheric **looping video/audio background** behind a transparent menu — **not** the same as a simple static page background | `experts-api/plugins/background-plugin.md`, `experts-api/plugins/backdrop-plugin.md`. For a plain static background image instead, that's just the `background` property on Content Root/Menu Root Object (Section 2 above) — no plugin needed. |
+| Adaptive/dynamic URL resolution at playback time (server picks a codec, mints a temporary/token-protected link) | `experts-api/hidden-features/resolve-action.md` |
 | Item-type/image/icon sizing & contrast pitfalls (`icon`+`image` combined, `"button"`/`"control"` height, `tag`/`stamp`/`badge` defaults, `imageOverlay`) | `reference/best-practices.md` (Best Practices section) |
 | Why `layout` (not `offset`) decides what gets focused next | `reference/cookbook.md#deep-dive--layout-drives-navigation-offset-doesnt-list0json` |
 | Choosing between M3U/PLS and MRSS for playlist import | `reference/cookbook.md#m3upls-vs-mrss-two-different-playlist-import-mechanisms`, `extended-api/m3u-pls-files.md`, `extended-api/mrss-feeds.md` |
+| Playing YouTube/Vimeo/Dailymotion/Twitch/Facebook/Wistia/SoundCloud content | `extended-api/youtube-vimeo-co.md` |
 | Available actions (full list) | `main-api/common/actions.md` + `reference/actions-reference.md` |
 | Inline expressions (standard) | `main-api/common/inline-expressions.md` |
 | Colors | `main-api/common/colors.md` |
 | Icons | `main-api/common/icons.md` |
 | Number formatting expressions | `experts-api/hidden-features/number-inline-expressions.md` |
-| Dictionary expressions | `experts-api/hidden-features/dictionary-inline-expressions.md` |
+| Dictionary — building the dictionary **file** (for UI translation) vs. the `{dic:...}` lookup **expression** | `experts-api/special/dictionary-structure.md` (file structure) vs. `experts-api/hidden-features/dictionary-inline-expressions.md` (expression syntax) — two different things, both called "dictionary" |
 | Color override expressions | `experts-api/hidden-features/color-inline-expressions.md` |
 | Live updates (scheduling, timers) | `experts-api/live/live-object.md`, `experts-api/live/live-inline-expressions.md` |
 | Building a live TV channel list / EPG guide backend (server-driven) | `reference/cookbook.md#deep-dive--the-live-channels--epg-backend-live_test_4`, `reference/cookbook.md#deep-dive--the-tv-guide-epg-grid-backend-guidephp` |
+| HTTP request/response mechanics for a JSON/service backend | `main-api/common/requests.md`, `main-api/common/responses.md` |
 | Selection behavior on focus | `experts-api/selection/selection-object.md` |
 | Compress grid (16×8 layout) | `experts-api/hidden-features/compress-property.md` |
 | Plugin development | `experts-api/plugins/video-audio-plugin.md`, `experts-api/plugins/plugin-api-reference.md` |
 | Building your own interaction plugin (handler pattern: `handleEvent`/`handleData`/`handleRequest`) | `experts-api/plugins/interaction-plugin.md`, `reference/cookbook.md#deep-dive--building-an-interaction-plugin-plugin_test_2` |
-| Building your own video plugin (player pattern: `MyPlayer`, progress polling) | `experts-api/plugins/video-audio-plugin.md`, `reference/cookbook.md#deep-dive--building-a-video-plugin-plugin_test_4-html5x` |
+| Building your own video plugin (player pattern: `MyPlayer`, progress polling) | `experts-api/plugins/video-audio-plugin.md`, `experts-api/plugins/html5x-plugin.md`, `reference/cookbook.md#deep-dive--building-a-video-plugin-plugin_test_4-html5x` |
+| Ready-made specialized plugins: wide sliding-pan images (Panorama), mixed image/video/audio playlist (Image), runtime player selection (Play), paging through large datasets (Paging), text entry — logins/search (Input) | `experts-api/plugins/panorama-plugin.md`, `experts-api/plugins/image-plugin.md`, `experts-api/plugins/play-plugin.md`, `experts-api/plugins/paging-plugin.md`, `experts-api/plugins/input-plugin.md` |
+| Playing HLS/DASH streams, or letting the user pick among multiple player engines (HTML5X, HLS, DASH, Shaka Player, Video.js, Android Plugin, native Tizen Player) at runtime | `experts-api/plugins/play-plugin.md#available-players` |
+| Preselecting a subtitle/audio track, or switching between them at playback time | `experts-api/plugins/html5x-plugin.md` (`html5x:subtitle`/`html5x:audiotrack` to preselect, `panel:request:player:subtitle`/`panel:request:player:audiotrack` to switch at runtime) |
+| Google Drive, OneDrive, or Dropbox as an MSX media source | `overview/showcases.md` (Google Drive MSX / OneDrive MSX / Dropbox MSX — setup parameter, demo link) + `experts-api/plugins/html5x-plugin.md` (the `index.json`/`{asset:id:{NAME}}` mechanism used to reference files from these services) |
+| Browsing/hosting a plain HTTP directory listing as MSX content (Node Browser MSX): file-naming conventions (background/hide/panorama prefixes, `menu`/`content`/`panel`/`index.json`), setting up directory listing + CORS on your own server, tabs, hosting your own MSX pages this way | `reference/cookbook.md#deep-dive--node-browser-msx-browsing-a-plain-http-directory-listing`, `overview/showcases.md#node-browser-msx`, `overview/tips-tricks.md#node-browser-msx`, `overview/tips-tricks.md#cloud-storage-service-tabs` |
 | Plugin event types / `handleEvent` payloads | `experts-api/plugins/plugin-events-reference.md` |
 | TypeScript types for JSON objects | `reference/type-definitions.md` |
 | Step-by-step JSON building | `reference/json-building-guide.md` |

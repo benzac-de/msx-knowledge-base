@@ -108,7 +108,7 @@ Media Station X (MSX) is a white-label TV app driven entirely by JSON served ove
 - [experts-api/plugins/video-audio-plugin.md](experts-api/plugins/video-audio-plugin.md) — Video/Audio plugin: custom media player integration
 - [experts-api/plugins/interaction-plugin.md](experts-api/plugins/interaction-plugin.md) — Interaction plugin: custom interactive content
 - [experts-api/plugins/image-plugin.md](experts-api/plugins/image-plugin.md) — Image plugin
-- [experts-api/plugins/html5x-plugin.md](experts-api/plugins/html5x-plugin.md) — HTML5X plugin: extended HTML5 rendering
+- [experts-api/plugins/html5x-plugin.md](experts-api/plugins/html5x-plugin.md) — HTML5X plugin: extended HTML5 video rendering with subtitle/audio track support — preselect a track, switch tracks at playback time, load tracks from an interaction plugin (Google Drive/OneDrive/Dropbox MSX)
 - [experts-api/plugins/panorama-plugin.md](experts-api/plugins/panorama-plugin.md) — Panorama plugin (wide, >16:9 sliding image pan)
 - [experts-api/plugins/background-plugin.md](experts-api/plugins/background-plugin.md) — Background plugin
 - [experts-api/plugins/backdrop-plugin.md](experts-api/plugins/backdrop-plugin.md) — Backdrop plugin

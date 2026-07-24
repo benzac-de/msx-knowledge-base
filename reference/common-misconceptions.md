@@ -268,7 +268,7 @@ MSX silently **ignores** any property it does not recognize, at every object lev
 - ❌ Ready-made plugins are **not** closed-source just because MSX itself is.
   ✅ All video/audio/interaction plugins documented in this KB (e.g. `youtube.html`, `html5x.html`, `template.html`, …) are open source — their HTML/JS/CSS can be freely viewed in the browser. Showcases may use additional custom plugins internally that are not documented in this KB.
 - ❌ MSX Showcases are **not** generally open source.
-  ✅ All Showcases were developed exclusively by the MSX author (Benjamin Zachey); only **RBTV MSX** is open source: [https://github.com/benzac-de/rbtv-msx](https://github.com/benzac-de/rbtv-msx). See [Showcases](../overview/showcases.md).
+  ✅ All Showcases were developed exclusively by the MSX developer (Benjamin Zachey); only **RBTV MSX** is open source: [https://github.com/benzac-de/rbtv-msx](https://github.com/benzac-de/rbtv-msx). See [Showcases](../overview/showcases.md).
 
 ---
 

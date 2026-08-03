@@ -106,6 +106,7 @@ Unless a "since" annotation says otherwise, assume a feature is available from `
 | `0.1.40` | Plugin actions (`video:plugin:`, `audio:plugin:`) |
 | `0.1.53` | `header` / `footer` properties (Content Root Object) — individually-configured Content Page Objects layered as a fixed header/footer row onto templated (`template`+`items`) content |
 | `0.1.58` | Extended actions: multi-action `[a|b]`, `reload`, `update:*`, `data`; `cache` (Content Root, Menu Root Object) and `important` (Content Root Object only) |
+| `0.1.60` | `logo` property (Menu Root Object only) — a logo image instead of a `headline` |
 | `0.1.65` | `{SERVER}` placeholder in the Start Object's `parameter` (start file only) |
 | `0.1.70` | Live inline expressions: `{now:…}`, `{from:…}`, `{to:…}`, `{duration:…}`, `{progress:…}`, `{countdown:…}`, `{overflow:…}`, `{creation:…}` |
 | `0.1.74` | `~`-prefixed rounded duration text format (`~dhms`, etc.) |
@@ -117,7 +118,7 @@ Unless a "since" annotation says otherwise, assume a feature is available from `
 | `0.1.97` | `{PREFIX}` placeholder in the Start Object's `parameter` (start file only); `redirect:` prefix for the Start Object's `parameter` to load the actual Start Object from another location (e.g. `redirect:{PREFIX}{SERVER}/msx/start.php`) |
 | `0.1.102` | `wrap` property (Content Root, Content Page Object) |
 | `0.1.107` | Resolve Action hidden feature — as `action`-strings (always prefixed: `video:resolve:`/`video:auto:resolve:`, `audio:resolve:`/`audio:auto:resolve:`, `image:resolve:`, `background:resolve:`) and as a bare `resolve:{URL}` value on the `image` property (content context only) and on the `background` property (works everywhere it appears — Content Item, Content Page, Content Root, Selection Object, Menu Item, Menu Root) — see [Actions Reference](actions-reference.md#hidden-feature-actions-replace-start--resolve) |
-| `0.1.110` | Selection Object (`important`, `background`, `action`, `data`); `update:content:overlay:`, `update:panel:overlay:`; `offset` value range increased from `-1.0`–`1.0` (each component) to `-11.0`–`11.0` (`x`/`w`; panels `-7.0`–`7.0`) / `-5.0`–`5.0` (`y`/`h`) — an `offset` beyond `±1.0` on any component silently clamps/misbehaves on pre-`0.1.110` clients |
+| `0.1.110` | Selection Object (`important`, `background`, `action`, `data`); Content Page Object's own separate `important` (hides/never-hides the page's corresponding overlay/underlay page); `update:content:overlay:`, `update:panel:overlay:`; `offset` value range increased from `-1.0`–`1.0` (each component) to `-11.0`–`11.0` (`x`/`w`; panels `-7.0`–`7.0`) / `-5.0`–`5.0` (`y`/`h`) — an `offset` beyond `±1.0` on any component silently clamps/misbehaves on pre-`0.1.110` clients |
 | `0.1.111` | Selection Object `headline`; `resume:key` / `resume:position` extended properties |
 | `0.1.112` | `update:content:underlay:`, `update:panel:underlay:`; Page Action hidden feature (the `action` executed when a Content Page becomes active) |
 | `0.1.117` | Start Object `welcome` property |
@@ -134,7 +135,7 @@ Unless a "since" annotation says otherwise, assume a feature is available from `
 | `0.1.154` | Settings-validation panel (guards Layout, Scale Factor, Zoom Factor, Transform, Remote Control, and Input Type after a restart); `info:headline` Dynamic Extended Property mirror action |
 | `0.1.155` | Template-only `decompress` property (author template `layout` in uncompressed grid coordinates while content is compressed) |
 | `0.1.156` | `separation` property and the `separation-*` `alignment` variants (only take effect once `separation` is set); `"space"` items can share a grid position with other items (excluded from the selection engine); `info:round` Dynamic Extended Property |
-| `0.1.160` | All internal actions; `preselect` property — **not** the same as the `"Preselect"` hover-effect setting value above (`0.1.136`); see the note below; `{#1}` / `{#2}` insertion expressions; basic format expressions for `{num:…}` |
+| `0.1.160` | All internal actions; `preselect` property — **not** the same as the `"Preselect"` hover-effect setting value above (`0.1.136`); see the note below; `{#1}` / `{#2}` insertion expressions; basic format expressions for `{num:…}`; the `formatter:` sub-form of Live Inline Expressions (`{now:formatter:...}`, `{creation:formatter:...}`, `{from:formatter:...}`, `{to:formatter:...}`) — the `now`/`creation`/`from`/`to` families themselves remain `0.1.70`, only their `formatter:` sub-form is `0.1.160` |
 | `0.1.161` | `outline:{ICON}` icon prefix variant (e.g. `"outline:movie"`, `"msx-red:outline:movie"`) |
 | `0.1.164` | Start Object `launcher` property; `navigationOffset`; `navigationSpan` |
 

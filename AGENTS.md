@@ -637,6 +637,8 @@ A short list of the highest-impact, cross-cutting gotchas. For the full build-fo
 
 10. **Expecting `update:content:{ID}`/`update:menu:{ID}` to set a property the item never had a value for originally:** these actions only update properties already present (non-`null`) in the item's own origin data — a property that started `null`/unset silently stays that way. Exceptions that always work regardless: `background`/`lineColor`/`options` for `update:menu:{ID}`; `color`-type properties (`color`/`tagColor`/`badgeColor`/`stampColor`/`progressColor`/`progressBackColor`/`wrapperColor`) plus `live`/`selection`/`options` for `update:content:{ID}` — the same `color`-type exemption as the `live` object's own update mechanism (point 9). Same underlying reason both times: MSX only renders a dedicated element for a property when it's initially present. See [Actions](main-api/common/actions.md), [Common Misconceptions → Actions](reference/common-misconceptions.md#actions).
 
+11. **Assuming a `template` object is layout-only and can't carry `action`/`data`/`properties`/`live`/`selection`/`options`:** A template object is itself a [Content Item Object](main-api/content/content-item-object.md) — it can carry any of that object's properties, not just visual/layout ones. Templated items only need to specify what differs from the template; everything else, including a `live` block or `properties` bag, is copied from it to every generated item. See [Cookbook → Deep dive — a minimal "resume playback" item](reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern) for a worked example with `live` inside `template`.
+
 ---
 
 ## 10. Authoritative Instruction

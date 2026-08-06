@@ -6,7 +6,7 @@ summary: Human-readable project entry point for the MSX LLM Knowledge Base repos
 
 # MSX Knowledge Base
 
-**KB Version:** `2026-08-04` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
+**KB Version:** `2026-08-06` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
 
 An LLM-optimized knowledge base for **Media Station X (MSX)**, covering the MSX app API from version `0.1.0` to `0.1.166`. It is aimed at MSX JSON authors and at LLMs that need to answer MSX questions or build valid MSX JSON pages from scratch.
 

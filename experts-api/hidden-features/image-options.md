@@ -1,4 +1,4 @@
-﻿---
+---
 title: Image Options
 category: Experts API - Hidden Features
 summary: Explains the MSX image options hidden feature for rotating the current slideshow image via the options panel or remote control REWIND/FORWARD buttons.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: IMA Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX IMA (Interactive Media Ads) plugin.

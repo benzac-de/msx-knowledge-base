@@ -1,4 +1,4 @@
-﻿---
+---
 title: Play Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX play plugin that enables platform-compatible player selection at runtime.

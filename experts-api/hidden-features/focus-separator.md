@@ -1,4 +1,4 @@
-﻿---
+---
 title: Focus Separator
 category: Experts API - Hidden Features
 summary: Explains the MSX focus separator hidden feature for focusing and executing items on load.

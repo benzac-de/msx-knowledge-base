@@ -1,4 +1,4 @@
-﻿---
+---
 title: NetCast Menu
 category: Experts API - Special
 summary: Details about the LG NetCast platform-specific menu integration in MSX, available from version 0.1.136.

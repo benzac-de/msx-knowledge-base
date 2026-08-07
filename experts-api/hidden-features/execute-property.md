@@ -1,4 +1,4 @@
-﻿---
+---
 title: Execute Property
 category: Experts API - Hidden Features
 summary: Explains the MSX execute property hidden feature for running actions on item load.

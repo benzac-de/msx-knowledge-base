@@ -1,4 +1,4 @@
-﻿---
+---
 title: Resolve Action
 category: Experts API - Hidden Features
 summary: Explains the MSX resolve action hidden feature for dynamically resolving a video/audio/image/background URL via a server request at runtime.

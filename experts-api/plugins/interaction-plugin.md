@@ -1,4 +1,4 @@
-﻿---
+---
 title: Interaction Plugin
 category: Experts API - Plugin
 summary: Reference for creating custom interaction plugins in MSX, including the MyHandler class and event handling.

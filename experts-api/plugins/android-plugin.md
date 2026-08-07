@@ -1,4 +1,4 @@
-﻿---
+---
 title: Android Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX Android-specific plugin capabilities.

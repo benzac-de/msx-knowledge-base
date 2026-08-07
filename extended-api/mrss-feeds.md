@@ -1,4 +1,4 @@
-﻿---
+---
 title: MRSS Feeds
 category: Extended API
 summary: Explains how to load MRSS feeds via a special MSX interaction plugin.

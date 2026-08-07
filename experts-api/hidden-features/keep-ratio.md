@@ -1,4 +1,4 @@
-﻿---
+---
 title: Keep Ratio Keyword
 category: Experts API - Hidden Features
 summary: Explains the MSX keep ratio keyword for maintaining image aspect ratios.

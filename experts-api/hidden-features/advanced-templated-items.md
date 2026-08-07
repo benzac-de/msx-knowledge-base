@@ -1,4 +1,4 @@
-﻿---
+---
 title: Advanced Templated Items
 category: Experts API - Hidden Features
 summary: Explains how to extend templated content items with context inserts and line/page/context breaks in MSX.

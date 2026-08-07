@@ -1,4 +1,4 @@
-﻿---
+---
 title: Number Inline Expressions
 category: Experts API - Hidden Features
 summary: Reference for MSX number inline expressions used for numeric formatting in text values.

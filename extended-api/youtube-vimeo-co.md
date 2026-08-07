@@ -1,4 +1,4 @@
-﻿---
+---
 title: YouTube, Vimeo & Co.
 category: Extended API
 summary: Describes the integration of YouTube, Vimeo, and other video platforms in MSX.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Image Plugin
 category: Experts API - Plugin
 summary: Reference for using the MSX image plugin to load and display images inline with videos and audios.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Particles Plugin
 category: Experts API - Benchmark
 summary: Reference for the MSX particles plugin benchmark test.

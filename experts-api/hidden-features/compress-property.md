@@ -1,4 +1,4 @@
-﻿---
+---
 title: Compress Property
 category: Experts API - Hidden Features
 summary: Explains the MSX compress property hidden feature that expands the grid layout for more items per page.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Panorama Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX panorama plugin, which displays a wide panorama image as an automatic sliding pan, not an interactive or video view.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Menu Examples
 category: Main API - Menu
 summary: Code examples demonstrating menu configurations in MSX.

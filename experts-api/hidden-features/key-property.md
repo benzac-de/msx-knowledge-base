@@ -1,4 +1,4 @@
-﻿---
+---
 title: Key Property
 category: Experts API - Hidden Features
 summary: Explains the MSX key property hidden feature for assigning keyboard shortcuts to items.

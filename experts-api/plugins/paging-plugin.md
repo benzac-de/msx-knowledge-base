@@ -1,4 +1,4 @@
-﻿---
+---
 title: Paging Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX paging plugin that enables server-side paged content loading.

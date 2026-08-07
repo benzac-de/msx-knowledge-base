@@ -1,4 +1,4 @@
-﻿---
+---
 title: Start Action
 category: Experts API - Hidden Features
 summary: Explains the MSX start action hidden feature for executing a startup action.

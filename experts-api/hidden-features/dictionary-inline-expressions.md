@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dictionary Inline Expressions
 category: Experts API - Hidden Features
 summary: Reference for MSX dictionary inline expressions used to look up values from a dictionary.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Video/Audio Plugin
 category: Experts API - Plugin
 summary: Reference for creating custom video and audio plugins in MSX, including the MyPlayer class and event handling.

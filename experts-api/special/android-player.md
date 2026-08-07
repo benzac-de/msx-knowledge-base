@@ -1,4 +1,4 @@
-﻿---
+---
 title: Android Player
 category: Experts API - Special
 summary: API reference for launching an external Android player (VLC, MX Player & Co.) from MSX and handling the application result event.

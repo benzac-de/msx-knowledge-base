@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ad Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX ad plugin that integrates advertisement display.

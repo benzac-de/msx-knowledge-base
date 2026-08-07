@@ -1,4 +1,4 @@
-﻿---
+---
 title: Color Inline Expressions
 category: Experts API - Hidden Features
 summary: Reference for MSX color inline expressions used to apply color to text segments.

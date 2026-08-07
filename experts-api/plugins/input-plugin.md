@@ -1,4 +1,4 @@
-﻿---
+---
 title: Input Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX input plugin, a special interaction plugin for multilingual text entry (default/secret/search types) with paging support for search results.

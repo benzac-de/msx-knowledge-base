@@ -1,4 +1,4 @@
-﻿---
+---
 title: Drawing Plugin
 category: Experts API - Benchmark
 summary: Reference for the MSX drawing plugin benchmark test.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Internal Actions
 category: Experts API - Special
 summary: Reference for all internal MSX actions, valid for version 0.1.160+, including main actions and internal-only actions.

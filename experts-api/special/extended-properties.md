@@ -1,4 +1,4 @@
-﻿---
+---
 title: Extended Properties
 category: Experts API - Special
 summary: Reference for MSX extended properties set in a Content Item Object's `properties` bag for special use cases.

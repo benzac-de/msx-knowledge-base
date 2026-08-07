@@ -1,4 +1,4 @@
-﻿---
+---
 title: Background Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX background plugin that sets a custom video background for content pages.

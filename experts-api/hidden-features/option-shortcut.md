@@ -1,4 +1,4 @@
-﻿---
+---
 title: Option Shortcut
 category: Experts API - Hidden Features
 summary: Explains the MSX option shortcut hidden feature for quick option access.

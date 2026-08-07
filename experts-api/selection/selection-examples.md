@@ -1,4 +1,4 @@
-﻿---
+---
 title: Selection Examples
 category: Experts API - Selection
 summary: Code examples demonstrating selection object configurations in MSX.

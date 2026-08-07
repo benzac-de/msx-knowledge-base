@@ -1,4 +1,4 @@
-﻿---
+---
 title: Settings Menu Item
 category: Experts API - Hidden Features
 summary: Explains the MSX settings menu item hidden feature for embedding settings in menus.

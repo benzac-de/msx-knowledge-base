@@ -1,4 +1,4 @@
-﻿---
+---
 title: Advanced Text & Image
 category: Experts API - Hidden Features
 summary: Explains the MSX advanced text and image feature for complex combined text-image layouts.

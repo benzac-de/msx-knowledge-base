@@ -1,4 +1,4 @@
-﻿---
+---
 title: Renderer Plugin
 category: Experts API - Benchmark
 summary: Reference for the MSX renderer plugin benchmark test for measuring TV device performance.

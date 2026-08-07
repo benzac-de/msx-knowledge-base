@@ -1,4 +1,4 @@
-﻿---
+---
 title: Content Examples
 category: Main API - Content
 summary: Two worked JSON examples of content items — non-templated (manual pages) and templated (template + items).

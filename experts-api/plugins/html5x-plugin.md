@@ -1,4 +1,4 @@
-﻿---
+---
 title: HTML5X Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX HTML5X plugin that enables extended HTML5 video content.

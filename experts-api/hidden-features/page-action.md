@@ -1,4 +1,4 @@
-﻿---
+---
 title: Page Action
 category: Experts API - Hidden Features
 summary: Explains the MSX page action hidden feature for executing actions on page navigation.

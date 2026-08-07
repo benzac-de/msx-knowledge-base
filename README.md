@@ -122,10 +122,6 @@ They're a general-purpose default, not a guarantee. `AGENTS.md` is trimmed and o
 - **Bulk ingestion / RAG:** To build your own retrieval system, clone the repo (or fetch individual files via `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/...`) and index the raw Markdown in a vector store; `llms.txt` gives you the full file list to seed the crawl/embedding job.
 - **MCP server:** If your client supports the Model Context Protocol, point an MCP filesystem server at a local clone, or an MCP GitHub server at `benzac-de/msx-knowledge-base`, so the LLM can list and read files directly through the tool.
 
-## Example conversation
-
-A worked example of what this KB enables in practice — one JSON page, refined turn by turn and grounded entirely in KB files: a YouTube video list, extended with `resume:key`, a live playback progress footer, and a background image, then carried through to hosting it and setting it up on a real TV. See [`example.md`](example.md) for the full, verbatim transcript.
-
 ## Attribution & License
 
 Original content source: the official Media Station X wiki at [https://msx.benzac.de/wiki/](https://msx.benzac.de/wiki/), the documentation/demo pages at [https://msx.benzac.de/info/](https://msx.benzac.de/info/), and the public example repository at [https://github.com/benzac-de/msx](https://github.com/benzac-de/msx). Media Station X itself, all of its official Showcases, and all of the original source content behind this knowledge base were solely developed and authored by Benjamin Zachey.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Large Offsets
 category: Experts API - Hidden Features
 summary: Explains the MSX large offsets hidden feature for positioning items beyond default grid bounds.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Hide Images
 category: Experts API - Hidden Features
 summary: Explains the MSX hide images hidden feature for suppressing image display.

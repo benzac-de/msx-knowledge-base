@@ -1,4 +1,4 @@
-﻿---
+---
 title: M3U/PLS Files
 category: Extended API
 summary: Explains how to use M3U and PLS playlist files with a special MSX backend service.

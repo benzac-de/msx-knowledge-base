@@ -1,4 +1,4 @@
-﻿---
+---
 title: Icons
 category: Main API - Common
 summary: Reference for all Material Icons integrated in MSX, including syntax for colored and outline icons.

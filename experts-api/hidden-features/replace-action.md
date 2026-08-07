@@ -1,4 +1,4 @@
-﻿---
+---
 title: Replace Action
 category: Experts API - Hidden Features
 summary: Explains the MSX replace action hidden feature for replacing content items dynamically.

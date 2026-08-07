@@ -1,4 +1,4 @@
-﻿---
+---
 title: Backdrop Plugin
 category: Experts API - Plugin
 summary: Reference for the MSX backdrop plugin that displays an atmospheric backdrop image behind content.

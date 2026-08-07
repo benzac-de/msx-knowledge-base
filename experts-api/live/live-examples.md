@@ -1,4 +1,4 @@
-﻿---
+---
 title: Live Examples
 category: Experts API - Live
 summary: Code examples demonstrating live data update configurations in MSX.

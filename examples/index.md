@@ -573,7 +573,7 @@ Experimental tests. Minimum version requirements depend on the specific features
 - **Top-level type:** `pages`
 - **Item types:** `separate`
 - **Structural properties:** `execute`, `template`
-- **Description:** Demonstrates the Execute Property hidden feature with `execute` triggering side effects on item activation.
+- **Description:** Demonstrates the Execute Property hidden feature with `execute` auto-executing the item on load (requires `focus: true`).
 - **Related API:** [Execute Property](../experts-api/hidden-features/execute-property.md)
 
 ### [xp/hidden_feature_4.json](xp/hidden_feature_4.json)

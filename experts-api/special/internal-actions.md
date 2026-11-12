@@ -1,12 +1,12 @@
 ---
 title: Internal Actions
 category: Experts API - Special
-summary: Reference for all internal MSX actions, valid for version 0.1.160+, including main actions and internal-only actions.
+summary: Reference for all internal MSX actions, valid for version 0.1.167+, including main actions and internal-only actions.
 ---
 
 # Internal Actions
 
-These actions are used internally, but can also be used to create more complex and interactive media pages. Unlike the main actions, they have no version control and are only valid for version **0.1.160+**. Therefore, please check your version if you encounter any errors/warnings, because the syntax in previous versions can be different.
+These actions are used internally, but can also be used to create more complex and interactive media pages. Unlike the main actions, they have no version control and are only valid for version **0.1.167+**. Therefore, please check your version if you encounter any errors/warnings, because the syntax in previous versions can be different.
 
 **Note: The main actions ([Actions](../../main-api/common/actions.md)) are also described here (in less detail) to provide a better overview of all available actions.**
 
@@ -14,18 +14,18 @@ If you would like to search for an action, please have a look at this link: [htt
 
 ## See Also
 
-- [Actions Reference](../../reference/actions-reference.md) — consolidated Main + Internal actions, including cases where "Main Action: No" still carries a tighter since-version than the `0.1.160+` blanket (`execute:service:...` since `0.1.90`, the entire broadcast/HbbTV family since `0.1.30`, the `content:json:`/`menu:json:`/`panel:json:`/`playlist:json:`/`slideshow:json:` base64-embedding variants since `0.1.0`, `system:tvx:launch`/`system:tvx:launch:{APP_ID}` and `system:netcast:menu` since `0.1.136`, `request:interaction:{DATA_ID}@{URL}` combinations since `0.1.82`) — see that page for the complete, authoritative list
-- [Actions Reference → Actions That Mirror a "Dynamic" Extended Property](../../reference/actions-reference.md#actions-that-mirror-a-dynamic-extended-property) — the largest exception group: the full `player:*`/`slider:*`/`resume:position`/`trigger:{KEY}:{ACTION}` cross-reference table, each action sharing its property's own since-version (`0.1.58`–`0.1.156`, not blanket `0.1.160+`)
-- [Actions Reference → Plugin-Commit Actions (`player:commit`, `interaction:commit:response:...`) and Tizen Player](../../reference/actions-reference.md#plugin-commit-actions-playercommit-interactioncommitresponse-and-tizen-player) — `player:commit`/`player:commit:message:{MESSAGE}` (built for video/audio plugins generally) are `0.1.74`; `interaction:commit:response:{REQUEST_ACTION}`/`interaction:commit:response:request:player:{DATA_ID}` (reused by [Tizen Player](./tizen-player.md)) are `0.1.128`; neither is blanket `0.1.160+`
-- [Actions Reference → Request Actions](../../reference/actions-reference.md#request-actions-requestinteraction-is-0182-requestplayer-remains-01160) — the `request:interaction:{DATA_ID}@{URL}` sub-variant seen throughout the tables below (e.g. `content:request:interaction:...`, `*:resolve:request:interaction:...`) is `0.1.82`, not blanket `0.1.160+`, except when combined with a later-floored prefix (`auto:`, Resolve); the sibling `request:player:{DATA_ID}` sub-variant remains blanket `0.1.160+`
+- [Actions Reference](../../reference/actions-reference.md) — consolidated Main + Internal actions, including cases where "Main Action: No" still carries a tighter since-version than the `0.1.167+` blanket (`execute:service:...` since `0.1.90`, the entire broadcast/HbbTV family since `0.1.30`, the `content:json:`/`menu:json:`/`panel:json:`/`playlist:json:`/`slideshow:json:` base64-embedding variants since `0.1.0`, `system:tvx:launch`/`system:tvx:launch:{APP_ID}` and `system:netcast:menu` since `0.1.136`, `request:interaction:{DATA_ID}@{URL}` combinations since `0.1.82`) — see that page for the complete, authoritative list
+- [Actions Reference → Actions That Mirror a "Dynamic" Extended Property](../../reference/actions-reference.md#actions-that-mirror-a-dynamic-extended-property) — the largest exception group: the full `player:*`/`slider:*`/`resume:position`/`trigger:{KEY}:{ACTION}` cross-reference table, each action sharing its property's own since-version (`0.1.58`–`0.1.156`, not blanket `0.1.167+`; the `0.1.167` `control:timeout` ↔ `player:control:timeout:{VALUE}` pair coincides with the blanket)
+- [Actions Reference → Plugin-Commit Actions (`player:commit`, `interaction:commit:response:...`) and Tizen Player](../../reference/actions-reference.md#plugin-commit-actions-playercommit-interactioncommitresponse-and-tizen-player) — `player:commit`/`player:commit:message:{MESSAGE}` (built for video/audio plugins generally) are `0.1.74`; `interaction:commit:response:{REQUEST_ACTION}`/`interaction:commit:response:request:player:{DATA_ID}` (reused by [Tizen Player](./tizen-player.md)) are `0.1.128`; neither is blanket `0.1.167+`
+- [Actions Reference → Request Actions](../../reference/actions-reference.md#request-actions-requestinteraction-is-0182-requestplayer-remains-01167) — the `request:interaction:{DATA_ID}@{URL}` sub-variant seen throughout the tables below (e.g. `content:request:interaction:...`, `*:resolve:request:interaction:...`) is `0.1.82`, not blanket `0.1.167+`, except when combined with a later-floored prefix (`auto:`, Resolve); the sibling `request:player:{DATA_ID}` sub-variant remains blanket `0.1.167+`
 - [Common Misconceptions → Actions](../../reference/common-misconceptions.md#actions) and [→ Server actions](../../reference/common-misconceptions.md#server-actions-execute)
 - [Versioning → Forward Compatibility](../../reference/versioning.md#forward-compatibility) — why an unrecognized internal action on an older client surfaces as a warning, not a hard error
 - [Glossary → Invalidate](../../reference/glossary.md#invalidate) and [→ Release](../../reference/glossary.md#release) — the distinction between `invalidate:*` (visual only) and `release:*` (actually clears cache)
-- [Best Practices & Good to Know → The player UI shows for several seconds by default](../../reference/best-practices.md#the-player-ui-shows-for-several-seconds-by-default-when-starting-videoaudio--several-mechanisms-shorten-or-suppress-it) — how `auto:{URL}`/`auto:` (internal-only, `0.1.160+`) fits alongside `control:load`/`trigger:load`/`trigger:start` to suppress or shorten the player UI
+- [Best Practices & Good to Know → The player UI shows for several seconds by default](../../reference/best-practices.md#the-player-ui-shows-for-several-seconds-by-default-when-starting-videoaudio--several-mechanisms-shorten-or-suppress-it) — how `auto:{URL}`/`auto:` (internal-only, `0.1.167+`) fits alongside `control:load`/`trigger:load`/`trigger:start` to suppress or shorten the player UI
 
 **Column guide:**
 - **Main Action = Yes**: This action is also an official Main Action (documented in [Actions](../../main-api/common/actions.md)) and is version-stable.
-- **Main Action = No**: This is an internal-only action. In most cases it requires version **0.1.160+** with no finer version control — but a substantial number of exceptions have their own tighter since-version despite being flagged "No" here: a few individual families (e.g. `execute:service:...` since `0.1.90`, the broadcast/HbbTV family since `0.1.30`, the `:json:` base64-embedding variants since `0.1.0`, `system:tvx:launch`/`system:netcast:menu` since `0.1.136`), the `request:interaction:{DATA_ID}@{URL}` sub-variant of most URL-accepting actions (`0.1.82`, not blanket `0.1.160+`, except when floored higher by a combined prefix like `auto:` or Resolve — its sibling `request:player:{DATA_ID}` sub-variant remains blanket `0.1.160+`), plus — the largest group — every action that is the runtime-settable form of a "Dynamic" [Extended Property](../../experts-api/special/extended-properties.md) (mostly `player:...`, plus a few `slider:...`, `resume:position`, and `trigger:{KEY}:{ACTION}`), each sharing that property's own since-version (`0.1.58`–`0.1.156`), plus `player:commit`/`player:commit:message:{MESSAGE}` (`0.1.74`) and `interaction:commit:response:{REQUEST_ACTION}`/`interaction:commit:response:request:player:{DATA_ID}` (`0.1.128`) — built for video/audio plugins generally, and reused (not invented) by [Tizen Player](./tizen-player.md); see [Actions Reference → Actions That Mirror a "Dynamic" Extended Property](../../reference/actions-reference.md#actions-that-mirror-a-dynamic-extended-property), [→ Plugin-Commit Actions (`player:commit`, `interaction:commit:response:...`) and Tizen Player](../../reference/actions-reference.md#plugin-commit-actions-playercommit-interactioncommitresponse-and-tizen-player), and [→ Request Actions](../../reference/actions-reference.md#request-actions-requestinteraction-is-0182-requestplayer-remains-01160) for the complete, precise cross-references.
+- **Main Action = No**: This is an internal-only action. In most cases it requires version **0.1.167+** with no finer version control — but a substantial number of exceptions have their own tighter since-version despite being flagged "No" here: a few individual families (e.g. `execute:service:...` since `0.1.90`, the broadcast/HbbTV family since `0.1.30`, the `:json:` base64-embedding variants since `0.1.0`, `system:tvx:launch`/`system:netcast:menu` since `0.1.136`, `dictionary:{URL}` since `0.1.160`, and the [Code Panel](../hidden-features/code-panel.md) actions `enter:{CODE}` since `0.1.0`, `player:commit:code` since `0.1.40`, `interaction:commit:code` since `0.1.82`), the `request:interaction:{DATA_ID}@{URL}` sub-variant of most URL-accepting actions (`0.1.82`, not blanket `0.1.167+`, except when floored higher by a combined prefix like `auto:` or Resolve — its sibling `request:player:{DATA_ID}` sub-variant remains blanket `0.1.167+`), plus — the largest group — every action that is the runtime-settable form of a "Dynamic" [Extended Property](../../experts-api/special/extended-properties.md) (mostly `player:...`, plus a few `slider:...`, `resume:position`, and `trigger:{KEY}:{ACTION}`), each sharing that property's own since-version (`0.1.58`–`0.1.167`), plus `player:commit`/`player:commit:message:{MESSAGE}` (`0.1.74`) and `interaction:commit:response:{REQUEST_ACTION}`/`interaction:commit:response:request:player:{DATA_ID}` (`0.1.128`) — built for video/audio plugins generally, and reused (not invented) by [Tizen Player](./tizen-player.md); see [Actions Reference → Actions That Mirror a "Dynamic" Extended Property](../../reference/actions-reference.md#actions-that-mirror-a-dynamic-extended-property), [→ Plugin-Commit Actions (`player:commit`, `interaction:commit:response:...`) and Tizen Player](../../reference/actions-reference.md#plugin-commit-actions-playercommit-interactioncommitresponse-and-tizen-player), [→ Request Actions](../../reference/actions-reference.md#request-actions-requestinteraction-is-0182-requestplayer-remains-01167), and [→ Code Panel Actions](../../reference/actions-reference.md#code-panel-actions) for the complete, precise cross-references.
 
 ## audio: Actions
 
@@ -39,6 +39,13 @@ If you would like to search for an action, please have a look at this link: [htt
 | `audio:broadcast:{BC_ACTION}`<br> `audio:broadcast:current`<br> `audio:broadcast:next`<br> `audio:broadcast:prev`<br> `audio:broadcast:release`<br> `audio:broadcast:name:{CHANNEL_NAME}`<br> `audio:broadcast:triplet:{ONID}.{TSID}.{SID}`<br> | Optional | No | Executes a platform-specific audio broadcast action. |
 | `audio:plugin:{URL}`<br> `audio:plugin:http://msx.benzac.de/plugins/template.html`<br> | Optional | **Yes** | Plays a plugin audio. |
 | `audio:resolve:{REQUEST_ACTION}`<br> `audio:resolve:http://msx.benzac.de/services/resolve.php?type=audio`<br> `audio:resolve:user:{URL}`<br> `audio:resolve:request:interaction:{DATA_ID}`<br> `audio:resolve:request:interaction:{DATA_ID}@{URL}`<br> | Optional | No | Plays an audio by resolving it with a URL (the response data must contain a `url` property). |
+
+## autoplay: Actions
+
+| Syntax & Example | Data | Main Action | Description |
+|---|---|---|---|
+| `autoplay` | None | No | Executes the video/audio action of the currently focused item in auto mode. If the focused item does not contain a video/audio action, or if no item is focused at all (e.g. if the menu is focused), the first item of the current context that contains a video/audio action is used instead. If no video/audio action can be found, the action is ignored. |
+| `autoplay:{FOCUS}`<br> `autoplay:content_item_id`<br> `autoplay:index:0`<br> `autoplay:random`<br> | None | No | Executes the video/audio action of the item that would be focused by the action `focus:{FOCUS}` (without actually focusing it) in auto mode. If this item does not exist (e.g. if an unknown ID is indicated), the currently focused item is used instead (like with the action `autoplay`). If the item does not contain a video/audio action, the first item of the current context that contains a video/audio action is used instead. If no video/audio action can be found, the action is ignored. |
 
 ## awake: Actions
 
@@ -83,7 +90,7 @@ If you would like to search for an action, please have a look at this link: [htt
 
 | Syntax & Example | Data | Main Action | Description |
 |---|---|---|---|
-| `close`<br> `close`<br> | None | No | Closes visible content and/or panel. |
+| `close` | None | No | Closes visible content and/or panel. |
 | `close:{CONTENT_FLAG}`<br> `close:content_flag`<br> | None | No | Closes a visible content and/or panel that has the specific flag. |
 
 ## content: Actions
@@ -103,6 +110,12 @@ If you would like to search for an action, please have a look at this link: [htt
 | Syntax & Example | Data | Main Action | Description |
 |---|---|---|---|
 | `data` | **Required** | **Yes** | Executes multiple actions in a row. |
+
+## defer: Actions
+
+| Syntax & Example | Data | Main Action | Description |
+|---|---|---|---|
+| `defer:{ACTION}`<br> `defer:info:Deferred action executed.`<br> | Optional | No | Executes an action asynchronously after the current execution cycle has been completed. |
 
 ## delay: Actions
 
@@ -135,6 +148,7 @@ If you would like to search for an action, please have a look at this link: [htt
 
 | Syntax & Example | Data | Main Action | Description |
 |---|---|---|---|
+| `enter` | **Required** | No | The entered code is embedded in the indicated action by replacing the keyword `{CODE}` (the data must contain an `action` property and can optionally contain an action-related `data` property). |
 | `enter:{CODE}`<br> `enter:1234`<br> | **Required** | No | If the entered code is correct, the indicated action is executed (the data must contain an `action` property and can optionally contain an action-related `data` property). |
 
 ## error: Actions
@@ -174,6 +188,7 @@ If you would like to search for an action, please have a look at this link: [htt
 | `execute:info:silent:{REQUEST_ACTION}`<br> `execute:info:silent:http://msx.benzac.de/services/echo.php`<br> `execute:info:silent:user:{URL}`<br> `execute:info:silent:accurate:{URL}`<br> `execute:info:silent:user:accurate:{URL}`<br> `execute:info:silent:request:player:{DATA_ID}`<br> `execute:info:silent:request:interaction:{DATA_ID}`<br> `execute:info:silent:request:interaction:{DATA_ID}@{URL}`<br> | Optional | No | Executes an action with attached system info in silent mode (by not showing a busy indicator and error messages). It is also possible to attach the extended or only a specific system info. Please see action `execute:info:{URL}` for possible examples. |
 | `execute:info:user:{URL}`<br> `execute:info:user:http://msx.benzac.de/services/echo.php`<br> | Optional | No | Executes an action on server side with attached system info in user mode. It is also possible to attach the extended or only a specific system info. Please see action `execute:info:{URL}` for possible examples. |
 | `execute:info:user:accurate:{URL}`<br> `execute:info:user:accurate:http://msx.benzac.de/services/echo.php`<br> | Optional | No | Executes an action on server side with attached system info in user mode with accurate headers. It is also possible to attach the extended or only a specific system info. Please see action `execute:info:{URL}` for possible examples. |
+| `execute:json:{BASE64_ENCODED_JSON}` | None | No | Executes an action by directly providing the data as base64-encoded JSON (the data must contain an `action` property and can optionally contain an action-related `data` property). |
 | `execute:request:interaction:{DATA_ID}`<br> `execute:request:interaction:custom_data_id`<br> | Optional | No | Executes an action on the interaction plugin. |
 | `execute:request:interaction:{DATA_ID}@{URL}`<br> `execute:request:interaction:custom_data_id@http://msx.benzac.de/interaction/template.html`<br> | Optional | No | Executes an action on the interaction plugin (with ensuring that the interaction plugin is loaded). |
 | `execute:request:player:{DATA_ID}`<br> `execute:request:player:custom_data_id`<br> | Optional | No | Executes an action on the player (handled by the video/audio plugin). |
@@ -266,7 +281,9 @@ If you would like to search for an action, please have a look at this link: [htt
 | `focus:control:{CONTROL}`<br> `focus:control:menu`<br> `focus:control:content`<br> | None | No | Focuses a control in the current context. |
 | `focus:execute:{ITEM_ID}`<br> `focus:execute:content_item_id`<br> | None | No | Focuses and executes an item with the indicated ID in the current context. |
 | `focus:execute:index:{ITEM_INDEX}`<br> `focus:execute:index:0`<br> | None | No | Focuses and executes an item with the indicated index in the current context. |
+| `focus:execute:random` | None | No | Focuses and executes a random item in the current context. |
 | `focus:index:{ITEM_INDEX}`<br> `focus:index:0`<br> | None | **Yes** | Focuses an item with the indicated index in the current context. |
+| `focus:random` | None | No | Focuses a random item in the current context. |
 
 ## fullscreen: Actions
 
@@ -316,6 +333,7 @@ If you would like to search for an action, please have a look at this link: [htt
 | `interaction:commit:info:{DATA_TYPE}`<br> `interaction:commit:info:extended`<br> `interaction:commit:info:base`<br> `interaction:commit:info:application`<br> `interaction:commit:info:framework`<br> `interaction:commit:info:content`<br> `interaction:commit:info:dictionary`<br> `interaction:commit:info:screen`<br> `interaction:commit:info:time`<br> | Optional | No | Commits the extended system info (including URL parameters and system data) or a specific system info to the interaction plugin. |
 | `interaction:commit:message:{MESSAGE}`<br> `interaction:commit:message:This is an interaction message.`<br> | Optional | No | Commits a message to the interaction plugin. |
 | `interaction:commit:response:{REQUEST_ACTION}`<br> `interaction:commit:response:http://msx.benzac.de/services/echo.php`<br> `interaction:commit:response:user:{URL}`<br> `interaction:commit:response:accurate:{URL}`<br> `interaction:commit:response:user:accurate:{URL}`<br> `interaction:commit:response:request:player:{DATA_ID}`<br> `interaction:commit:response:silent:{URL}`<br> `interaction:commit:response:silent:user:{URL}`<br> `interaction:commit:response:silent:accurate:{URL}`<br> `interaction:commit:response:silent:user:accurate:{URL}`<br> `interaction:commit:response:silent:request:player:{DATA_ID}`<br> | Optional | No | Commits a response to the interaction plugin. |
+| `interaction:commit:resume` | Optional | No | Commits the resume keys to the interaction plugin. |
 | `interaction:commit:slider` | Optional | No | Commits the slider info to the interaction plugin. |
 | `interaction:commit:string:{TRANSFORM_TYPE}:{STRING}`<br> `interaction:commit:string:transform:Media Station X`<br> `interaction:commit:string:normalize:EW6l] 801JCU; )`<br> | Optional | No | Commits a transformed/normalized string to the interaction plugin. |
 | `interaction:commit:video` | Optional | No | Commits the video info to the interaction plugin. |
@@ -455,8 +473,8 @@ If you would like to search for an action, please have a look at this link: [htt
 | `player:button:{BUTTON_ID}:disable`<br> `player:button:content:disable`<br> `player:button:restart:disable`<br> `player:button:prev:disable`<br> `player:button:rewind:disable`<br> `player:button:play_pause:disable`<br> `player:button:forward:disable`<br> `player:button:next:disable`<br> `player:button:speed:disable`<br> | None | No | Disables a player button (all buttons except the eject button are supported). |
 | `player:button:{BUTTON_ID}:enable`<br> `player:button:content:enable`<br> `player:button:restart:enable`<br> `player:button:prev:enable`<br> `player:button:rewind:enable`<br> `player:button:play_pause:enable`<br> `player:button:forward:enable`<br> `player:button:next:enable`<br> `player:button:speed:enable`<br> | None | No | Enables a player button (all buttons except the eject button are supported). |
 | `player:button:{BUTTON_ID}:execute`<br>                                     `player:button:content:execute`<br> `player:button:restart:execute`<br> `player:button:prev:execute`<br> `player:button:rewind:execute`<br> `player:button:play_pause:execute`<br> `player:button:forward:execute`<br> `player:button:next:execute`<br> `player:button:speed:execute`<br> `player:button:eject:execute`<br> | None | No | Executes a player button. |
-| `player:button:{BUTTON_ID}:focus`<br> `player:button:content:focus`<br> `player:button:restart:focus`<br> `player:button:prev:focus`<br> `player:button:rewind:focus`<br> `player:button:play_pause:focus`<br> `player:button:forward:focus`<br> `player:button:next:focus`<br> `player:button:speed:focus`<br> `player:button:eject:focus`<br> `player:button:none:focus`<br> `player:button:default:focus`<br> `player:button:invalid:focus`<br> | None | No | Focuses a player button. Additionally, the focus button for player execution events will be set. If the button `none` is used, no button is focused and the focus button for player execution events will be set `none`. If the button `default` is used, the default button is focused and the focus button for player execution events will also be set to default. If the button `invalid` (or any other invalid ID) is used, no button is focused, but the focus button for player execution events will be set to default. |
-| `player:button:{BUTTON_ID}:reset`<br> `player:button:content:reset`<br> `player:button:restart:reset`<br> `player:button:prev:reset`<br> `player:button:rewind:reset`<br> `player:button:play_pause:reset`<br> `player:button:forward::reset`<br> `player:button:next:reset`<br> `player:button:speed:reset`<br> | None | No | Resets a player button (all buttons except the eject button are supported). |
+| `player:button:{BUTTON_ID}:focus`<br> `player:button:content:focus`<br> `player:button:restart:focus`<br> `player:button:prev:focus`<br> `player:button:rewind:focus`<br> `player:button:play_pause:focus`<br> `player:button:forward:focus`<br> `player:button:next:focus`<br> `player:button:speed:focus`<br> `player:button:eject:focus`<br> `player:button:none:focus`<br> `player:button:default:focus`<br> `player:button:invalid:focus`<br> | None | No | Focuses a player button. Additionally, the focus button for player execution events will be set. If the button `none` is used, no button is focused and the focus button for player execution events will be set to `none`. If the button `default` is used, the default button is focused and the focus button for player execution events will also be set to default. If the button `invalid` (or any other invalid ID) is used, no button is focused, but the focus button for player execution events will be set to default. |
+| `player:button:{BUTTON_ID}:reset`<br> `player:button:content:reset`<br> `player:button:restart:reset`<br> `player:button:prev:reset`<br> `player:button:rewind:reset`<br> `player:button:play_pause:reset`<br> `player:button:forward:reset`<br> `player:button:next:reset`<br> `player:button:speed:reset`<br> | None | No | Resets a player button (all buttons except the eject button are supported). |
 | `player:button:{BUTTON_ID}:setup`<br> `player:button:content:setup`<br> `player:button:restart:setup`<br> `player:button:prev:setup`<br> `player:button:rewind:setup`<br> `player:button:play_pause:setup`<br> `player:button:forward:setup`<br> `player:button:next:setup`<br> `player:button:speed:setup`<br> | Optional | No | Sets up a player button (all buttons except the eject button are supported).  The data can contain a `key` property (of type `string`), an `icon` property (of type `string`), an `action` property (of type `string`), and an `enable` property (of type `boolean`). If some properties are not set, the default values are used.<br><br>**Note: If the `icon` property is set, the `action` property must also be set (and vice versa), otherwise the default values are used for both properties.** |
 | `player:commit` | **Required** | No | Commits data to the video/audio plugin. |
 | `player:commit:code` | Optional | No | Commits a code to the video/audio plugin. |
@@ -464,7 +482,8 @@ If you would like to search for an action, please have a look at this link: [htt
 | `player:commit:info` | Optional | No | Commits the system info to the video/audio plugin. |
 | `player:commit:info:{DATA_TYPE}`<br> `player:commit:info:extended`<br> `player:commit:info:base`<br> `player:commit:info:application`<br> `player:commit:info:framework`<br> `player:commit:info:content`<br> `player:commit:info:dictionary`<br> `player:commit:info:screen`<br> `player:commit:info:time`<br> | Optional | No | Commits the extended system info (including URL parameters and system data) or a specific system info to the video/audio plugin. |
 | `player:commit:message:{MESSAGE}`<br> `player:commit:message:This is a player message.`<br> | Optional | No | Commits a message to the video/audio plugin. |
-| `player:commit:response:{REQUEST_ACTION}`<br> `player:commit:response:http://msx.benzac.de/services/echo.php`<br> `player:commit:response:user:{URL}`<br> `player:commit:response:accurate:{URL}`<br> `player:commit:response:user:accurate:{URL}`<br> `player:commit:response:request:interaction:{DATA_ID}`<br> `player:commit:response:request:interaction:{DATA_ID}@{URL}`<br>  `player:commit:response:silent:{URL}`<br> `player:commit:response:silent:user:{URL}`<br> `player:commit:response:silent:accurate:{URL}`<br> `player:commit:response:silent:user:accurate:{URL}`<br>                                   `player:commit:response:silent:request:interaction:{DATA_ID}`<br> `player:commit:response:silent:request:interaction:{DATA_ID}@{URL}`<br> | Optional | No | Commits a response to the video/audio plugin. |
+| `player:commit:response:{REQUEST_ACTION}`<br> `player:commit:response:http://msx.benzac.de/services/echo.php`<br> `player:commit:response:user:{URL}`<br> `player:commit:response:accurate:{URL}`<br> `player:commit:response:user:accurate:{URL}`<br> `player:commit:response:request:interaction:{DATA_ID}`<br> `player:commit:response:request:interaction:{DATA_ID}@{URL}`<br> `player:commit:response:silent:{URL}`<br> `player:commit:response:silent:user:{URL}`<br> `player:commit:response:silent:accurate:{URL}`<br> `player:commit:response:silent:user:accurate:{URL}`<br> `player:commit:response:silent:request:interaction:{DATA_ID}`<br> `player:commit:response:silent:request:interaction:{DATA_ID}@{URL}`<br> | Optional | No | Commits a response to the video/audio plugin. |
+| `player:commit:resume` | Optional | No | Commits the resume keys to the video/audio plugin. |
 | `player:commit:slider` | Optional | No | Commits the slider info to the video/audio plugin. |
 | `player:commit:string:{TRANSFORM_TYPE}:{STRING}`<br> `player:commit:string:transform:Media Station X`<br> `player:commit:string:normalize:EW6l] 801JCU; )`<br> | Optional | No | Commits a transformed/normalized string to the video/audio plugin. |
 | `player:commit:video` | Optional | No | Commits the video info to the video/audio plugin. |
@@ -474,10 +493,12 @@ If you would like to search for an action, please have a look at this link: [htt
 | `player:content:data` | **Required** | No | Shows a content page with the player back function. |
 | `player:content:json:{BASE64_ENCODED_JSON}` | None | No | Shows a content page with the player back function by indicating the data inline as base64-encoded JSON. |
 | `player:control:action:{ACTION}`<br> `player:control:action:info:Custom player control action executed.`<br> `player:control:action:default`<br> | None | No | Sets up a custom player control action (replacement for the action that is executed if the OK key is pressed while the video/audio is in foreground).<br><br>**Note: For control actions, it is not possible to provide an action-related `data` property. If you want to execute a control data action, please use the `execute:fetch:{URL}` action, alternatively.** |
+| `player:control:timeout:{VALUE}`<br> `player:control:timeout:-1`<br> `player:control:timeout:1`<br> `player:control:timeout:4`<br> `player:control:timeout:8`<br> | None | No | Sets up the player control timeout in seconds. The value must be greater than `0`, otherwise the default is used. The maximum value is `30` seconds. |
 | `player:default` | None | No | Executes the following default player action. Shows the player with applied remote key `execute`. |
 | `player:eject` | None | No | Stops/Ejects the video/audio. |
-| `player:execute_pause:{ACTION}`<br> `player:execute_pause:info:Video is paused.`<br> | Optional | No | Executes an action if the player is paused. |
-| `player:execute_play:{ACTION}`<br> `player:execute_play:info:Video is playing.`<br> | Optional | No | Executes an action if the player is playing. |
+| `player:execute_pause:{ACTION}`<br> `player:execute_pause:info:Video is paused.`<br> | Optional | No | Executes an action if the player is paused.<br><br>**Note: Together with the actions `player:execute_play:{ACTION}` and `player:execute_stop:{ACTION}`, this action can be executed without a previously loaded video/audio (all other player actions display an info message in this case).** |
+| `player:execute_play:{ACTION}`<br> `player:execute_play:info:Video is playing.`<br> | Optional | No | Executes an action if the player is playing.<br><br>**Note: Together with the actions `player:execute_pause:{ACTION}` and `player:execute_stop:{ACTION}`, this action can be executed without a previously loaded video/audio (all other player actions display an info message in this case).** |
+| `player:execute_stop:{ACTION}`<br> `player:execute_stop:info:Video is stopped.`<br> | Optional | No | Executes an action if the player is stopped or no video/audio has been loaded yet.<br><br>**Note: Together with the actions `player:execute_pause:{ACTION}` and `player:execute_play:{ACTION}`, this action can be executed without a previously loaded video/audio (all other player actions display an info message in this case).** |
 | `player:forward` | None | No | Jumps forward in the playback. |
 | `player:goto:{ITEM_ID}`<br> `player:goto:content_item_id`<br> | None | No | Plays the item with the indicated ID. |
 | `player:goto:current` | None | No | Replays the current item (by retuning it). |
@@ -487,7 +508,7 @@ If you would like to search for an action, please have a look at this link: [htt
 | `player:goto:next` | None | No | Plays the next item. |
 | `player:goto:number:{ITEM_NUMBER}`<br> `player:goto:number:1`<br> | None | No | Plays the item with the indicated number. |
 | `player:goto:prev` | None | No | Plays the previous item. |
-| `player:goto:random` | None | No | Plays a random item. |
+| `player:goto:random` | None | No | Plays a random item (that is not the current one). |
 | `player:goto:swap` | None | No | Plays the swap item. |
 | `player:hide` | None | No | Hides the player. |
 | `player:hide_pause` | None | No | Hides the player if it is paused. |
@@ -570,7 +591,7 @@ If you would like to search for an action, please have a look at this link: [htt
 
 | Syntax & Example | Data | Main Action | Description |
 |---|---|---|---|
-| `quiet` | None | No | Stops a running video/audio. |
+| `quiet` | None | No | Stops a running video/audio.<br><br>**Note: In contrast to the actions `player:eject` and `player:stop`, no info message is displayed if no video/audio has been loaded yet.** |
 
 ## release: Actions
 
@@ -681,6 +702,12 @@ If you would like to search for an action, please have a look at this link: [htt
 | `settings:zoom` | None | No | Shows the zoom settings panel. |
 | `settings:zoom:{VALUE}`<br> `settings:zoom:default`<br> `settings:zoom:auto`<br> `settings:zoom:0.75`<br> | None | No | Sets the zoom settings. - `default`: No zooming - `auto`: Auto detect (with resize adjustment) - `{NUMBER}`: Set zoom factor to specific number |
 
+## silent: Actions
+
+| Syntax & Example | Data | Main Action | Description |
+|---|---|---|---|
+| `silent:{ACTION}`<br> `silent:info:This message is not displayed.`<br> | Optional | No | Executes an action in silent mode by suppressing all success, info, warning, and error messages that would otherwise be displayed. The action itself is executed normally.<br><br>**Note: Only messages that are displayed during the immediate execution of the action are suppressed. Actions that are executed later (e.g. via `defer:`, `delay:`, or `lazy:` while animations are running) are not affected. For example, compare `silent:defer:info:This message is displayed.` with `defer:silent:info:This message is not displayed.`.** |
+
 ## sleep: Actions
 
 | Syntax & Example | Data | Main Action | Description |
@@ -706,6 +733,7 @@ If you would like to search for an action, please have a look at this link: [htt
 | `slider:goto:next` | None | No | Goes to the next item. |
 | `slider:goto:number:{ITEM_NUMBER}`<br> `slider:goto:number:1`<br> | None | No | Goes to the item with the indicated number. |
 | `slider:goto:prev` | None | No | Goes to the previous item. |
+| `slider:goto:random` | None | No | Goes to a random item (that is not the current one). |
 | `slider:icon:{ICON}`<br> `slider:icon:info`<br> `slider:icon:default`<br> | None | No | Sets up a custom slideshow image icon of the current image.<br><br>**Note: A custom slideshow image action must be available for the icon to be visible.** |
 | `slider:label:{LABEL}`<br> `slider:label:Custom image label`<br> `slider:label:default`<br> | None | No | Sets up the slideshow image label of the current image (overrides the `imageLabel` property of the corresponding content item with a custom value).<br><br>**Note: Only if the `imageLabel` property has been set (to a non `null` value) in the corresponding content item, it can be updated.** |
 | `slider:labels:hide` | None | No | Hides the slideshow labels. |

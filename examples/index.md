@@ -1,12 +1,12 @@
 ---
 title: Examples Index
 category: Examples
-summary: Searchable catalog of all 101 MSX JSON example files with extracted metadata for each.
+summary: Searchable catalog of all 103 MSX JSON example files with extracted metadata for each.
 ---
 
 # Examples Index
 
-This catalog covers all 101 JSON example files in `docs/examples/`. Each entry lists the top-level type, item types, structural properties, plugins, inline-expression families, and multi-action syntax used — so an LLM can quickly find a suitable template for a given JSON-building task. Descriptions are derived from file content and folder annotations; entries that have a deeper walk-through in the [Cookbook](../reference/cookbook.md) carry a **Cookbook** cross-link with the key mechanism folded into the description.
+This catalog covers all 103 JSON example files in `docs/examples/`. Each entry lists the top-level type, item types, structural properties, plugins, inline-expression families, and multi-action syntax used — so an LLM can quickly find a suitable template for a given JSON-building task. Descriptions are derived from file content and folder annotations; entries that have a deeper walk-through in the [Cookbook](../reference/cookbook.md) carry a **Cookbook** cross-link with the key mechanism folded into the description.
 
 > **`type` disambiguation:** The **Item types** field lists only values of a *content item's* `type` property (`default`, `teaser`, `button`, `separate`, `space`, `control`) or a *menu item's* `type` (`default`, `separator`, `settings`). Values that belong to a **`live` sub-object** (`schedule`, `lifetime`, `airtime`, `playback`, `setup`) are listed separately under **Live object type** — they are *not* valid content-item `type` values. See [Live Object](../experts-api/live/live-object.md) and [Content Item Object](../main-api/content/content-item-object.md).
 
@@ -737,6 +737,29 @@ Experimental tests. Minimum version requirements depend on the specific features
 - **Inline expressions:** `{context:...}`
 - **Description:** Advanced Templated Items hidden feature: list with grouping, selection, and `{context:...}` for advanced template-driven content.
 - **Related API:** [Advanced Templated Items](../experts-api/hidden-features/advanced-templated-items.md)
+
+### [xp/hidden_feature_20.json](xp/hidden_feature_20.json)
+
+- **Top-level type:** `list`
+- **Item types:** `button`
+- **Structural properties:** `template`
+- **Inline expressions:** `{br}`
+- **Version:** the first three items (`Default`, `Secret`, `Prefilled + Extension`) work since `0.1.0` (except the `clear` property used in `Secret`, `0.1.167`); the other five items are labeled `0.1.167+` in their own `titleFooter` (`digits`, `description`, `delay`, and the `enter` action are `0.1.167`).
+- **Description:** Code Panel hidden feature: a list of `button` items that open the code panel — six via `execute:code:http://msx.benzac.de/services/echo.php` (default, secret, prefilled with `extension`, 1/3/6 fixed `digits` with optional `description`) and two via the `enter` action, which embeds the entered code into `player:goto:number:{CODE}` (once with `placeholder` + `delay: 3000`, once with `digits: 4` + `description`).
+- **Related API:** [Code Panel](../experts-api/hidden-features/code-panel.md)
+
+### [xp/hidden_feature_21.json](xp/hidden_feature_21.json)
+
+- **Top-level type:** `list`
+- **Item types:** `default`, `space`
+- **Live object type:** `playback`
+- **Structural properties:** `flag`, `important`, `live`, `navigationSpan`, `overlay`, `selection`, `template`, `transparent`, `underlay`
+- **Multi-action syntax:** `[a|b]`
+- **Inline expressions:** `{br}`, `{col:...}`, `{context:...}`, `{ico:...}`, `{txt:...}`, `{progress:...}` (live)
+- **Version:** `0.1.167` (the `autoplay` action, `control:timeout`, and the `trigger:execute` key are `0.1.167`).
+- **Description:** PiP & Autoplay hidden feature: a list of 12 templated `default` items (`area` `0,0,6,6` keeps the right half free) whose `selection` updates an overlay `space` item (`text`) with the item's custom `description` and starts `delay:autoplay:1:autoplay`. Each item plays via `video:plugin:http://msx.benzac.de/plugins/pip.html?url=...&backdrop=...` (3 backdrop colors) — the PiP plugin shows the video in the upper right area while the content (`flag: "pip"`) is focused. Extended properties: `control:reuse: "retain"`, `control:transparent: "true"` (with content `transparent: 2`), `control:timeout: 3`, `trigger:active: "event:pip:disable"`, `trigger:inactive: "event:pip:validate"`, `trigger:execute: "delay:autoplay:cancel"`; the `underlay` page action is `event:pip:validate`; a `playback` `live` object shows the running time in `stamp` and executes `player:show` while running.
+- **Related API:** [PiP & Autoplay](../experts-api/hidden-features/pip-autoplay.md), [Selection Object](../experts-api/selection/selection-object.md), [Extended Properties](../experts-api/special/extended-properties.md)
+- **Cookbook:** [Plugins (media, immersive, platform, ads)](../reference/cookbook.md#plugins-media-immersive-platform-ads)
 
 ### [xp/live_test_1.json](xp/live_test_1.json)
 

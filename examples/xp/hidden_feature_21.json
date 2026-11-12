@@ -1,0 +1,134 @@
+{
+    "type": "list",
+    "headline": "PiP & Autoplay",
+    "flag": "pip",
+    "transparent": 2,
+    "navigationSpan": 6,
+    "template": {
+        "type": "default",
+        "layout": "0,0,6,1",
+        "area": "0,0,6,6",
+        "wrapperColor": "msx-glass",
+        "imageWidth": 1.83,
+        "color": "msx-glass",
+        "imageFiller": "cover",
+        "stamp": "",
+        "progress": -1,
+        "titleHeader": "Video",
+        "titleFooter": "Focus to autoplay",
+        "truncation": "titleHeader|titleFooter",
+        "description": "",
+        "selection": {
+            "important": true,
+            "action": "[update:content:overlay:text|delay:autoplay:1:autoplay]",
+            "data": {
+                "headline": "{context:titleHeader}",
+                "text": "{context:description}{br}{br}Press {txt:msx-white:OK} to enter fullscreen."
+            }
+        },
+        "live": {
+            "type": "playback",
+            "stamp": "",
+            "running": {
+                "stamp": "{progress:time:hh:mm:ss} {ico:repeat}"
+            },
+            "action": "player:show"
+        },
+        "properties": {
+            "control:type": "extended",
+            "control:transparent": "true",
+            "control:reuse": "retain",
+            "control:timeout": 3,
+            "trigger:active": "event:pip:disable",
+            "trigger:inactive": "event:pip:validate",
+            "trigger:execute": "delay:autoplay:cancel",
+            "label:duration": "{VALUE} {ico:repeat}"
+        }
+    },
+    "underlay": {
+        "action": "event:pip:validate"
+    },
+    "overlay": {     
+        "items": [{
+                "id": "text",
+                "type": "space",
+                "layout": "7,3,5,3",
+                "offset": "-0.5,0.5,0.5,-0.5",
+                "headline": "",
+                "text": ""
+            }]
+    },
+    "items": [{
+            "titleHeader": "{col:msx-white}Video 1",
+            "playerLabel": "Video 1",
+            "description": "Dark conifer trees on a mountain slope, partly hidden by thick drifting fog and clouds.",
+            "image": "http://msx.benzac.de/media/thumbs/video1.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/video1.mp4&backdrop=#1c3249|#646f78|#c4c5c3"
+        }, {
+            "titleHeader": "{col:msx-white}Video 2",
+            "playerLabel": "Video 2",
+            "description": "A clear stream rushing over mossy boulders through a lush, bright green spring forest.",
+            "image": "http://msx.benzac.de/media/thumbs/video2.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/video2.mp4&backdrop=#181912|#4b6e3b|#9ea5b3"
+        }, {
+            "titleHeader": "{col:msx-white}Video 3",
+            "playerLabel": "Video 3",
+            "description": "Many translucent moon jellyfish glowing in bright blue light against a dark aquarium background.",
+            "image": "http://msx.benzac.de/media/thumbs/video3.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/video3.mp4&backdrop=#010a4f|#013cf1|#00c1ff"
+        }, {
+            "titleHeader": "{col:msx-white}Video 4",
+            "playerLabel": "Video 4",
+            "description": "Aerial view of a snowy hillside dotted with spruce trees, lit by warm golden sunlight.",
+            "image": "http://msx.benzac.de/media/thumbs/video4.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/video4.mp4&backdrop=#352c24|#8c8f94|#e7c099"
+        }, {
+            "titleHeader": "{col:msx-white}Video 5",
+            "playerLabel": "Video 5",
+            "description": "Aerial view of a white sandy beach with green vegetation next to turquoise water under a blue sky.",
+            "image": "http://msx.benzac.de/media/thumbs/video5.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/video5.mp4&backdrop=#33321c|#559691|#ddcec6"
+        }, {
+            "titleHeader": "{col:msx-white}Video 6",
+            "playerLabel": "Video 6",
+            "description": "A secluded cove with crystal-clear turquoise water, white limestone cliffs, pine trees and driftwood on the shore.",
+            "image": "http://msx.benzac.de/media/thumbs/video6.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/video6.mp4&backdrop=#191f17|#588578|#c7c9c5"
+        }, {
+            "titleHeader": "{col:msx-white}Atmos 1",
+            "playerLabel": "Atmos 1",
+            "description": "Teal and cyan bokeh particles drifting through dark space, glowing brightest in the center like a nebula.",
+            "image": "http://msx.benzac.de/media/thumbs/atmos1.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/atmos1.mp4&backdrop=#011315|#02657f|#3db5d9"
+        }, {
+            "titleHeader": "{col:msx-white}Atmos 2",
+            "playerLabel": "Atmos 2",
+            "description": "Golden light rays falling from above onto a field of sparkling orange-gold particles on a black background.",
+            "image": "http://msx.benzac.de/media/thumbs/atmos2.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/atmos2.mp4&backdrop=#250b01|#c65f05|#f4c70a"
+        }, {
+            "titleHeader": "{col:msx-white}Atmos 3",
+            "playerLabel": "Atmos 3",
+            "description": "Abstract silver-white particle waves flowing in front of a blurred blue-grey striped background.",
+            "image": "http://msx.benzac.de/media/thumbs/atmos3.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/atmos3.mp4&backdrop=#2a3351|#64697f|#cacbd5"
+        }, {
+            "titleHeader": "{col:msx-white}Atmos 4",
+            "playerLabel": "Atmos 4",
+            "description": "Underwater scene in deep blue, with air bubbles rising toward the surface through beams of sunlight.",
+            "image": "http://msx.benzac.de/media/thumbs/atmos4.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/atmos4.mp4&backdrop=#06233a|#125a8e|#2dc2fe"
+        }, {
+            "titleHeader": "{col:msx-white}Atmos 5",
+            "playerLabel": "Atmos 5",
+            "description": "Close-up of a dark rippling ocean surface catching faint pale light at dusk.",
+            "image": "http://msx.benzac.de/media/thumbs/atmos5.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/atmos5.mp4&backdrop=#05131f|#3a4c53|#90958c"
+        }, {
+            "titleHeader": "{col:msx-white}Atmos 6",
+            "playerLabel": "Atmos 6",
+            "description": "City skyline at night with high-rise towers and glowing traffic, seen through a rain-covered window.",
+            "image": "http://msx.benzac.de/media/thumbs/atmos6.jpg",
+            "action": "video:plugin:http://msx.benzac.de/plugins/pip.html?url=http://msx.benzac.de/media/atmos6.mp4&backdrop=#100f0e|#632f24|#dcd9d4"
+        }]
+}

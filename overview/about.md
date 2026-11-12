@@ -32,7 +32,7 @@ Media Station X is built on the TVX Framework that has been developed for this a
 | Jun 8, 2021 | 0.1.136 | First version online in the LG Content Store (for 2011-2014 models). |
 | Oct 25, 2021 | 0.1.141 | First version online in the Foxxum App Store. |
 | May 12, 2022 | 0.1.145 | First version online in the VIDAA App Store. |
-| May 8, 2026 | 0.1.166 | Latest version released in stores. |
+| Oct 19, 2026 | 0.1.167 | Latest version released in stores. |
 
 ## See Also
 

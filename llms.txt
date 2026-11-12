@@ -1,8 +1,8 @@
 # MSX Knowledge Base
 
-Media Station X (MSX) is a white-label TV app driven entirely by JSON served over HTTP, covering app versions 0.1.0–0.1.166.
+Media Station X (MSX) is a white-label TV app driven entirely by JSON served over HTTP, covering app versions 0.1.0–0.1.167.
 
-> LLM usage: Load this file first to get the index of all KB files. Read AGENTS.md next for a concise usage guide, then fetch individual files on demand.
+> LLM usage: Load this file first to get the index of all KB files. Read AGENTS.md next before writing or reviewing MSX JSON, or for broad how-to questions (binding rules, object overview, common mistakes); for a narrow lookup, fetch the topic file directly. Fetch individual files on demand.
 
 ---
 
@@ -77,7 +77,7 @@ Media Station X (MSX) is a white-label TV app driven entirely by JSON served ove
 
 ## Experts API — Special
 
-- [experts-api/special/internal-actions.md](experts-api/special/internal-actions.md) — Internal actions (0.1.160+); includes which are also official main actions
+- [experts-api/special/internal-actions.md](experts-api/special/internal-actions.md) — Internal actions (0.1.167+); includes which are also official main actions
 - [experts-api/special/url-parameters.md](experts-api/special/url-parameters.md) — URL parameters for the MSX app start URL
 - [experts-api/special/extended-properties.md](experts-api/special/extended-properties.md) — Extended item properties for advanced use cases, nested inside a content item's `properties` object — includes `resume:key`/`resume:position`/`resume:context` for remembering/resuming playback position, plus player-button, `trigger:*`, `control:*`, and platform-specific overrides
 - [experts-api/special/attached-data-examples.md](experts-api/special/attached-data-examples.md) — Attached data object examples
@@ -144,6 +144,8 @@ Media Station X (MSX) is a white-label TV app driven entirely by JSON served ove
 - [experts-api/hidden-features/advanced-text-image.md](experts-api/hidden-features/advanced-text-image.md) — Advanced text and image layout options
 - [experts-api/hidden-features/keep-ratio.md](experts-api/hidden-features/keep-ratio.md) — Keep-ratio keyword for background images
 - [experts-api/hidden-features/advanced-templated-items.md](experts-api/hidden-features/advanced-templated-items.md) — Advanced templated items with context expressions
+- [experts-api/hidden-features/code-panel.md](experts-api/hidden-features/code-panel.md) — Code panel for entering numeric codes: `enter`, `enter:{CODE}`, `execute:code:...` actions and code panel data properties (`digits`, `secret`, `delay`, ...)
+- [experts-api/hidden-features/pip-autoplay.md](experts-api/hidden-features/pip-autoplay.md) — PiP & Autoplay: `autoplay`/`autoplay:{FOCUS}` actions (auto mode on focus) and the PiP video plugin (`pip.html`, parameters `url`, `backdrop`, `loop`) for picture-in-picture playback inside the content
 
 ---
 
@@ -171,7 +173,7 @@ Media Station X (MSX) is a white-label TV app driven entirely by JSON served ove
 
 ## Examples
 
-- [examples/index.md](examples/index.md) — Searchable catalog of all 101 JSON example files with metadata
+- [examples/index.md](examples/index.md) — Searchable catalog of all 103 JSON example files with metadata
 - [examples/guide/actions.json](examples/guide/actions.json) — Menu grouping the other guide categories (contains no action strings itself)
 - [examples/guide/audios.json](examples/guide/audios.json) — Audio pages
 - [examples/guide/icon_names.json](examples/guide/icon_names.json) — Icon name showcase
@@ -247,6 +249,8 @@ Media Station X (MSX) is a white-label TV app driven entirely by JSON served ove
 - [examples/xp/hidden_feature_17.json](examples/xp/hidden_feature_17.json) — Hidden feature 17 (advanced text & image)
 - [examples/xp/hidden_feature_18.json](examples/xp/hidden_feature_18.json) — Hidden feature 18 (keep ratio)
 - [examples/xp/hidden_feature_19.json](examples/xp/hidden_feature_19.json) — Hidden feature 19 (advanced templated items)
+- [examples/xp/hidden_feature_20.json](examples/xp/hidden_feature_20.json) — Hidden feature 20 (code panel)
+- [examples/xp/hidden_feature_21.json](examples/xp/hidden_feature_21.json) — Hidden feature 21 (PiP & autoplay)
 - [examples/xp/live_test_1.json](examples/xp/live_test_1.json) — Live test 1 (execute + lifetime)
 - [examples/xp/live_test_2.json](examples/xp/live_test_2.json) — Live test 2 (enumerate + playback)
 - [examples/xp/live_test_3.json](examples/xp/live_test_3.json) — Live test 3 (live + selection + enumerate)

@@ -8,6 +8,28 @@ summary: Release notes and version history for Media Station X.
 
 These release notes contain major API extensions, fundamental UI/UX changes, and important bug fixes.
 
+## 0.1.167 (Oct 19, 2026)
+
+### Bug fixes
+
+- **Android devices**: Fixed key handling for remote controls that do not report valid key codes (e.g. keys that were reported as `0` and therefore could not be recognized)
+
+### UI/UX changes
+
+- **Android/iOS devices**: Improved webView crash handling
+- **Android/iOS devices**: Improved error handling
+- Improved user experience on mobile devices with touch, mouse or hybrid input (e.g. a stylus that hovers as a pointer and switches to touch on contact) by detecting the active input method at runtime and handling events accordingly
+- Improved automatic scaling on mobile devices when not running in full screen (e.g. windowed apps, split screen, or multi-window) by using the actual window width instead of the screen width
+
+### API extensions
+
+- Extended [Code Panel](../experts-api/hidden-features/code-panel.md)
+- Updated [Internal Actions](../experts-api/special/internal-actions.md)
+- Updated [URL Parameters](../experts-api/special/url-parameters.md): Updated `pointer` parameter
+- Updated [Extended Properties](../experts-api/special/extended-properties.md): Added `execute:json:{BASE64_ENCODED_JSON}` action for property data actions
+- Updated [Extended Properties](../experts-api/special/extended-properties.md): Added `control:timeout` property
+- Updated [Extended Properties](../experts-api/special/extended-properties.md): Added `trigger:execute` property
+
 ## 0.1.166 (May 8, 2026)
 
 ### UI/UX changes
@@ -479,7 +501,7 @@ These release notes contain major API extensions, fundamental UI/UX changes, and
 - Updated [Menu Root Object](../main-api/menu/menu-root-object.md): Added `logoSize` property
 - Updated [Menu Item Object](../main-api/menu/menu-item-object.md): Added `image` property
 - Updated [Content Root Object](../main-api/content/content-root-object.md): Added `caption` property
-- Updated [Content Item Object](../main-api/content/content-item-object.md): Added `caption` property
+- Updated [Content Page Object](../main-api/content/content-page-object.md): Added `caption` property
 - Updated [Actions](../main-api/common/actions.md)
 - Updated [Internal Actions](../experts-api/special/internal-actions.md)
 - Updated [Extended Properties](../experts-api/special/extended-properties.md): Added `button:{BUTTON_ID}:display` property

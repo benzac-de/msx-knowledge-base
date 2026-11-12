@@ -94,6 +94,7 @@ Action syntax of extended actions.
 ## See Also
 
 - [Internal Actions](../../experts-api/special/internal-actions.md)
+- [Code Panel](../../experts-api/hidden-features/code-panel.md) — the complete code panel data object behind `execute:code:{URL}` (the five properties above plus `description`, `digits`, `clear`, `delay` since `0.1.167`), and the `enter`/`enter:{CODE}` actions
 - [Actions Reference](../../reference/actions-reference.md) — consolidated Main + Internal actions with exact since-versions, including the `execute:service:...`/broadcast/HbbTV edge cases not spelled out above
 - [Cookbook → Media lists](../../reference/cookbook.md#media-lists) — `video:`/`audio:`/`image:`/`video:plugin:` used as real templated-list actions
 - [Best Practices & Good to Know → Video/audio keeps playing in the background after `back`](../../reference/best-practices.md#videoaudio-keeps-playing-in-the-background-after-back-by-default) — the default behavior of `video:{URL}`/`audio:{URL}` once `back` is pressed

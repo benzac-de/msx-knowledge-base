@@ -133,6 +133,7 @@ Hidden features are used in menu and content objects and can be used for special
 - [Advanced Text & Image](../experts-api/hidden-features/advanced-text-image.md)
 - [Keep Ratio Keyword](../experts-api/hidden-features/keep-ratio.md)
 - [Advanced Templated Items](../experts-api/hidden-features/advanced-templated-items.md)
+- [Code Panel](../experts-api/hidden-features/code-panel.md)
 
 ### Benchmark Tests
 

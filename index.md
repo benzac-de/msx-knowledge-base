@@ -6,7 +6,7 @@ summary: Master navigation page for the MSX LLM Knowledge Base; mirrors the API 
 
 # MSX Knowledge Base — Master Index
 
-**Media Station X (MSX)** is a white-label TV app driven entirely by JSON served over HTTP. This knowledge base covers the MSX API from version `0.1.0` to `0.1.166`.
+**Media Station X (MSX)** is a white-label TV app driven entirely by JSON served over HTTP. This knowledge base covers the MSX API from version `0.1.0` to `0.1.167`.
 
 **Note:** This page is a human-readable navigation index. If you are an LLM/agent, use [`llms.txt`](llms.txt) and [`AGENTS.md`](AGENTS.md) instead — see [`README.md`](README.md) for full usage and integration instructions.
 
@@ -155,6 +155,8 @@ Features not originally intended as official API but useful for advanced use cas
 - [Advanced Text & Image](experts-api/hidden-features/advanced-text-image.md)
 - [Keep Ratio Keyword](experts-api/hidden-features/keep-ratio.md)
 - [Advanced Templated Items](experts-api/hidden-features/advanced-templated-items.md)
+- [Code Panel](experts-api/hidden-features/code-panel.md)
+- [PiP & Autoplay](experts-api/hidden-features/pip-autoplay.md)
 
 ### Benchmark Tests
 
@@ -184,14 +186,14 @@ Consolidated cross-cutting reference documents synthesized from all sources.
 
 ## Examples
 
-101 JSON example files with a searchable catalog.
+103 JSON example files with a searchable catalog.
 
 - [Examples Index](examples/index.md) — Catalog of all examples with metadata
 - [guide/](examples/guide/) — 29 basic examples (since `0.1.0`)
 - [github/base/](examples/github/base/) — 4 baseline examples (since `0.1.0`; `youtube.json` requires the YouTube plugin, since `0.1.40`)
 - [github/extended/](examples/github/extended/) — 14 extended examples (require `0.1.112`, except `list3_section0.json`–`list3_section3.json` which require `0.1.144`)
 - [github/](examples/github/) — 2 top-level examples (since `0.1.0`)
-- [xp/](examples/xp/) — 52 experimental/advanced tests
+- [xp/](examples/xp/) — 53 experimental/advanced tests
 
 ---
 

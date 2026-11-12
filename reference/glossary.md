@@ -20,6 +20,12 @@ See [Actions](../main-api/common/actions.md), [Actions Reference](actions-refere
 
 ---
 
+## Autoplay
+
+The internal actions `autoplay` and `autoplay:{FOCUS}` (since `0.1.167`) execute the video/audio action of the currently focused item — or of the item `focus:{FOCUS}` would focus, without actually focusing it — in auto mode, so the player is not displayed and the content stays focused. Typically started from a [Selection Object](#selection-object) with a short delay (`delay:autoplay:1:autoplay`). Combined with the PiP plugin (`video:plugin:http://msx.benzac.de/plugins/pip.html?url={URL}`), the video is shown in a fixed picture-in-picture area of the content while it is focused. See [PiP & Autoplay](../experts-api/hidden-features/pip-autoplay.md).
+
+---
+
 ## Backward Compatibility
 
 The MSX engine is fully backward-compatible: a JSON page that worked in an older MSX version will continue to work in all newer versions without modification. See [Versioning](versioning.md).
@@ -49,6 +55,12 @@ MSX keeps four separate slots for this, each keyed by URL: `mainMenu` (a Menu Ro
 **At runtime, [Release](#release)** (`release:menu`/`release:content`/`release:panel`) is the action-level equivalent: it clears the target slot's cached data and any built-DOM reference outright, forcing the next matching load through the full network-fetch-and-DOM-rebuild path regardless of that object's own `cache`/`reuse` values — useful when you can't simply set `cache: false`/`reuse: false` in the JSON itself (e.g. the data was already loaded once with caching enabled, and now needs a one-off forced refresh).
 
 See [Reuse](#reuse), [Release](#release), [Content Root Object](../main-api/content/content-root-object.md), [Menu Root Object](../main-api/menu/menu-root-object.md).
+
+---
+
+## Code Panel
+
+The integrated panel for entering codes (i.e. numbers). The entered code is either processed at the server or plugin level (`execute:code:{URL}` and its variants since `0.1.30` — except the `accurate:` variants, `0.1.90`, and the `request:interaction:` variants, `0.1.82`; see [Actions Reference → Code Panel Actions](actions-reference.md#code-panel-actions) — `player:commit:code` since `0.1.40`, `interaction:commit:code` since `0.1.82`), checked against a fixed code (`enter:{CODE}`, since `0.1.0`), or embedded directly into an action string by replacing the keyword `{CODE}` (`enter`, since `0.1.167`). Available since `0.1.0`, significantly expanded in `0.1.167` (`description`, `digits`, `clear`, `delay` properties of its data object). Default code length is 1 to 32 digits, 1 to 16 for `secret` codes, and 1 to 8 when `digits` is set. See [Code Panel](../experts-api/hidden-features/code-panel.md).
 
 ---
 
@@ -108,7 +120,7 @@ See [Menu Item Object](../main-api/menu/menu-item-object.md), [Content Item Obje
 
 ## Dictionary
 
-A key-value JSON structure that MSX can load to translate the application's own user interface and other services (e.g. the Launcher MSX service). Set declaratively via the `dictionary` property on a Content Root Object or Menu Root Object (since `0.1.120`, only takes effect if that root object is loaded at startup), or at runtime via the internal `dictionary:{URL}` action / `dictionary:none` to reset (since `0.1.160+`). As an additional feature on top of this, a JSON author can also add custom entries to a dictionary file and look them up in their own content via `{dic:{KEY}}` / `{dix:{KEY}}` inline expressions — or reuse the entries the MSX app itself already ships with.
+A key-value JSON structure that MSX can load to translate the application's own user interface and other services (e.g. the Launcher MSX service). Set declaratively via the `dictionary` property on a Content Root Object or Menu Root Object (since `0.1.120`, only takes effect if that root object is loaded at startup), or at runtime via the internal `dictionary:{URL}` action / `dictionary:none` to reset (since `0.1.160`). As an additional feature on top of this, a JSON author can also add custom entries to a dictionary file and look them up in their own content via `{dic:{KEY}}` / `{dix:{KEY}}` inline expressions — or reuse the entries the MSX app itself already ships with.
 
 See [Dictionary Inline Expressions](../experts-api/hidden-features/dictionary-inline-expressions.md), [Dictionary Structure](../experts-api/special/dictionary-structure.md).
 
@@ -144,7 +156,7 @@ An action that sends an HTTP POST request to a server URL, submitting the item's
 
 Without the `service:` prefix, only one server action can be running at a time on the application side — parallel execution is not allowed. Use `execute:service:{URL}` (since `0.1.90`, max 128 concurrent) when multiple server actions need to run at once.
 
-Syntax: `execute:{URL}` (since `0.1.30`). Variants: `execute:code:`, `execute:user:`, `execute:accurate:`, `execute:service:`, etc.
+Syntax: `execute:{URL}` (since `0.1.30`). Variants: `execute:code:` (opens the [Code Panel](../experts-api/hidden-features/code-panel.md) first), `execute:user:`, `execute:accurate:`, `execute:service:`, etc.
 
 See [Actions](../main-api/common/actions.md), [Responses](../main-api/common/responses.md).
 
@@ -187,7 +199,7 @@ See [experts-api/hidden-features/](../experts-api/hidden-features/).
 
 ## HbbTV
 
-Hybrid Broadcast Broadband TV — a standard for smart TV broadcast apps. MSX has an HbbTV-specific version that supports broadcast-channel actions: `video:broadcast:current` and `system:hbbtv:launch:{URL}` are documented Main Actions (both since `0.1.30`). Their internal-only sibling variants — including the entire `audio:broadcast:...` family, which has no individually-documented Main Action variant at all — share the same `0.1.30` version; none of the three families (`audio:broadcast:...`, `video:broadcast:...`, `system:hbbtv:...`) fall back to the `0.1.160+` blanket that otherwise applies to internal-only actions. These actions are functional but practically obsolete — no currently supported platform relies on them in practice, which is also why [Internal Actions](../experts-api/special/internal-actions.md) does not mark the family rows as Main Actions. See [Actions](../main-api/common/actions.md), [Actions Reference](actions-reference.md#broadcast-and-hbbtv-actions-a-third-case).
+Hybrid Broadcast Broadband TV — a standard for smart TV broadcast apps. MSX has an HbbTV-specific version that supports broadcast-channel actions: `video:broadcast:current` and `system:hbbtv:launch:{URL}` are documented Main Actions (both since `0.1.30`). Their internal-only sibling variants — including the entire `audio:broadcast:...` family, which has no individually-documented Main Action variant at all — share the same `0.1.30` version; none of the three families (`audio:broadcast:...`, `video:broadcast:...`, `system:hbbtv:...`) fall back to the `0.1.167+` blanket that otherwise applies to internal-only actions. These actions are functional but practically obsolete — no currently supported platform relies on them in practice, which is also why [Internal Actions](../experts-api/special/internal-actions.md) does not mark the family rows as Main Actions. See [Actions](../main-api/common/actions.md), [Actions Reference](actions-reference.md#broadcast-and-hbbtv-actions-a-third-case).
 
 ---
 
@@ -221,7 +233,7 @@ See [Interaction Plugin](../experts-api/plugins/interaction-plugin.md).
 
 ## Internal Action
 
-An action string used the same way as a Main Action (e.g. in the `action` property), but undocumented/internal-only and not part of the official, version-stable Main Actions list. Internal actions extend the standard action vocabulary with hundreds of advanced behaviors. Unlike Main Actions, they typically have no individual "since version" and carry only a blanket minimum of MSX `0.1.160+` — see [Versioning](versioning.md) for why no finer version control exists and why this rarely matters in practice. Not to be confused with the Plugin API (`TVXVideoPlugin`, etc.), which is a separate JavaScript API for writing plugin pages. Also distinct from documented hidden-feature actions (e.g. Replace Action, Start Action, Resolve Action), which are neither Main Actions nor blanket-`0.1.160+` internal actions — each has its own individually documented since-version. A handful of further internal-only action families are also exceptions to the blanket floor despite not being Main Actions or Hidden Feature Actions either: the entire Broadcast/HbbTV family (`0.1.30` — `audio:broadcast:...` has no Main Action counterpart at all, yet still isn't blanket `0.1.160+`) and `execute:service:...` (`0.1.90`). See [Actions Reference](actions-reference.md#internal-only-actions--overview-require-01160) for the complete, precise list of exceptions.
+An action string used the same way as a Main Action (e.g. in the `action` property), but undocumented/internal-only and not part of the official, version-stable Main Actions list. Internal actions extend the standard action vocabulary with hundreds of advanced behaviors. Unlike Main Actions, they typically have no individual "since version" and carry only a blanket minimum of MSX `0.1.167+` — see [Versioning](versioning.md) for why no finer version control exists and why this rarely matters in practice. Not to be confused with the Plugin API (`TVXVideoPlugin`, etc.), which is a separate JavaScript API for writing plugin pages. Also distinct from documented hidden-feature actions (e.g. Replace Action, Start Action, Resolve Action), which are neither Main Actions nor blanket-`0.1.167+` internal actions — each has its own individually documented since-version. A handful of further internal-only action families are also exceptions to the blanket floor despite not being Main Actions or Hidden Feature Actions either: the entire Broadcast/HbbTV family (`0.1.30` — `audio:broadcast:...` has no Main Action counterpart at all, yet still isn't blanket `0.1.167+`) and `execute:service:...` (`0.1.90`). See [Actions Reference](actions-reference.md#internal-only-actions--overview-require-01167) for the complete, precise list of exceptions.
 
 See [Internal Actions](../experts-api/special/internal-actions.md).
 
@@ -452,7 +464,7 @@ There are two distinct usage forms:
 1. **As an `action`-string** — always requires a prefix, there is no bare `resolve:` action: `video:resolve:{URL}` (also `video:auto:resolve:{URL}`), `audio:resolve:{URL}` (also `audio:auto:resolve:{URL}`), `image:resolve:{URL}`, `background:resolve:{URL}` — each with `user:` and `request:interaction:{DATA_ID}@{URL}` sub-variants.
 2. **As a bare `resolve:{URL}` property value** (no `action` property involved) — only on two properties: the `image` property (**content context only** — does not work on a Menu Item's `image` or the Menu Root's `logo`), and the `background` property, which works **everywhere it appears**, independent of context or nesting level (Content Item Object, Content Page Object, Content Root Object, Selection Object, Menu Item Object, and Menu Root Object all have their own `background` property).
 
-Despite also appearing in [Internal Actions](../experts-api/special/internal-actions.md), the Resolve Action is **not** covered by that list's blanket `0.1.160+` minimum — its own dedicated wiki page documents the more precise `0.1.107` since-version for all forms above, which takes precedence. This includes the `request:interaction:{DATA_ID}@{URL}` sub-variant (e.g. `video:resolve:request:interaction:{DATA_ID}@{URL}`) — also `0.1.107`, since the interaction-plugin request mechanism already existed by then and all combinations with Resolve worked from the start.
+Despite also appearing in [Internal Actions](../experts-api/special/internal-actions.md), the Resolve Action is **not** covered by that list's blanket `0.1.167+` minimum — its own dedicated wiki page documents the more precise `0.1.107` since-version for all forms above, which takes precedence. This includes the `request:interaction:{DATA_ID}@{URL}` sub-variant (e.g. `video:resolve:request:interaction:{DATA_ID}@{URL}`) — also `0.1.107`, since the interaction-plugin request mechanism already existed by then and all combinations with Resolve worked from the start.
 
 See [Resolve Action](../experts-api/hidden-features/resolve-action.md), [Actions Reference](actions-reference.md#hidden-feature-actions-replace-start--resolve).
 
@@ -497,6 +509,8 @@ An action that sends a request to a server endpoint (HTTP POST). The server proc
 
 An internal-only `silent:` prefix (e.g. `execute:silent:{URL}`, also combinable as `execute:silent:user:`, `execute:silent:accurate:`, `execute:silent:fetch:`, `execute:silent:request:player:`, `execute:silent:request:interaction:`, etc.) that executes the action without showing a busy indicator and without displaying error/warning messages to the user. Without `silent:`, errors and warnings are always both logged internally and shown to the user; with `silent:`, they are still written to the internal log — only the busy indicator and the user-visible error/warning message are suppressed.
 
+Separately, a standalone `silent:{ACTION}` wrapper (internal-only, `0.1.167+`, e.g. `silent:info:This message is not displayed.`) works with any action: it executes the action normally but suppresses all success, info, warning, and error messages that would otherwise be displayed. It only affects messages displayed during the immediate execution of the action — actions executed later (e.g. via `defer:`, `delay:`, or `lazy:` while animations are running) are not affected, so `silent:defer:info:This message is displayed.` still shows its message, whereas `defer:silent:info:This message is not displayed.` does not.
+
 See [Internal Actions](../experts-api/special/internal-actions.md).
 
 ---
@@ -533,9 +547,9 @@ A partial Content Item Object used as a blueprint for an array of `items`. The `
 
 ## Trigger
 
-A video/audio playback hook set via the `trigger:{TRIGGER_KEY}` extended property (since `0.1.58`) — fires an action string when the named condition occurs during the current playback (e.g. `load`, `start`, `end`, `complete`, a specific second/percentage/tick count, or its negative-numbered "seconds remaining" form). By default, a trigger can fire more than once per playback if its condition recurs — most relevant for the numeric second/percentage/tick-based keys, since seeking back past the same point can retrigger them. Prefixing the action with `shot:` (e.g. `"trigger:20": "shot:info:20 seconds of video passed (shot)."`) makes that trigger a one-time event instead: it fires once, then never again for the rest of that playback — useful for cues that shouldn't repeat if the user seeks back over the same spot.
+A video/audio playback hook set via the `trigger:{TRIGGER_KEY}` extended property (since `0.1.58`) — fires an action string when the named condition occurs during the current playback (e.g. `load`, `start`, `end`, `complete`, a specific second/percentage/tick count, or its negative-numbered "seconds remaining" form; `execute` fires when the initial action is executed, e.g. the corresponding content item clicked). Individual keys were added after `0.1.58` and carry their own since-version per the [Release Notes](../overview/release-notes.md): `active`/`inactive`/`player` since `0.1.134`, `ending` and the negative "seconds remaining" form `-{SECONDS}` since `0.1.146`, `execute` since `0.1.167`. By default, a trigger can fire more than once per playback if its condition recurs — most relevant for the numeric second/percentage/tick-based keys, since seeking back past the same point can retrigger them. Prefixing the action with `shot:` (e.g. `"trigger:20": "shot:info:20 seconds of video passed (shot)."`) makes that trigger a one-time event instead: it fires once, then never again for the rest of that playback — useful for cues that shouldn't repeat if the user seeks back over the same spot.
 
-See [Extended Properties](../experts-api/special/extended-properties.md), [Actions Reference → Internal-Only Actions Overview](actions-reference.md#internal-only-actions--overview-require-01160).
+See [Extended Properties](../experts-api/special/extended-properties.md), [Actions Reference → Internal-Only Actions Overview](actions-reference.md#internal-only-actions--overview-require-01167).
 
 ---
 

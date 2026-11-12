@@ -6,9 +6,9 @@ summary: Human-readable project entry point for the MSX LLM Knowledge Base repos
 
 # MSX Knowledge Base
 
-**KB Version:** `2026-08-11` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
+**KB Version:** `2026-11-12` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
 
-An LLM-optimized knowledge base for **Media Station X (MSX)**, covering the MSX app API from version `0.1.0` to `0.1.166`. It is aimed at MSX JSON authors and at LLMs that need to answer MSX questions or build valid MSX JSON pages from scratch.
+An LLM-optimized knowledge base for **Media Station X (MSX)**, covering the MSX app API from version `0.1.0` to `0.1.167`. It is aimed at MSX JSON authors and at LLMs that need to answer MSX questions or build valid MSX JSON pages from scratch.
 
 ## What is this?
 
@@ -31,26 +31,64 @@ The curated reference documents (`AGENTS.md`, `reference/actions-reference.md`, 
 | `index.md` | Master entry point — full API taxonomy with navigation links |
 | `llms.txt` | Machine-readable index of every public KB file (load this first) |
 | `AGENTS.md` | Usage guide for the LLM consuming this KB |
+| `CLAUDE.md` | Instructions Claude Code picks up automatically in a local clone |
 | `LICENSE.md` | License for this KB itself (CC BY 4.0) |
 | `overview/` | App overview, home page, welcome page (API taxonomy), quick-start, platform support, release notes, tips & tricks, showcases, license, data privacy, about |
 | `main-api/` | Start, Menu, Content, and Common API (actions, colors, icons, inline expressions, requests, responses) |
 | `extended-api/` | YouTube/Vimeo, M3U/PLS, MRSS |
 | `experts-api/` | Special, Live, Selection, Plugin, Hidden Features, Benchmark |
 | `reference/` | Type definitions, actions reference, JSON-building guide, cookbook, best practices & good to know, versioning model, glossary, common misconceptions, in-app Settings screen reference |
-| `examples/` | 101 JSON example files with a searchable catalog (`index.md`) |
+| `examples/` | 103 JSON example files with a searchable catalog (`index.md`) |
 | `img/` | Copied images referenced by the converted pages |
 
 ## How to use with an LLM
 
-For an LLM/agent fetching files by URL, use the raw Markdown source under the base path `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/` — e.g. [`llms.txt`](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/llms.txt) and [`AGENTS.md`](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/AGENTS.md). Every workflow below starts the same way: get the LLM to load `llms.txt` (the file index) and `AGENTS.md` (the usage guide) first, then fetch or read further files on demand rather than loading the whole KB at once. All internal links are relative paths, so they resolve correctly on the raw source, the hosted Pages site below, and in a local clone.
+The recommended way is a **local clone with a coding agent** (Option A below): the agent reads every file in full and searches the KB with its own tools. Fetching files by URL (Option B) also works, but is noticeably less reliable. For URL access, use the raw Markdown source under the base path `https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/` — e.g. [`llms.txt`](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/llms.txt) and [`AGENTS.md`](https://raw.githubusercontent.com/benzac-de/msx-knowledge-base/main/AGENTS.md). Every workflow below starts the same way: get the LLM to load `llms.txt` (the file index) and `AGENTS.md` (the usage guide) first, then fetch or read further files on demand rather than loading the whole KB at once. All internal links are relative paths, so they resolve correctly on the raw source, the hosted Pages site below, and in a local clone.
 
 As a nice extra for human readers, the same content is also hosted at **[https://benzac-de.github.io/msx-knowledge-base/](https://benzac-de.github.io/msx-knowledge-base/)**, where GitHub Pages renders the Markdown as HTML for browsing. Its Markdown source lives in the repository at **[https://github.com/benzac-de/msx-knowledge-base](https://github.com/benzac-de/msx-knowledge-base)**.
 
 **Language:** the KB's own text is written in English on purpose (consistent terminology, higher information density), but that doesn't limit which language you *use* it in — an LLM that has read these English files can just as well explain MSX or build JSON while conversing in German, Spanish, French, Portuguese, Italian, Dutch, Russian, Japanese, Chinese, or any other widely-used language; translating on the fly from an English source is a general LLM capability, not something this KB needs to support explicitly. Expect the most reliable results in major, well-resourced world languages; very low-resource or niche languages/dialects may read a little less fluently, simply because the underlying model has less training data there, independent of this KB. One rule holds no matter the conversation language: literal MSX syntax — property names, action strings, color/icon names, JSON keys, and code itself (e.g. `titleFooter`, `video:plugin:{URL}`, `msx-red`) — must stay exactly as documented and never get translated, even when every word around it is.
 
-### Option A — LLM with a URL-fetch / browsing tool
+### Option A — Local clone + coding agent (recommended)
+
+Clone the repository and point a local coding agent or LLM client at the checkout; it then reads files from disk on demand instead of fetching over HTTP. This is the most reliable setup: the agent always sees complete files rather than summaries, finds exact property names with its own search tools, and works from one consistent snapshot of the KB. Run `git pull` from time to time to pick up KB updates.
+
+```
+git clone https://github.com/benzac-de/msx-knowledge-base.git
+```
+
+Two agents pick up the KB's instructions on their own when started in the repository root:
+
+- **Codex** automatically reads `AGENTS.md` from the repository root as its instructions.
+- **Claude Code** automatically reads the repository's `CLAUDE.md`, which tells it when to read `AGENTS.md` and how to look things up in the KB.
+
+For those two, you can simply start asking. For any other agent, start with this prompt (run from inside the cloned repository):
+
+```
+Act as my Media Station X (MSX) expert.
+
+Read these files first:
+- llms.txt
+- AGENTS.md
+
+Use llms.txt as the index and AGENTS.md as the usage guide.
+Read additional referenced files from this repository whenever you need them.
+
+From now on, answer all my Media Station X questions and build any MSX JSON I ask for strictly from this KB rather than general knowledge or guesses.
+```
+
+This works with any tool that reads local files on demand — Claude Code, Codex, other CLI coding agents, or IDE-integrated assistants (Cursor, Continue, etc.) run with the cloned repository open as the workspace.
+
+**Two things worth checking here:**
+
+- **Working directory:** the relative paths in the prompt above (`llms.txt`, `AGENTS.md`) only resolve — and Codex/Claude Code only pick up `AGENTS.md`/`CLAUDE.md` — if the tool's working directory or open workspace is the cloned repository's root. Point it there, not at a parent folder or a subfolder.
+- **RAG/semantic-search clients:** some IDE assistants (e.g. Cursor, Continue) don't necessarily read a file in full on request — they index the repository semantically and pull back only the chunks that match your query, which can mean `llms.txt`/`AGENTS.md` never actually get loaded in full even though the files are technically accessible. Before relying on its answers, ask the model to confirm it loaded `llms.txt` and `AGENTS.md`, and to name a few specific files or topics it found in the index.
+
+### Option B — LLM with a URL-fetch / browsing tool
 
 If the LLM (or the agent/client it runs in) can fetch arbitrary URLs, point it at the hosted `llms.txt` and let it pull further files as needed.
+
+**Less reliable than a local clone.** Many fetch/browsing tools don't hand the model the page verbatim: they summarize it with a smaller model or cut it off beyond a size limit, and some providers rate-limit or block fetches from `raw.githubusercontent.com`. Exact property names, version numbers and table rows are precisely what gets lost that way. Use this option when a local clone isn't possible.
 
 **Many chat UIs don't fetch URLs by default — the browsing/fetch capability usually needs to be turned on first, or the model will just answer from its general training instead of the actual KB files:**
 
@@ -81,36 +119,6 @@ From now on, answer all my Media Station X questions and build any MSX JSON I as
 
 **Confirm the files were actually loaded before relying on the answers.** A model can acknowledge the fetch instruction and then answer from general training instead of the retrieved content, without any visible error. Before asking real MSX questions, send a quick follow-up such as: "Please confirm you successfully loaded llms.txt and AGENTS.md, and name a few of the specific files or topics you found in the index." A model that actually fetched the files can name concrete file names/topics from them; one that didn't will typically give a vague answer or admit it couldn't fetch anything.
 
-### Option B — Local clone + local/CLI LLM client
-
-Clone the repository and point a local coding agent or LLM client at the checkout; it then reads files from disk on demand instead of fetching over HTTP.
-
-```
-git clone https://github.com/benzac-de/msx-knowledge-base.git
-```
-
-Example starting prompt (run from inside the cloned repository):
-
-```
-Act as my Media Station X (MSX) expert.
-
-Read these files first:
-- llms.txt
-- AGENTS.md
-
-Use llms.txt as the index and AGENTS.md as the usage guide.
-Read additional referenced files from this repository whenever you need them.
-
-From now on, answer all my Media Station X questions and build any MSX JSON I ask for strictly from this KB rather than general knowledge or guesses.
-```
-
-This works with any tool that reads local files on demand — Claude Code, other CLI coding agents, or IDE-integrated assistants (Cursor, Continue, etc.) run with the cloned repository open as the workspace.
-
-**Two things worth checking here:**
-
-- **Working directory:** the relative paths in the prompt above (`llms.txt`, `AGENTS.md`) only resolve if the tool's working directory or open workspace is the cloned repository's root — point it there, not at a parent folder or a subfolder.
-- **RAG/semantic-search clients:** some IDE assistants (e.g. Cursor, Continue) don't necessarily read a file in full on request — they index the repository semantically and pull back only the chunks that match your query, which can mean `llms.txt`/`AGENTS.md` never actually get loaded in full even though the files are technically accessible. The same follow-up used for Option A applies here too: ask the model to confirm it loaded `llms.txt` and `AGENTS.md`, and to name a few specific files or topics it found in the index, before relying on its answers.
-
 ### A note on these starting prompts
 
 They're a general-purpose default, not a guarantee. `AGENTS.md` is trimmed and optimized to cover the large majority of cases well, but even a highly-optimized KB doesn't guarantee a correct result every time — a big, open-ended ask (e.g. "build me a beautiful example app with several content pages") can still come back with real mistakes, depending on the LLM. That's a limit of the LLM you're talking to, not something this KB alone can fully rule out.
@@ -133,7 +141,7 @@ This KB itself is a derived, generated artifact, maintained in this repository b
 ## Coverage & version scope
 
 - **KB Version (this snapshot):** see the date at the top of this file. Not to be confused with the MSX app version range below — that date tracks the KB document set itself and is replaced with the new generation date whenever this KB is regenerated or updated.
-- MSX app version range covered: **`0.1.0`** to **`0.1.166`**.
+- MSX app version range covered: **`0.1.0`** to **`0.1.167`**.
 - TVX Framework version mentioned in sources: `0.1.35` (no changelog or per-version feature list available in the sources).
 - TVX Plugin Library version mentioned in sources: `0.0.79` (no changelog available).
-- This KB is a **snapshot** generated at a point in time. For updates beyond `0.1.166`, refer to the official MSX wiki.
+- This KB is a **snapshot** generated at a point in time. For updates beyond `0.1.167`, refer to the official MSX wiki.

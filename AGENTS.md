@@ -6,7 +6,7 @@ summary: Comprehensive guide for an LLM consuming this KB to answer MSX question
 
 # AGENTS — LLM Usage Guide for the MSX Knowledge Base
 
-This document tells **you** — the LLM reading this file — how to use the MSX Knowledge Base effectively. Read it first: it carries the binding rules, the mental model, and a question-to-file map (Section 8) that answers most routing questions on its own. Then fetch individual topic files on demand — do not try to hold the whole KB in context. If Section 8 doesn't cover your question, list every file with your client's `index` tool, or fetch `llms.txt` for the same listing with a one-line description per file (the fallback when your client has no file-listing tool). This guide is a map: the exhaustive property tables, per-feature since-versions, and edge cases live in the files it points to.
+This document tells **you** — the LLM reading this file — how to use the MSX Knowledge Base effectively. Read it before writing or reviewing MSX JSON, and for broad how-to questions: it carries the binding rules, the mental model, the object overview with its exhaustive property lists, the common mistakes, and a question-to-file map (Section 8) that answers most routing questions on its own. Then fetch individual topic files on demand — do not try to hold the whole KB in context. If Section 8 doesn't cover your question, list every file with your client's `index` tool, or fetch `llms.txt` for the same listing with a one-line description per file (the fallback when your client has no file-listing tool). For a narrow lookup — one property, action, or since-version — you may skip this guide: search for the exact name and read the topic file directly. This guide is a map: the exhaustive property tables, per-feature since-versions, and edge cases live in the files it points to.
 
 > **Prime directive:** For the MSX JSON API surface — property names, allowed values, action strings, color names, icon names, version numbers, object structure — if it is not in this KB, say so; do not guess or invent it. See [Common Misconceptions](reference/common-misconceptions.md) for plausible-sounding things that do **not** exist.
 >
@@ -35,15 +35,15 @@ JSON Document  (videos · images · links · audio · text · plugins · playlis
 
 - MSX is a white-label app: the app is a shell, all content and structure comes from JSON.
 - JSON files must be reachable over HTTP/HTTPS with CORS enabled.
-- The engine is **backward-compatible**: JSON valid in `0.1.0` still runs in `0.1.166`. No breaking changes.
+- The engine is **backward-compatible**: JSON valid in `0.1.0` still runs in `0.1.167`. No breaking changes.
 - Forward compatibility is **not guaranteed**: newer features (e.g. `compress`) may display incorrectly or not at all on older clients. Always state the minimum version for any feature you use.
-- This KB covers MSX app versions `0.1.0`–`0.1.166`.
+- This KB covers MSX app versions `0.1.0`–`0.1.167`.
 
 **Three version systems (do not confuse them):**
 
 | System | Current version | Has per-feature changelog? |
 |---|---|---|
-| **MSX app** | `0.1.0`–`0.1.166` | **Yes** — every "Since Version" column in this KB refers to this |
+| **MSX app** | `0.1.0`–`0.1.167` | **Yes** — every "Since Version" column in this KB refers to this |
 | TVX Framework | `0.1.35` | No — mentioned once in sources, no version history |
 | TVX Plugin Library | `0.0.79` | No — mentioned once in sources, no version history |
 
@@ -219,7 +219,7 @@ One cell/tile on the grid.
 - `image`, `icon`, `color`: visual properties.
 - `background` — **narrower than it looks: only applies if this item's own `action` uses the `audio:` prefix** (`audio:{URL}`, `audio:plugin:{URL}`, `audio:resolve:...`, `audio:auto:...` — any `audio:`-prefixed variant counts, see the general prefix-family rule in Section 3). It sets the backdrop shown while that item's audio plays, and does nothing for a `video:`-prefixed or any other action. Do not confuse it with the general page-background chain on Content Root/Content Page/Menu Root/Menu Item (also called `background`, but unconditional there). For a background image on a video/plugin item's page, set `background` on the Content Root or Content Page instead.
 - `enumerate`, `group` (since `0.1.92`): playlist/slideshow auto-advance. Enumerated items (`enumerate: true` — the default for templated items, `false` otherwise) execute in a row and show a `(1/10)`-style position label in the headline; `group` (requires `enumerate: true`) splits the counter per group and can add its own label after the position. Full playlist-formation recipe: [Best Practices → The player UI shows for several seconds by default](reference/best-practices.md#the-player-ui-shows-for-several-seconds-by-default-when-starting-videoaudio--several-mechanisms-shorten-or-suppress-it).
-- `live` (object, since `0.1.70`): periodically updates this item's visual properties (live data, playback progress, countdowns) and fires a one-shot action on state transitions. Combined with `resume:key` (since `0.1.74`), a `type: "playback"` live object also shows the *resume* progress — the saved position from a previous session — on the `progress` bar while the item sits idle, before it is ever selected. See [Live Object](experts-api/live/live-object.md) and the deep dives in [Cookbook](reference/cookbook.md#live-data-epg-progress-countdowns).
+- `live` (object, since `0.1.70`): periodically updates this item's visual properties (live data, playback progress, countdowns) and fires a one-shot action on state transitions. Since `0.1.74`, combined with the `resume:key` Extended Property (formally labeled `0.1.111` — a retroactive label, see [Cookbook](reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern)), a `type: "playback"` live object also shows the *resume* progress — the saved position from a previous session — on the `progress` bar while the item sits idle, before it is ever selected. See [Live Object](experts-api/live/live-object.md) and the deep dives in [Cookbook](reference/cookbook.md#live-data-epg-progress-countdowns).
 - `selection` (object, since `0.1.110`): runs an action the moment this item receives focus — auto-preview, backdrop loading, updating another item. See [Selection Object](experts-api/selection/selection-object.md).
 - `options` (since `0.1.120`): a panel shown when this item is selected and the menu button is pressed. Highest priority in the `options` fallback chain — see [Glossary: Options](reference/glossary.md#options).
 - `properties` (object): the **Extended Properties bag** — a large, separate set of advanced, mostly player/plugin-facing properties (`resume:key`/`resume:position`/`resume:context`, `trigger:{TRIGGER_KEY}`, `control:load`, `tizen:*`, `html5x:*`, `image:*`, player-button overrides) that do **not** live at the top level: they are nested inside this one object, e.g. `"properties": { "resume:key": "url" }`. Not every `key:value` inside it is MSX-defined — some are free-form data a specific plugin reads (see [Common Misconceptions](reference/common-misconceptions.md#extended-properties-the-properties-bag)). See [Extended Properties](experts-api/special/extended-properties.md).
@@ -244,7 +244,7 @@ All actions are strings. They appear in the `action` property of:
 
 > **Menu items have no `action` property** — they associate content exclusively via `data`.
 >
-> **Several Extended Properties also expect an action string as their value** — `trigger:{TRIGGER_KEY}`, `button:{BUTTON_ID}:action`, `control:action`, `image:trigger`, `image:rotation:trigger`. Unlike the object-level `action`/`data` pairs above, these "property actions" **cannot** carry an action-related `data` property — use `execute:fetch:{URL}` if the action needs data.
+> **Several Extended Properties also expect an action string as their value** — `trigger:{TRIGGER_KEY}`, `button:{BUTTON_ID}:action`, `control:action`, `image:trigger`, `image:rotation:trigger`. Unlike the object-level `action`/`data` pairs above, these "property actions" **cannot** carry an action-related `data` property — use `execute:fetch:{URL}` if the action needs data, or, since `0.1.167`, `execute:json:{BASE64_ENCODED_JSON}` (the base64-encoded JSON must contain an `action` property and can optionally contain an action-related `data` property).
 
 ### Basic Action Patterns
 
@@ -313,7 +313,7 @@ Which to use:
 
 ### Request Actions
 
-Many URL-accepting actions support `request:interaction:{DATA_ID}@{URL}` instead of a plain URL, enabling interactive plugin requests (e.g. `video:resolve:request:interaction:{DATA_ID}@{URL}`). This pattern is **`0.1.82`**, not the blanket `0.1.160+` floor that otherwise applies to internal-only actions without their own since-version (see [Feature Minimum Versions](#feature-minimum-versions)) — except when combined with a prefix that has a later since-version itself (e.g. `playlist:auto:...` or Resolve, which keep their own higher floor). The sibling `request:player:{DATA_ID}` is a separate mechanism and stays at `0.1.160+`. See [Actions Reference](reference/actions-reference.md#request-actions-requestinteraction-is-0182-requestplayer-remains-01160), and [Resolve Action](experts-api/hidden-features/resolve-action.md) for the `0.1.107` hidden feature.
+Many URL-accepting actions support `request:interaction:{DATA_ID}@{URL}` instead of a plain URL, enabling interactive plugin requests (e.g. `video:resolve:request:interaction:{DATA_ID}@{URL}`). This pattern is **`0.1.82`**, not the blanket `0.1.167+` floor that otherwise applies to internal-only actions without their own since-version (see [Feature Minimum Versions](#feature-minimum-versions)) — except when combined with a prefix that has a later since-version itself (e.g. `playlist:auto:...` or Resolve, which keep their own higher floor). The sibling `request:player:{DATA_ID}` is a separate mechanism and stays at `0.1.167+`. See [Actions Reference](reference/actions-reference.md#request-actions-requestinteraction-is-0182-requestplayer-remains-01167), and [Resolve Action](experts-api/hidden-features/resolve-action.md) for the `0.1.107` hidden feature.
 
 ---
 
@@ -423,7 +423,7 @@ See: [Colors](main-api/common/colors.md)
 
 ### Backward Compatibility
 
-The MSX engine is **fully backward-compatible**. Every JSON page that worked in `0.1.0` still works in `0.1.166`. There are no breaking changes.
+The MSX engine is **fully backward-compatible**. Every JSON page that worked in `0.1.0` still works in `0.1.167`. There are no breaking changes.
 
 ### Forward Behavior (newer features on older MSX versions)
 
@@ -438,9 +438,9 @@ Using a newer feature on an MSX version that does not support it has one of two 
 
 ### Feature Minimum Versions
 
-Every property, action, and inline expression documented with an individual "since" version carries its own minimum MSX app version, stated on its dedicated page. The broad default: internal actions that are not also official Main Actions have no individually documented since-version — only the blanket `0.1.160+` floor.
+Every property, action, and inline expression documented with an individual "since" version carries its own minimum MSX app version, stated on its dedicated page. The broad default: internal actions that are not also official Main Actions have no individually documented since-version — only the blanket `0.1.167+` floor.
 
-**In practice this rarely matters** — nearly all platforms run the latest MSX version; only very old, no-longer-updatable Samsung TV models can be stuck below `0.1.160` (see [Versioning → How "Since Version" Annotations Work](reference/versioning.md#how-since-version-annotations-work)). A handful of internal action families do have their own tighter since-version anyway — see [Actions Reference → Internal-Only Actions Overview](reference/actions-reference.md#internal-only-actions--overview-require-01160) for the complete list. For a curated timeline of feature-introduction milestones, see the **Version Baseline** table in [Versioning](reference/versioning.md#version-baseline-010).
+**In practice this rarely matters** — nearly all platforms run the latest MSX version; the main exception is very old, no-longer-updatable Samsung TV models, which can be stuck on versions from `0.1.58` up to `0.1.163`, plus iPads/iPhones below iOS 15 and Macs below macOS 12, which stay on the legacy `0.1.165` app (see [Platform Support](overview/platform-support.md)) (`0.1.167` itself was released on Oct 19, 2026 according to the [Release Notes](overview/release-notes.md); see [Versioning → How "Since Version" Annotations Work](reference/versioning.md#how-since-version-annotations-work)). A handful of internal action families do have their own tighter since-version anyway — see [Actions Reference → Internal-Only Actions Overview](reference/actions-reference.md#internal-only-actions--overview-require-01167) for the complete list. For a curated timeline of feature-introduction milestones, see the **Version Baseline** table in [Versioning](reference/versioning.md#version-baseline-010).
 
 For exact version information on each property, always check the relevant API page. For the complete per-version changelog, see [Release Notes](overview/release-notes.md).
 
@@ -491,6 +491,9 @@ Plugin Library version: `0.0.79`; no version changelog exists for it. A `tvx-plu
 | HTTP request/response mechanics for a JSON/service backend | `main-api/common/requests.md`, `responses.md` |
 | Selection behavior on focus | `experts-api/selection/selection-object.md` |
 | Compress grid (16×8 layout) | `experts-api/hidden-features/compress-property.md` |
+| Entering a numeric code (PIN, channel number) via the code panel — `execute:code:…`, `enter:{CODE}`, `enter` with `{CODE}` | `experts-api/hidden-features/code-panel.md` |
+| Automatically playing the focused item's video (`autoplay`), or showing it picture-in-picture inside the content (PiP plugin) | `experts-api/hidden-features/pip-autoplay.md` |
+| How long the player UI stays open without user input (`control:timeout`) | `experts-api/special/extended-properties.md` + `reference/best-practices.md` |
 | Plugin development (general) | `experts-api/plugins/video-audio-plugin.md`, `plugin-api-reference.md` |
 | Building an interaction plugin (`handleEvent`/`handleData`/`handleRequest`) | `experts-api/plugins/interaction-plugin.md`, [Cookbook](reference/cookbook.md#deep-dive--building-an-interaction-plugin-plugin_test_2) |
 | Building a video plugin (`MyPlayer`, progress polling) | `experts-api/plugins/video-audio-plugin.md`, `html5x-plugin.md`, [Cookbook](reference/cookbook.md#deep-dive--building-a-video-plugin-plugin_test_4-html5x) |

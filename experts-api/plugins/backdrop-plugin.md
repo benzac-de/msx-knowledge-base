@@ -197,6 +197,7 @@ Please note that this example uses some properties that are only available in ve
 
 - [Interaction Plugin](./interaction-plugin.md)
 - [Plugin API Reference](./plugin-api-reference.md)
+- [PiP & Autoplay](../hidden-features/pip-autoplay.md) — the PiP video plugin's `backdrop` parameter generates the same kind of gradient backdrop, but from three directly indicated colors instead of colors extracted from an image
 - [Cookbook → Plugins (media, immersive, platform, ads)](../../reference/cookbook.md#plugins-media-immersive-platform-ads)
 - [Common Misconceptions → Right property, wrong object](../../reference/common-misconceptions.md#right-property-wrong-object) — using this plugin's `quiet` mode plus a neutral reload as one way to reset a selection `action`'s lasting effect once focus moves on
 - [Cookbook → M3U/PLS vs. MRSS](../../reference/cookbook.md#m3upls-vs-mrss-two-different-playlist-import-mechanisms) — why this plugin's `url` needs CORS when an ordinary `image`/`background` doesn't

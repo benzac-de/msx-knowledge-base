@@ -1,0 +1,84 @@
+{
+    "type": "list",
+    "headline": "Code Panel",
+    "template": {
+        "enumerate": false,
+        "icon": "dialpad",
+        "type": "button",
+        "layout": "0,0,3,3"
+    },
+    "items": [{           
+            "label": "Default",
+            "action": "execute:code:http://msx.benzac.de/services/echo.php"
+        }, {
+            "label": "Secret",
+            "action": "execute:code:http://msx.benzac.de/services/echo.php",
+            "data": {
+                "headline": "Enter Secret Code",
+                "placeholder": "Secret Code",
+                "secret": true,
+                "clear": true
+            }
+        }, {           
+            "label": "Prefilled + Extension",
+            "action": "execute:code:http://msx.benzac.de/services/echo.php",
+            "data": {               
+                "value": "1234",
+                "extension": "Prefilled"
+            }
+        }, {
+            "label": "1 Digit",
+            "titleFooter": "0.1.167+{br}{br}{br}",
+            "alignment": "center",
+            "action": "execute:code:http://msx.benzac.de/services/echo.php",
+            "data": {
+                "headline": "Enter 1 Digit",
+                "digits": 1
+            }
+        }, {           
+            "label": "3 Digits + Description",
+            "titleFooter": "0.1.167+{br}{br}{br}",
+            "alignment": "center",
+            "action": "execute:code:http://msx.benzac.de/services/echo.php",
+            "data": {
+                "headline": "Enter 3 Digits",
+                "description": "Execution takes place automatically as soon as all digits have been entered.",
+                "digits": 3
+            }
+        }, {
+            "label": "6 Secret Digits",
+            "titleFooter": "0.1.167+{br}{br}{br}",
+            "alignment": "center",
+            "action": "execute:code:http://msx.benzac.de/services/echo.php",
+            "data": {
+                "headline": "Enter 6 Secret Digits",              
+                "digits": 6,
+                "secret": true
+            }
+        }, {         
+            "badge": "Enter Action",
+            "label": "Switch Channel",
+            "titleFooter": "0.1.167+{br}{br}{br}",
+            "alignment": "center",
+            "action": "enter",
+            "data": {
+                "headline": "Switch Channel",
+                "placeholder": "Channel Number",
+                "extension": "Delay: 3 sec",
+                "action": "player:goto:number:{CODE}",
+                "delay": 3000
+            }
+        }, {           
+            "badge": "Enter Action",
+            "label": "Switch Channel",
+            "titleFooter": "0.1.167+{br}{br}{br}",
+            "alignment": "center",
+            "action": "enter",
+            "data": {
+                "headline": "Switch Channel",
+                "description": "Enter the channel number to switch to this channel. Please load a playlist first so that this action can be executed.",               
+                "action": "player:goto:number:{CODE}",
+                "digits": 4
+            }
+        }]
+}

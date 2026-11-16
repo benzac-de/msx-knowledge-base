@@ -20,20 +20,20 @@ summary: Platform support matrix showing MSX compatibility across TV platforms a
 | Samsung TVs (Current) | 2022+ models | Tizen 2.3+ | Samsung Smart Hub | - | 0.1.165 | - |
 | LG TVs (Legacy) | 2011-2014 models | NetCast 2.0+ | LG Content Store | [https://us.lgappstv.com/main/tvapp/detail?appId=464834](https://us.lgappstv.com/main/tvapp/detail?appId=464834) | 0.1.165 | Please note that the displayed version in the store is 1.1.165. However, the application version is 0.1.165. |
 | LG TVs (Current) | 2014+ models | webOS 1.0+ | LG Content Store | [https://us.lgappstv.com/main/tvapp/detail?appId=464834](https://us.lgappstv.com/main/tvapp/detail?appId=464834) | 0.1.165 | Please note that the displayed version in the store is 1.1.165. However, the application version is 0.1.165. |
-| Android TVs (e.g. Sony, TCL, Sharp, Phillips, Nvidia, etc.) and tablets/phones | All | Android 4.2+ | Google Play Store | [https://play.google.com/store/apps/details?id=de.benzac.msx](https://play.google.com/store/apps/details?id=de.benzac.msx) | 0.1.167 | - |
-| Fire TVs and tablets/phones | All | Android 4.2+ | Amazon App Store | [https://www.amazon.com/benzac-de-Media-Station-X/dp/B078TL932D/](https://www.amazon.com/benzac-de-Media-Station-X/dp/B078TL932D/) | 0.1.167 | - |
+| Android TVs (e.g. Sony, TCL, Sharp, Phillips, Nvidia, etc.) and tablets/phones | All | Android 4.2+ | Google Play Store | [https://play.google.com/store/apps/details?id=de.benzac.msx](https://play.google.com/store/apps/details?id=de.benzac.msx) | 0.1.168 | - |
+| Fire TVs and tablets/phones | All | Android 4.2+ | Amazon App Store | [https://www.amazon.com/benzac-de-Media-Station-X/dp/B078TL932D/](https://www.amazon.com/benzac-de-Media-Station-X/dp/B078TL932D/) | 0.1.168 | - |
 | iPads/iPhones (Legacy) | All | iOS 9.0+ | Apple App Store | [https://itunes.apple.com/us/app/media-station-x/id1363036077](https://itunes.apple.com/us/app/media-station-x/id1363036077) | 0.1.165 | - |
-| iPads/iPhones (Current) | All | iOS 15.0+ | Apple App Store | [https://itunes.apple.com/us/app/media-station-x/id1363036077](https://itunes.apple.com/us/app/media-station-x/id1363036077) | 0.1.167 | - |
+| iPads/iPhones (Current) | All | iOS 15.0+ | Apple App Store | [https://itunes.apple.com/us/app/media-station-x/id1363036077](https://itunes.apple.com/us/app/media-station-x/id1363036077) | 0.1.168 | - |
 | Mac devices (Legacy) | All | macOS 10.15+ | Apple App Store | [https://itunes.apple.com/us/app/media-station-x/id1363036077](https://itunes.apple.com/us/app/media-station-x/id1363036077) | 0.1.165 | - |
-| Mac devices (Current) | All | macOS 12.0+ | Apple App Store | [https://itunes.apple.com/us/app/media-station-x/id1363036077](https://itunes.apple.com/us/app/media-station-x/id1363036077) | 0.1.167 | - |
-| Universal Windows Platform (UWP) devices (Xboxes, desktops, tablets, phones, surfaces, etc.) | All | Windows 10.0.10240.0+ | Microsoft Store | [https://apps.microsoft.com/detail/9p4z98mljplz](https://apps.microsoft.com/detail/9p4z98mljplz) | 0.1.167 | - |
-| Vewd Smart TVs (e.g. Hisense, TiVo, Samsung Blu-ray Players, etc.) | All | Vewd Specification 4.0+ | Vewd App Store | - | 0.1.167 | - |
-| TP Vision Smart TVs (e.g. Philips, Sharp, etc.) | All | Smart TV Alliance SDK 3.0+ | TP Vision App Gallery | - | 0.1.167 | - |
-| Foxxum Smart TVs (e.g. Hisense, Sharp, TCL, Vestel, etc.) | All | - | Foxxum App Store | - | 0.1.167 | - |
-| VIDAA Smart TVs (e.g. Hisense, etc.) | All | VIDAA U6+ | VIDAA App Store | - | 0.1.167 | Discontinued in October 2026 due to a new annual app fee required by VIDAA. |
-| Other TVs and desktops/tablets/phones | - | - | - | - | 0.1.167 | Please use the standard web browser and open the URL [http://msx.benzac.de](http://msx.benzac.de). |
-| HbbTV devices | - | HbbTV 1.1+ | - | - | 0.1.167 | Please use an HbbTV-capable browser and open the URL [http://msx.benzac.de/hbbtv.html](http://msx.benzac.de/hbbtv.html). |
-| AR/VR headsets | - | - | - | - | 0.1.167 | Please use an AR/VR browser/application and open the URL [http://msx.benzac.de/xr.html](http://msx.benzac.de/xr.html). |
+| Mac devices (Current) | All | macOS 12.0+ | Apple App Store | [https://itunes.apple.com/us/app/media-station-x/id1363036077](https://itunes.apple.com/us/app/media-station-x/id1363036077) | 0.1.168 | - |
+| Universal Windows Platform (UWP) devices (Xboxes, desktops, tablets, phones, surfaces, etc.) | All | Windows 10.0.10240.0+ | Microsoft Store | [https://apps.microsoft.com/detail/9p4z98mljplz](https://apps.microsoft.com/detail/9p4z98mljplz) | 0.1.168 | - |
+| Vewd Smart TVs (e.g. Hisense, TiVo, Samsung Blu-ray Players, etc.) | All | Vewd Specification 4.0+ | Vewd App Store | - | 0.1.168 | - |
+| TP Vision Smart TVs (e.g. Philips, Sharp, etc.) | All | Smart TV Alliance SDK 3.0+ | TP Vision App Gallery | - | 0.1.168 | - |
+| Foxxum Smart TVs (e.g. Hisense, Sharp, TCL, Vestel, etc.) | All | - | Foxxum App Store | - | 0.1.168 | - |
+| VIDAA Smart TVs (e.g. Hisense, etc.) | All | VIDAA U6+ | VIDAA App Store | - | 0.1.168 | Discontinued in October 2026 due to a new annual app fee required by VIDAA. |
+| Other TVs and desktops/tablets/phones | - | - | - | - | 0.1.168 | Please use the standard web browser and open the URL [http://msx.benzac.de](http://msx.benzac.de). |
+| HbbTV devices | - | HbbTV 1.1+ | - | - | 0.1.168 | Please use an HbbTV-capable browser and open the URL [http://msx.benzac.de/hbbtv.html](http://msx.benzac.de/hbbtv.html). |
+| AR/VR headsets | - | - | - | - | 0.1.168 | Please use an AR/VR browser/application and open the URL [http://msx.benzac.de/xr.html](http://msx.benzac.de/xr.html). |
 
 ## See Also
 

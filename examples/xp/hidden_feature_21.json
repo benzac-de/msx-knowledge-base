@@ -36,19 +36,20 @@
         },
         "properties": {
             "control:type": "extended",
-            "control:transparent": "true",
+            "control:transparent": true,
             "control:reuse": "retain",
             "control:timeout": 3,
             "trigger:active": "event:pip:disable",
             "trigger:inactive": "event:pip:validate",
             "trigger:execute": "delay:autoplay:cancel",
-            "label:duration": "{VALUE} {ico:repeat}"
+            "label:duration": "{VALUE} {ico:repeat}",
+            "video:transparent": true
         }
     },
     "underlay": {
         "action": "event:pip:validate"
     },
-    "overlay": {     
+    "overlay": {
         "items": [{
                 "id": "text",
                 "type": "space",

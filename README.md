@@ -6,9 +6,9 @@ summary: Human-readable project entry point for the MSX LLM Knowledge Base repos
 
 # MSX Knowledge Base
 
-**KB Version:** `2026-11-12` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
+**KB Version:** `2026-11-16` — the date this snapshot was last generated/updated. A future update always carries a later date, so this value alone tells you whether you're looking at the current KB or an older copy.
 
-An LLM-optimized knowledge base for **Media Station X (MSX)**, covering the MSX app API from version `0.1.0` to `0.1.167`. It is aimed at MSX JSON authors and at LLMs that need to answer MSX questions or build valid MSX JSON pages from scratch.
+An LLM-optimized knowledge base for **Media Station X (MSX)**, covering the MSX app API from version `0.1.0` to `0.1.168`. It is aimed at MSX JSON authors and at LLMs that need to answer MSX questions or build valid MSX JSON pages from scratch.
 
 ## What is this?
 
@@ -141,7 +141,7 @@ This KB itself is a derived, generated artifact, maintained in this repository b
 ## Coverage & version scope
 
 - **KB Version (this snapshot):** see the date at the top of this file. Not to be confused with the MSX app version range below — that date tracks the KB document set itself and is replaced with the new generation date whenever this KB is regenerated or updated.
-- MSX app version range covered: **`0.1.0`** to **`0.1.167`**.
+- MSX app version range covered: **`0.1.0`** to **`0.1.168`**.
 - TVX Framework version mentioned in sources: `0.1.35` (no changelog or per-version feature list available in the sources).
 - TVX Plugin Library version mentioned in sources: `0.0.79` (no changelog available).
-- This KB is a **snapshot** generated at a point in time. For updates beyond `0.1.167`, refer to the official MSX wiki.
+- This KB is a **snapshot** generated at a point in time. For updates beyond `0.1.168`, refer to the official MSX wiki.

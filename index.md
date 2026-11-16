@@ -6,7 +6,7 @@ summary: Master navigation page for the MSX LLM Knowledge Base; mirrors the API 
 
 # MSX Knowledge Base — Master Index
 
-**Media Station X (MSX)** is a white-label TV app driven entirely by JSON served over HTTP. This knowledge base covers the MSX API from version `0.1.0` to `0.1.167`.
+**Media Station X (MSX)** is a white-label TV app driven entirely by JSON served over HTTP. This knowledge base covers the MSX API from version `0.1.0` to `0.1.168`.
 
 **Note:** This page is a human-readable navigation index. If you are an LLM/agent, use [`llms.txt`](llms.txt) and [`AGENTS.md`](AGENTS.md) instead — see [`README.md`](README.md) for full usage and integration instructions.
 

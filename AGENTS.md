@@ -35,15 +35,15 @@ JSON Document  (videos · images · links · audio · text · plugins · playlis
 
 - MSX is a white-label app: the app is a shell, all content and structure comes from JSON.
 - JSON files must be reachable over HTTP/HTTPS with CORS enabled.
-- The engine is **backward-compatible**: JSON valid in `0.1.0` still runs in `0.1.167`. No breaking changes.
+- The engine is **backward-compatible**: JSON valid in `0.1.0` still runs in `0.1.168`. No breaking changes.
 - Forward compatibility is **not guaranteed**: newer features (e.g. `compress`) may display incorrectly or not at all on older clients. Always state the minimum version for any feature you use.
-- This KB covers MSX app versions `0.1.0`–`0.1.167`.
+- This KB covers MSX app versions `0.1.0`–`0.1.168`.
 
 **Three version systems (do not confuse them):**
 
 | System | Current version | Has per-feature changelog? |
 |---|---|---|
-| **MSX app** | `0.1.0`–`0.1.167` | **Yes** — every "Since Version" column in this KB refers to this |
+| **MSX app** | `0.1.0`–`0.1.168` | **Yes** — every "Since Version" column in this KB refers to this |
 | TVX Framework | `0.1.35` | No — mentioned once in sources, no version history |
 | TVX Plugin Library | `0.0.79` | No — mentioned once in sources, no version history |
 
@@ -217,7 +217,7 @@ One cell/tile on the grid.
 - `action`: executed when the item is selected.
 - Text (all support inline expressions): `headline`/`text` upper-left, `title`/`titleHeader`/`titleFooter` lower-left, `badge` upper-left (overlapping `headline`/`text` — see [Best Practices](reference/best-practices.md#tagstampbadge--short-single-line-text-and-default-colors-that-already-fit)), `tag` upper-right, `stamp` lower-right.
 - `image`, `icon`, `color`: visual properties.
-- `background` — **narrower than it looks: only applies if this item's own `action` uses the `audio:` prefix** (`audio:{URL}`, `audio:plugin:{URL}`, `audio:resolve:...`, `audio:auto:...` — any `audio:`-prefixed variant counts, see the general prefix-family rule in Section 3). It sets the backdrop shown while that item's audio plays, and does nothing for a `video:`-prefixed or any other action. Do not confuse it with the general page-background chain on Content Root/Content Page/Menu Root/Menu Item (also called `background`, but unconditional there). For a background image on a video/plugin item's page, set `background` on the Content Root or Content Page instead.
+- `background` — **narrower than it looks: only applies if this item's own `action` uses the `audio:` prefix** (`audio:{URL}`, `audio:plugin:{URL}`, `audio:resolve:...`, `audio:auto:...` — any `audio:`-prefixed variant counts, see the general prefix-family rule in Section 3). **Since `0.1.168`, it also applies to a `video:`-prefixed action if the item's extended property `"video:transparent"` is set to `"true"`** (transparent video scene background, e.g. for picture-in-picture videos via `video:plugin:{URL}` — see [Extended Properties](experts-api/special/extended-properties.md)). It sets the backdrop shown while that item's audio plays (or behind such a transparent video), and does nothing for any other `video:`-prefixed or any other action. Do not confuse it with the general page-background chain on Content Root/Content Page/Menu Root/Menu Item (also called `background`, but unconditional there). For a background image on a video/plugin item's page, set `background` on the Content Root or Content Page instead.
 - `enumerate`, `group` (since `0.1.92`): playlist/slideshow auto-advance. Enumerated items (`enumerate: true` — the default for templated items, `false` otherwise) execute in a row and show a `(1/10)`-style position label in the headline; `group` (requires `enumerate: true`) splits the counter per group and can add its own label after the position. Full playlist-formation recipe: [Best Practices → The player UI shows for several seconds by default](reference/best-practices.md#the-player-ui-shows-for-several-seconds-by-default-when-starting-videoaudio--several-mechanisms-shorten-or-suppress-it).
 - `live` (object, since `0.1.70`): periodically updates this item's visual properties (live data, playback progress, countdowns) and fires a one-shot action on state transitions. Since `0.1.74`, combined with the `resume:key` Extended Property (formally labeled `0.1.111` — a retroactive label, see [Cookbook](reference/cookbook.md#deep-dive--a-minimal-resume-playback-item-live_test_2-pattern)), a `type: "playback"` live object also shows the *resume* progress — the saved position from a previous session — on the `progress` bar while the item sits idle, before it is ever selected. See [Live Object](experts-api/live/live-object.md) and the deep dives in [Cookbook](reference/cookbook.md#live-data-epg-progress-countdowns).
 - `selection` (object, since `0.1.110`): runs an action the moment this item receives focus — auto-preview, backdrop loading, updating another item. See [Selection Object](experts-api/selection/selection-object.md).
@@ -423,7 +423,7 @@ See: [Colors](main-api/common/colors.md)
 
 ### Backward Compatibility
 
-The MSX engine is **fully backward-compatible**. Every JSON page that worked in `0.1.0` still works in `0.1.167`. There are no breaking changes.
+The MSX engine is **fully backward-compatible**. Every JSON page that worked in `0.1.0` still works in `0.1.168`. There are no breaking changes.
 
 ### Forward Behavior (newer features on older MSX versions)
 
@@ -440,7 +440,7 @@ Using a newer feature on an MSX version that does not support it has one of two 
 
 Every property, action, and inline expression documented with an individual "since" version carries its own minimum MSX app version, stated on its dedicated page. The broad default: internal actions that are not also official Main Actions have no individually documented since-version — only the blanket `0.1.167+` floor.
 
-**In practice this rarely matters** — nearly all platforms run the latest MSX version; the main exception is very old, no-longer-updatable Samsung TV models, which can be stuck on versions from `0.1.58` up to `0.1.163`, plus iPads/iPhones below iOS 15 and Macs below macOS 12, which stay on the legacy `0.1.165` app (see [Platform Support](overview/platform-support.md)) (`0.1.167` itself was released on Oct 19, 2026 according to the [Release Notes](overview/release-notes.md); see [Versioning → How "Since Version" Annotations Work](reference/versioning.md#how-since-version-annotations-work)). A handful of internal action families do have their own tighter since-version anyway — see [Actions Reference → Internal-Only Actions Overview](reference/actions-reference.md#internal-only-actions--overview-require-01167) for the complete list. For a curated timeline of feature-introduction milestones, see the **Version Baseline** table in [Versioning](reference/versioning.md#version-baseline-010).
+**In practice this rarely matters** — nearly all platforms run the latest MSX version; the main exception is very old, no-longer-updatable Samsung TV models, which can be stuck on versions from `0.1.58` up to `0.1.163`, plus iPads/iPhones below iOS 15 and Macs below macOS 12, which stay on the legacy `0.1.165` app (see [Platform Support](overview/platform-support.md) and [Versioning → How "Since Version" Annotations Work](reference/versioning.md#how-since-version-annotations-work)). A handful of internal action families do have their own tighter since-version anyway — see [Actions Reference → Internal-Only Actions Overview](reference/actions-reference.md#internal-only-actions--overview-require-01167) for the complete list. For a curated timeline of feature-introduction milestones, see the **Version Baseline** table in [Versioning](reference/versioning.md#version-baseline-010).
 
 For exact version information on each property, always check the relevant API page. For the complete per-version changelog, see [Release Notes](overview/release-notes.md).
 
@@ -493,6 +493,7 @@ Plugin Library version: `0.0.79`; no version changelog exists for it. A `tvx-plu
 | Compress grid (16×8 layout) | `experts-api/hidden-features/compress-property.md` |
 | Entering a numeric code (PIN, channel number) via the code panel — `execute:code:…`, `enter:{CODE}`, `enter` with `{CODE}` | `experts-api/hidden-features/code-panel.md` |
 | Automatically playing the focused item's video (`autoplay`), or showing it picture-in-picture inside the content (PiP plugin) | `experts-api/hidden-features/pip-autoplay.md` |
+| Showing the background image behind a video instead of black, e.g. for PiP videos (`video:transparent`, since `0.1.168`) | `experts-api/special/extended-properties.md` + `experts-api/hidden-features/pip-autoplay.md` |
 | How long the player UI stays open without user input (`control:timeout`) | `experts-api/special/extended-properties.md` + `reference/best-practices.md` |
 | Plugin development (general) | `experts-api/plugins/video-audio-plugin.md`, `plugin-api-reference.md` |
 | Building an interaction plugin (`handleEvent`/`handleData`/`handleRequest`) | `experts-api/plugins/interaction-plugin.md`, [Cookbook](reference/cookbook.md#deep-dive--building-an-interaction-plugin-plugin_test_2) |

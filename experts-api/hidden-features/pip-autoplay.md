@@ -6,7 +6,7 @@ summary: Explains the autoplay actions that automatically play the video/audio o
 
 # PiP & Autoplay
 
-It is possible to automatically play the video/audio of a content item as soon as it gets the focus (autoplay). In combination with a special video plugin, the video can additionally be displayed in a specific area of the content while it is still focused (picture-in-picture, PiP). This feature is available since version **0.1.167**.
+It is possible to automatically play the video/audio of a content item as soon as it gets the focus (autoplay). In combination with a special video plugin, the video can additionally be displayed in a specific area of the content while it is still focused (picture-in-picture, PiP). The autoplay feature is available since version **0.1.167**. The PiP plugin also works with older versions.
 
 ## Usage
 
@@ -29,6 +29,7 @@ This is a special video plugin that plays a video in an endless loop and display
 
 - `video:plugin:http://msx.benzac.de/plugins/pip.html?url={URL}`
 - `video:plugin:http://msx.benzac.de/plugins/pip.html?url={URL}&backdrop={COLOR_1}|{COLOR_2}|{COLOR_3}`
+- `video:plugin:http://msx.benzac.de/plugins/pip.html?url={URL}&backdrop=transparent:{NUMBER}`
 
 The PiP mode is automatically handled by the plugin by observing the content state.
 
@@ -49,6 +50,11 @@ Because the content state is observed in a 1-second cycle, the event `event:pip:
 The PiP area is defined by a placeholder element in the plugin HTML page. The values of this placeholder are applied to the video in PiP mode.
 
 ```css
+body
+{
+    /*Make body transparent to support transparent videos (available since MSX version 0.1.168)*/
+    background: transparent;
+}
 .placeholder
 {
     /*Placeholder values will be applied to the video in pip mode*/
@@ -64,9 +70,30 @@ The PiP area is defined by a placeholder element in the plugin HTML page. The va
 {
     display: block;
 }
+/*Only show placeholder if pip is ready (i.e. all values have been correctly calculated)*/
+/*Only show player if video is ready (i.e. pip is ready and video is ready to play)*/
+.placeholder,
+.player
+{
+    visibility: hidden;
+}
+.pip-ready .placeholder,
+.video-ready .player
+{
+    visibility: visible;
+}
 ```
 
 The placeholder is located inside a content wrapper element that is managed by the helper script [http://msx.benzac.de/plugins/js/content-controller.js](http://msx.benzac.de/plugins/js/content-controller.js). This script is needed for the immersive mode (**Settings** → **Immersive Mode**): The entire MSX user interface is always displayed in 16:9 format, but if the immersive mode is enabled, the plugin page can have a different format. Therefore, the content wrapper is centered in the plugin page with the 16:9 screen size of the application (and scaled with its zoom factor), so that the placeholder matches exactly the corresponding area of the content. The content wrapper is set up again if the immersive mode setting is changed or the application is resized. Each time the content wrapper is set up (and each time the window is resized), the current position and size of the placeholder are applied to the video.
+
+To prevent the PiP area from jumping while the plugin is loading, the placeholder and the video are initially hidden (but still laid out), so that all calculations can be performed in advance. The plugin sets the following CSS classes on the `body` element to make them visible step by step.
+
+- `pip-ready`: This class is set as soon as the application settings have been validated (i.e. the content wrapper has been set up correctly). From this point on, the placeholder is visible (if the PiP mode is enabled).
+- `video-ready`: This class is set as soon as the video is ready to play. From this point on, the video is visible.
+
+**Note: This is a pure plugin feature, so it also works with older versions.**
+
+Additionally, the `body` element of the plugin page has a transparent background. Together with the extended property `"video:transparent": "true"` (available since version **0.1.168**), the underlying background is displayed behind the plugin instead of a black screen (e.g. while switching between videos). For more information, please see [Extended Properties](../special/extended-properties.md).
 
 If you would like to use the plugin as reference to implement your own plugin, please have a look at this implementation script: [https://msx.benzac.de/plugins/js/pip.js](https://msx.benzac.de/plugins/js/pip.js).
 
@@ -77,7 +104,7 @@ Parameter syntax of PiP plugin.
 | Parameter | Type | Default Value | Mandatory | Description |
 |---|---|---|---|---|
 | `url` | `string` | `null` | **Yes** | The URL of the PiP video. It is recommended to encode the value to ensure that it is evaluated correctly (e.g. `"http://msx.benzac.de/media/video1.mp4"` → `"http%3A%2F%2Fmsx.benzac.de%2Fmedia%2Fvideo1.mp4"`). |
-| `backdrop` | `string` | `null` | No | The colors of an atmospheric backdrop that is generated as gradient background behind the video. Exactly three colors must be indicated, separated by `\|` (e.g. `"#1c3249\|#646f78\|#c4c5c3"`). All CSS color formats can be used. If not exactly three valid colors are indicated, no backdrop is generated. The backdrop is generated in the same way as with the [Backdrop Plugin](../plugins/backdrop-plugin.md), except that the three colors are indicated directly instead of being extracted from an image. It is recommended to encode the value to ensure that it is evaluated correctly (e.g. `"#1c3249\|#646f78\|#c4c5c3"` → `"%231c3249%7C%23646f78%7C%23c4c5c3"`). |
+| `backdrop` | `string` | `null` | No | The colors of an atmospheric backdrop that is generated as gradient background behind the video. Exactly three colors must be indicated, separated by `\|` (e.g. `"#1c3249\|#646f78\|#c4c5c3"`). All CSS color formats can be used. If not exactly three valid colors are indicated, no backdrop is generated. The backdrop is generated in the same way as with the [Backdrop Plugin](../plugins/backdrop-plugin.md), except that the three colors are indicated directly instead of being extracted from an image. It is recommended to encode the value to ensure that it is evaluated correctly (e.g. `"#1c3249\|#646f78\|#c4c5c3"` → `"%231c3249%7C%23646f78%7C%23c4c5c3"`).<br><br>Alternatively, the special value `"transparent:{NUMBER}"` can be indicated. In this case, no backdrop is generated and only the opacity of the default background (i.e. the default MSX gradient from dark gray to black) is set. The number is a relative floating point number and can go from `0.0` to `1.0`. This can be used to darken the underlying background image (e.g. `"transparent:0.5"`) or to display it without any darkening (`"transparent:0"`).<br><br>**Note: The value `"transparent:{NUMBER}"` is only meaningful if the extended property `"video:transparent"` is set to `"true"` (available since version 0.1.168). Otherwise, the video scene background is black, so the default background is only displayed on top of a black area and simply appears darker.** |
 | `loop` | `number` | `1` | No | Indicates if the PiP video is played in an endless loop.<br><br>• `0`: The video is played once and the playback is stopped when it has ended.<br>• `1`: The video is played in an endless loop. |
 
 ## Example
@@ -86,6 +113,7 @@ Please note that this example uses some properties that are only available in ve
 
 - The content `flag` is set to `"pip"`, so that the PiP mode is enabled while the content is focused. The template `area` keeps the right part of the screen clear of content items, where the PiP video and the description of the focused item (overlay item `text`) are displayed.
 - The content `transparent` property is set to `2` and the extended property `"control:transparent"` is set to `"true"`, so that the content background is transparent while a PiP video is active.
+- The extended property `"video:transparent"` is set to `"true"`, so that the transitions between the videos are smoother: Instead of briefly switching to a black screen when the next video is loaded, the underlying background is displayed. This property is only available in version **0.1.168** or higher (in older versions, it is ignored).
 - The selection action updates the overlay item `text` with the description of the focused item and starts the autoplay action after a delay of 1 second. The selection is set to `important`, so that the item action is only executed if the item has the focus (when using mouse or touch). The custom `description` property is only used for the `{context:description}` expression.
 - The extended property `"trigger:execute": "delay:autoplay:cancel"` cancels a pending autoplay action if the item is executed before the delay has expired.
 - The extended property `"control:reuse": "retain"` ensures that the running PiP video is reused (and not restarted) if the item is executed. The extended property `"trigger:active": "event:pip:disable"` disables the PiP mode when the video moves to the foreground and `"trigger:inactive": "event:pip:validate"` validates the PiP mode when the video moves to the background.
@@ -140,13 +168,14 @@ Some of these properties are redundant and only act as additional safety nets. F
         },
         "properties": {
             "control:type": "extended",
-            "control:transparent": "true",
+            "control:transparent": true,
             "control:reuse": "retain",
             "control:timeout": 3,
             "trigger:active": "event:pip:disable",
             "trigger:inactive": "event:pip:validate",
             "trigger:execute": "delay:autoplay:cancel",
-            "label:duration": "{VALUE} {ico:repeat}"
+            "label:duration": "{VALUE} {ico:repeat}",
+            "video:transparent": true
         }
     },
     "underlay": {
@@ -247,7 +276,7 @@ Some of these properties are redundant and only act as additional safety nets. F
 
 - [Internal Actions](../special/internal-actions.md) — the `autoplay`, `autoplay:{FOCUS}`, `delay:{ACTION_ID}:...`, `event:{EVENT_ID}`, `quiet`, and `player:show` rows
 - [Selection Object](../selection/selection-object.md)
-- [Extended Properties](../special/extended-properties.md) — `control:reuse`, `control:transparent`, `control:timeout`, `control:type`, `trigger:{TRIGGER_KEY}` (incl. `active`, `inactive`, `execute`), `label:duration`
+- [Extended Properties](../special/extended-properties.md) — `control:reuse`, `control:transparent`, `control:timeout`, `control:type`, `video:transparent`, `trigger:{TRIGGER_KEY}` (incl. `active`, `inactive`, `execute`), `label:duration`
 - [Page Action](page-action.md)
 - [Live Object](../live/live-object.md)
 - [Background Plugin](../plugins/background-plugin.md)

@@ -1,6 +1,6 @@
 # MSX Knowledge Base
 
-Media Station X (MSX) is a white-label TV app driven entirely by JSON served over HTTP, covering app versions 0.1.0–0.1.167.
+Media Station X (MSX) is a white-label TV app driven entirely by JSON served over HTTP, covering app versions 0.1.0–0.1.168.
 
 > LLM usage: Load this file first to get the index of all KB files. Read AGENTS.md next before writing or reviewing MSX JSON, or for broad how-to questions (binding rules, object overview, common mistakes); for a narrow lookup, fetch the topic file directly. Fetch individual files on demand.
 

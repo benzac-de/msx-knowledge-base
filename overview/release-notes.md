@@ -8,6 +8,13 @@ summary: Release notes and version history for Media Station X.
 
 These release notes contain major API extensions, fundamental UI/UX changes, and important bug fixes.
 
+## 0.1.168 (Nov 16, 2026)
+
+### API extensions
+
+- Updated [Extended Properties](../experts-api/special/extended-properties.md): Added `video:transparent` property
+- Updated [PiP & Autoplay](../experts-api/hidden-features/pip-autoplay.md)
+
 ## 0.1.167 (Oct 19, 2026)
 
 ### Bug fixes
@@ -23,6 +30,7 @@ These release notes contain major API extensions, fundamental UI/UX changes, and
 
 ### API extensions
 
+- Added [PiP & Autoplay](../experts-api/hidden-features/pip-autoplay.md)
 - Extended [Code Panel](../experts-api/hidden-features/code-panel.md)
 - Updated [Internal Actions](../experts-api/special/internal-actions.md)
 - Updated [URL Parameters](../experts-api/special/url-parameters.md): Updated `pointer` parameter
